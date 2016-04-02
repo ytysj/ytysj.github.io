@@ -74,3 +74,9 @@ article: true
 	<p class="copyright">&copy;{{ site.time | date: "%Y" }}, <a href="{{ site.copyright.url }}" target="_blank">{{ site.copyright.author }}</a>. <a href="{{ site.copyright.type_url }}" target="_blank">{{ site.copyright.type_title }}</a>.</p>
 </footer>
 <script src="{{ site.baseurl }}/assets/js/smooth-scroll.js"></script>
+
+<!-- Blog Comments -->
+<div class="media">
+  {% include comment.html %} 
+</div> 
+</div>
