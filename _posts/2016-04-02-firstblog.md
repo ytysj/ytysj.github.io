@@ -3,7 +3,7 @@ layout: post
 title: 上线博客
 quote: 清明假期，雨
 image:
-      url:http://7xskc4.com1.z0.glb.clouddn.com/background1.jpg
+      url:/media/2016-04-02-firstblog/cover.jpg
 video: false
 comments: true
 theme_color: 302F2D
