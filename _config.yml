@@ -4,7 +4,7 @@ markdown:	kramdown
 permalink:	/blog/:title
 
 # Setup
-title:            Thinny
+title:            ytysj
 tagline:          'blog'
 description:      'My personal blog.'
 url:              http://ytysj.github.io
@@ -14,7 +14,7 @@ disqus:           example
 
 author:
   name:           ytysj
-  url:            https://google.com/+IanCamporezBrunelli
+  url:            http://weibo.com/3493499301/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1
 
 paginate:         5
 
@@ -23,21 +23,21 @@ icon:             /assets/images/icon.png
 cover:            /assets/images/cover.jpg
 
 social:
-  - icon:         twitter
-    url:          https://twitter.com/iancamporez
-    desc:         Follow me on twitter
+  - icon:         weibo
+    url:          http://weibo.com/3493499301/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1
+    desc:         Follow me on weibo
 
   - icon:         github
-    url:          https://github.com/camporez
+    url:          https://github.com/ytysj
     desc:         Fork me on github
 
   - icon:         googleplus-alt
-    url:          https://google.com/+IanCamporezBrunelli
-    desc:         Add me on google+
+    url:          
+    desc:         
 
   - icon:         feed
-    url:          http://camporez.github.io/atom.xml
-    desc:         Subscribe to my feed
+    url:          
+    desc:         
 
 menu:
   - title:        Home
@@ -47,7 +47,7 @@ menu:
     url:          /about
 
 copyright:
-  author:         Camporez
+  author:         ytysj
   url:            http://ytysj.github.io
   type_title:     Some rights reserved
   type_url:       http://creativecommons.org/licenses/by-nc/2.5
