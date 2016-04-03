@@ -9,7 +9,7 @@
 		<a href="{{ item.url }}">{{ item.title }}</a>
 {% endfor %}
 	<hr>
-	{% for social in site.social %}<a href="{{ social.url }}" class="social-links-menu" target="_blank" title="{{ social.desc }}"><span class="fa {{ social.icon }}"></span></a>{% endfor %}
+	{% for social in site.social %}<a href="{{ social.url }}" class="social-links-menu" target="_blank" title="{{ social.desc }}"><span class="fa fa-{{ social.icon }}"></span></a>{% endfor %}
 </div>
 <div class="social-links" data-stellar-ratio="0.1">
 	{% for social in site.social %}
