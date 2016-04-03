@@ -9,7 +9,7 @@ tagline:          'blog'
 description:      'My personal blog.'
 url:              http://ytysj.github.io
 baseurl:          
-commentsystem:    google
+commentsystem:    Duoshuo
 disqus:           example
 
 author:
@@ -23,7 +23,7 @@ icon:             /assets/images/icon.png
 cover:            /assets/images/cover.jpg
 
 social:
-  - icon:         weibo
+  - icon:         website
     url:          http://weibo.com/3493499301/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1
     desc:         Follow me on weibo
 
@@ -55,7 +55,7 @@ copyright:
 parallax:         false
 
 # Google Analytics (add the UA Code, e.g.: UA-xxxxxxxx-1)
-google_analytics:  
+google_analytics:  UA-75857373-1
 
 # Default Theme Color for Chrome on Android Lollipop (Use RGB ColorCode without `#`, e.g.: `db5945`)
 theme_color:       7E9576
