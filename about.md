@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Ò»¸öĞ¡ÍøÕ¾¡£
+title: ä¸€ä¸ªå°ç½‘ç«™
 permalink: about/
 ---
 
