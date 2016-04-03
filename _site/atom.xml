@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>ytysj</title>
+ <link href="http://ytysj.github.io/atom.xml" rel="self"/>
+ <link href="http://ytysj.github.io/"/>
+ <updated>2016-04-04T03:28:20+08:00</updated>
+ <id>http://ytysj.github.io</id>
+ <author>
+   <name>ytysj</name>
+   <email></email>
+ </author>
+
+ 
+ <entry>
+   <title>做了小小的修改</title>
+   <link href="http://ytysj.github.io/blog/blog2"/>
+   <updated>2016-04-04T00:00:00+08:00</updated>
+   <id>http://ytysj.github.io/blog/blog2</id>
+   <content type="html">&lt;p&gt;做了一点小小的美化，也学了不少的HTML语言，打算过几天整理一个教程，方便建立自己的网站。&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>上线博客</title>
+   <link href="http://ytysj.github.io/blog/firstblog"/>
+   <updated>2016-04-02T00:00:00+08:00</updated>
+   <id>http://ytysj.github.io/blog/firstblog</id>
+   <content type="html">&lt;p&gt;折腾了一两天，终于上线了个人网站。&lt;/p&gt;
+</content>
+ </entry>
+ 
+
+</feed>

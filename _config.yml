@@ -23,7 +23,7 @@ icon:             /assets/images/icon.png
 cover:            /assets/images/cover.jpg
 
 social:
-  - icon:         github
+  - icon:         weibo
     url:          http://weibo.com/3493499301/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1
     desc:         Follow me on weibo
 
@@ -31,9 +31,9 @@ social:
     url:          https://github.com/ytysj
     desc:         Fork me on github
 
-  - icon:         googleplus-alt
+  - icon:         wechat
     url:          
-    desc:         
+    desc:         Contenct my wechat ytysj_YCH
 
   - icon:         feed
     url:          
@@ -54,6 +54,7 @@ copyright:
 
 parallax:         false
 
+gems: [jekyll-paginate]
 # Google Analytics (add the UA Code, e.g.: UA-xxxxxxxx-1)
 google_analytics:  UA-75857373-1
 
