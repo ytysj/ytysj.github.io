@@ -21,7 +21,11 @@ header, footer {
 	background-repeat: no-repeat;
 	background-position: top;
 	background-size: cover;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: 'Helvetica Neue', Helvetica, Arial,
+             "Microsoft YaHei Light", "微软雅黑 Light", 
+             STXihei, "华文细黑", 
+             serif;
+	text-shadow: 0px 0px 30px #000000;
 }
 
 header a, footer a {
@@ -33,6 +37,7 @@ header a, footer a {
 footer {
 	width: 100%;
 }
+
 
 p {
 	margin-top: 10px;
@@ -72,7 +77,7 @@ h3 {
 }
 
 #post-info h2 {
-	opacity: 0.75;
+	opacity: 1;
 	font-style: italic;
 	font-size: 24px;
 	line-height: 24px;
@@ -185,7 +190,10 @@ h3 {
 }
 
 #article, #comments {
-	font-family: Fenix, Georgia, "Times New Roman", serif;
+	font-family: 'Helvetica Neue', Helvetica, Arial,
+             "Microsoft YaHei Light", "微软雅黑 Light", 
+             STXihei, "华文细黑", 
+             serif;
 	font-weight: 400;
 	letter-spacing: 0px;
 	font-size: 20px;
@@ -363,8 +371,8 @@ pre code {
 }
 
 .menu a:hover {
-	-webkit-opacity: 0.75;
-	opacity: 0.75;
+	-webkit-opacity: 0.85;
+	opacity: 0.85;
 }
 
 .menu {
@@ -393,7 +401,10 @@ pre code {
 }
 
 .menu-content {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: 'Helvetica Neue', Helvetica, Arial,
+             "Microsoft YaHei Light", "微软雅黑 Light", 
+             STXihei, "华文细黑", 
+             serif;
 	background-color: rgba(26, 26, 26, 1);
 	text-align: center;
 	z-index: 5;
@@ -444,7 +455,10 @@ pre code {
 	position: relative;
 	margin-top: 30px;
 	text-align: center;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: 'Helvetica Neue', Helvetica, Arial,
+             "Microsoft YaHei Light", "微软雅黑 Light", 
+             STXihei, "华文细黑", 
+             serif;
 	font-size: 14px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
@@ -497,7 +511,10 @@ pre code {
 }
 
 #post-list {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: 'Helvetica Neue', Helvetica, Arial,
+             "Microsoft YaHei Light", "微软雅黑 Light", 
+             STXihei, "华文细黑", 
+             serif;
 	top: 50px;
 	padding-bottom: 80px;
 	font-weight: 400;
@@ -530,7 +547,10 @@ pre code {
 .post-description {
 	color: #777;
 	font-size: 15pt;
-	font-family: Fenix, Georgia, "Times New Roman", serif;
+	font-family: 'Helvetica Neue', Helvetica, Arial,
+             "Microsoft YaHei Light", "微软雅黑 Light", 
+             STXihei, "华文细黑", 
+             serif;
 }
 
 .post-date {
