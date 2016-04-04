@@ -38,10 +38,17 @@ header, footer {
 
 .menu {
 	position: fixed;
+	
+	transition:width 1s;
+	-moz-transition:width 1s; /* Firefox 4 */
+	-webkit-transition:width 1s; /* Safari and Chrome */
+	-o-transition:width 1s; /* Opera */
 }
 
 .menu:hover, .menu:active  {
 	background-color: #1a1a1a;
+	width:160px;
+
 }
 
 .menu-content {

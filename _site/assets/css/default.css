@@ -386,7 +386,7 @@ pre code {
 	padding-top: 5px;
 	padding-left: 5px;
 	z-index: 6;
-	transition-duration: .5s;
+	
 }
 
 .menu-content > .social-links-menu {
@@ -417,28 +417,29 @@ pre code {
 	font-smoothing: antialiased;
 
 	letter-spacing: 1.2pt;
-	font-size: 12px;
+	font-size: 20px;
 	font-weight: 600;
 	font-style: normal;
 	line-height: 35px;
 	display: block;
 	color: gray;
+
 }
 
 .menu-content a:hover {
 	color: #fff;
+	
 }
 
 .menu span {
 	color: #eee;
-	font-size: 16px;
+	font-size: 18px;
 	height: 20px;
 	width: 20px;
 	opacity: 1;
 	margin-left: 5px;
 	margin-top: 5px;
 }
-
 .menu + input {
 	display: none;
 }
