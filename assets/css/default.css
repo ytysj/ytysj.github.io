@@ -182,7 +182,7 @@ h3 {
 }
 
 #middle {
-	background-color: #fff;
+	background-color: #FAF9F5;
 	width: 100%;
 	height: auto;
 	position: relative;
@@ -199,7 +199,7 @@ h3 {
 	letter-spacing: 0px;
 	font-size: 20px;
 	color: #313131;
-	line-height: 1.5;
+	line-height: 2.5;
 	position: relative;
 }
 
@@ -523,7 +523,7 @@ pre code {
              STXihei, "华文细黑", 
              serif;
 	top: 50px;
-	padding-bottom: 80px;
+	padding-bottom: 8px;
 	font-weight: 400;
 	letter-spacing: 0px;
 	font-size: 20pt;
