@@ -4,16 +4,16 @@ markdown:	kramdown
 permalink:	/blog/:title
 
 # Setup
-title:            一个希望变的有趣的小网站
-tagline:          'blog'
-description:      '关心科技和人文，热爱独立游戏、摄影、侦探小说粉，会打乒乓球，偶尔还会一些有趣的DIY手工，渴望学习绘画。_(:з」∠)__'
+title:            液态氧斯基
+tagline:          '小小站'
+description:      '一个普通的小小站'
 url:              http://ytysj.github.io
 baseurl:          
 commentsystem:    Duoshuo
 disqus:           example
 
 author:
-  name:           ytysj
+  name:           液态氧斯基
   url:            
 
 paginate:         5
