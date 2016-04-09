@@ -81,7 +81,7 @@ h3 {
 	opacity: 1;
 	font-style: italic;
 	font-size: 24px;
-	line-height: 24px;
+	line-height: 40px;
 	font-weight: lighter;
 	margin: 15px 0px;
 }
@@ -199,7 +199,7 @@ h3 {
 	letter-spacing: 0px;
 	font-size: 20px;
 	color: #313131;
-	line-height: 1.5;
+	line-height: 1.8;
 	position: relative;
 }
 
@@ -312,7 +312,7 @@ pre {
 	font-size: .8rem;
 	line-height: 1.2;
 	white-space: pre;
-	word-break: keep-all;
+	word-break: normal;
 	word-wrap: normal;
 	border-left: 10px solid #F6DF6A;
 }
@@ -528,7 +528,7 @@ pre code {
 	letter-spacing: 0px;
 	font-size: 20pt;
 	color: #313131;
-	line-height: 1.5;
+	line-height: 1.8;
 	position: relative;
 }
 

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
- <title>ytysj</title>
+ <title>液态氧斯基</title>
  <link href="http://ytysj.github.io/atom.xml" rel="self"/>
  <link href="http://ytysj.github.io/"/>
- <updated>2016-04-09T02:58:18+08:00</updated>
+ <updated>2016-04-09T14:13:28+08:00</updated>
  <id>http://ytysj.github.io</id>
  <author>
-   <name>ytysj</name>
+   <name>液态氧斯基</name>
    <email></email>
  </author>
 
@@ -17,38 +17,43 @@
    <link href="http://ytysj.github.io/blog/myblog3"/>
    <updated>2016-04-09T00:00:00+08:00</updated>
    <id>http://ytysj.github.io/blog/myblog3</id>
-   <content type="html">&lt;p&gt;##前言
-本人在4.1日之前属于完完全全不懂github、jekyll、CSS、HTML、markdown这些东西的，但是这几天探索和学习基本算是能看懂并且建立一个完整的博客了。&lt;/p&gt;
+   <content type="html">&lt;h2 id=&quot;section&quot;&gt;前言&lt;/h2&gt;
+&lt;p&gt;本人在4.1日之前属于完完全全不懂github、jekyll、CSS、HTML、markdown这些东西的，但是这几天探索和学习基本算是能看懂并且建立一个完整的博客了。&lt;/p&gt;
 
-&lt;p&gt;##一.了解背景&lt;br /&gt;
-首先，我们要了解github和jekyll,也就是我们建立博客的靠山，全靠他们。作为开源代码库以及版本控制系统，github深受程序员的喜爱，堪称是代码届的facebook。在Github上，我们能上传并托管自己的开源项目，也可以从别人的开源项目中fork或是clone东西过来自己修改。&lt;br /&gt;
-为了方便大家展示自己的开源项目，Github提供了一个免费的网页，不限流量，同时速度也非常可观。而jekyll，正是github的创始人之一，Tom Preston-Werner所开发的一个静态博客系统。同时，网上也提供了大量的主题来给大家使用。我们可以方便地从别人已经提供的成品博客项目那边fork过来，修改参数，即可食用。&lt;br /&gt;
-我也是在阅读某个大神的博客&lt;a href=&quot;http://pengzhihui.xyz/&quot;&gt;稚晖的个人站&lt;/a&gt;里偶然知道可以使用jekyll建立免费博客的。&lt;/p&gt;
+&lt;h2 id=&quot;section-1&quot;&gt;一.了解背景&lt;/h2&gt;
+&lt;p&gt;首先，我们要了解github和jekyll,也就是我们建立博客的靠山，全靠他们。作为开源代码库以及版本控制系统，github深受程序员的喜爱，堪称是代码届的facebook。在Github上，我们能上传并托管自己的开源项目，也可以从别人的开源项目中fork或是clone东西过来自己修改。&lt;/p&gt;
 
-&lt;p&gt;##二.食用方法
-###我把步骤分为这几步：&lt;br /&gt;
-1.注册Github账号，下载SourceTree&lt;br /&gt;
+&lt;p&gt;为了方便大家展示自己的开源项目，Github提供了一个免费的网页，不限流量，同时速度也非常可观。而jekyll，正是github的创始人之一，Tom Preston-Werner所开发的一个静态博客系统。同时，网上也提供了大量的主题来给大家使用。我们可以方便地从别人已经提供的成品博客项目那边fork过来，修改参数，即可食用。&lt;/p&gt;
+
+&lt;p&gt;各位完全可以把我的github项目fork或者clone出来，自己修改写作。(但是请麻烦您点一下右上角的star来支持一下，谢谢~)&lt;a href=&quot;https://github.com/ytysj/ytysj.github.io/tree/master/image/myblog3&quot;&gt;ytysj/ytysj.github.io&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;我也是在阅读某个大神的博客&lt;a href=&quot;http://  pengzhihui.xyz/&quot;&gt;稚晖的个人站&lt;/a&gt;里偶然知道可以使用jekyll建立免费博客的。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;二.食用方法&lt;/h2&gt;
+
+&lt;h3 id=&quot;section-3&quot;&gt;我把步骤分为这几步：&lt;/h3&gt;
+&lt;p&gt;1.注册Github账号，下载SourceTree&lt;br /&gt;
 2.创建项目，开启网页&lt;br /&gt;
 3.本地环境搭建&lt;br /&gt;
 4.更改配置&lt;br /&gt;
 5.开始写文章&lt;br /&gt;
 6.上传项目，发布网站&lt;/p&gt;
 
-&lt;p&gt;###1.注册Github账号，下载SourceTree 
-基本法第一条，注册！由于需要一个本地端来进行git操作，据说最好使用命令行，不要用客户端。但是我觉得SourceTree，作为git的&lt;strong&gt;图形化&lt;/strong&gt;客户端，毕竟还是方便一些。当然也可以选择其他客户端甚至是命令行。&lt;br /&gt;
-&lt;img src=&quot;/images/myblog3/5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;githubsourcetree&quot;&gt;1.注册Github账号，下载SourceTree&lt;/h3&gt;
+&lt;p&gt;基本法第一条，注册！由于需要一个本地端来进行git操作，据说最好使用命令行，不要用客户端。但是我觉得SourceTree，作为git的&lt;strong&gt;图形化&lt;/strong&gt;客户端，毕竟还是方便一些。当然也可以选择其他客户端甚至是命令行。&lt;br /&gt;
+&lt;img src=&quot;/image/myblog3/5.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;###2.创建项目，开启网页&lt;br /&gt;
-点击github网页上的加号，选择New repository,新建仓库。&lt;br /&gt;
-&lt;a href=&quot;/images/myblog3/1.png&quot;&gt;&lt;/a&gt;&lt;br /&gt;
+&lt;h3 id=&quot;section-4&quot;&gt;2.创建项目，开启网页&lt;/h3&gt;
+&lt;p&gt;点击github网页上的加号，选择New repository,新建仓库。&lt;br /&gt;
+&lt;img src=&quot;/image/myblog3/1.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
 注意，这里Repository name&lt;strong&gt;一定要填写username（你的名字）.github.io&lt;/strong&gt;，这是特殊的命名约定，然后打开仓库，在上面一栏里面选择settings，&lt;br /&gt;
-&lt;a href=&quot;/images/myblog3/2.png&quot;&gt;&lt;/a&gt;&lt;br /&gt;
+&lt;img src=&quot;/image/myblog3/2.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
 然后点击里面的Github Pages下面的Launch page generator，&lt;br /&gt;
-&lt;a href=&quot;/images/myblog3/3.png&quot;&gt;&lt;/a&gt; &lt;br /&gt;
+&lt;img src=&quot;/image/myblog3/3.png&quot; alt=&quot;&quot; /&gt; &lt;br /&gt;
 随便选择主题（没用的），下一步下一步，完成之后就可以通过username.github.io来进入你的主页了。此时的主页是自动生成的，并不是我们需要的东西，目录里多出的几个文件完全可以删掉。&lt;/p&gt;
 
-&lt;p&gt;###3.本地环境搭建
-首先，从&lt;a href=&quot;http://rubyinstaller.org/downloads/&quot;&gt;ruby官网&lt;/a&gt;我们下载Ruby和DevKit，注意要版本符合(也就是x64Ruby下x64的DevKit)。&lt;br /&gt;
+&lt;h3 id=&quot;section-5&quot;&gt;3.本地环境搭建&lt;/h3&gt;
+&lt;p&gt;首先，从&lt;a href=&quot;http://rubyinstaller.org/downloads/&quot;&gt;ruby官网&lt;/a&gt;我们下载Ruby和DevKit，注意要版本符合(也就是x64Ruby下x64的DevKit)。&lt;br /&gt;
 Ruby的安装很简单，点就是了，安装完之后打开cmd命令行，输入&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;  
@@ -65,8 +70,9 @@ ruby dk.rb reviewruby   &lt;span class=&quot;c1&quot;&gt;#检查&lt;/span&gt;
 dk.rb install    &lt;span class=&quot;c1&quot;&gt;#安装&lt;/span&gt;
  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;cd那一步也可以按住shift右击DevKit文件夹，选择在此处打开命令窗口。 &lt;br /&gt;
-然后更改gem镜像，据说可以改善国内Ruby安装的速度（但是我在这一步选择&lt;a href=&quot;https://ruby.taobao.org/&quot;&gt;淘宝镜像&lt;/a&gt;以及&lt;a href=&quot;https://gems.ruby-china.org/&quot;&gt;Ruby China镜像&lt;/a&gt;，都出现了ERROR和FAIL的问题…没办法，最后我什么都没改，用官方的反而搞定了）&lt;/p&gt;
+&lt;p&gt;cd那一步也可以按住shift右击DevKit文件夹，选择在此处打开命令窗口。&lt;/p&gt;
+
+&lt;p&gt;然后更改gem镜像，据说可以改善国内Ruby安装的速度（但是我在这一步选择&lt;a href=&quot;https://ruby.taobao.org/&quot;&gt;淘宝镜像&lt;/a&gt;以及&lt;a href=&quot;https://gems.ruby-china.org/&quot;&gt;Ruby China镜像&lt;/a&gt;，都出现了ERROR和FAIL的问题…没办法，最后我什么都没改，用官方的反而搞定了）&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;   
 gem sources --add https://ruby.taobao.org/ --remove https://rubygems.org/
@@ -91,43 +97,49 @@ gem install rdiscount
  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;接下来我们需要用SourceTree把项目下载下来，点击克隆/新建，  &lt;br /&gt;
-&lt;a href=&quot;/images/myblog3/6.png&quot;&gt;&lt;/a&gt;
-&lt;a href=&quot;/images/myblog3/7.png&quot;&gt;&lt;/a&gt;&lt;br /&gt;
+&lt;img src=&quot;/image/myblog3/6.png&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;/image/myblog3/7.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
 从github上获取链接填在上面，&lt;br /&gt;
-&lt;a href=&quot;/images/myblog3/8.png&quot;&gt;&lt;/a&gt; &lt;br /&gt;
-下面填本地地址。&lt;br /&gt;
-接下来如果本地有什么更改之后，点击提交，把未暂存文件的钩打上，&lt;br /&gt;
-&lt;a href=&quot;/images/myblog3/9.png&quot;&gt;&lt;/a&gt;&lt;br /&gt;
-写好版本信息之后点击提交。然后点击推送，就可以把本地的文件push到github上。&lt;br /&gt;
-为了方便，我们需要本地调试，好处是生效速度特别快，即改即看。
+&lt;img src=&quot;/image/myblog3/8.png&quot; alt=&quot;&quot; /&gt; &lt;br /&gt;
+下面填本地地址。&lt;/p&gt;
+
+&lt;p&gt;接下来如果本地有什么更改之后，点击提交，把未暂存文件的钩打上，&lt;br /&gt;
+&lt;img src=&quot;/image/myblog3/9.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+写好版本信息之后点击提交。然后点击推送，就可以把本地的文件push到github上。&lt;/p&gt;
+
+&lt;p&gt;为了方便，我们需要本地调试，好处是生效速度特别快，即改即看。
 用同样的办法打开本地地址的命令行，输入&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;   
 jekyll serve
  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;如果没有ERROR，就可以进127.0.0.1:4000里本地调试了。 本地调试会生成_site文件夹存放我们的站点，不需要管它。&lt;br /&gt;
-注：我碰到了端口占用的问题，参考&lt;a href=&quot;http://www.cnblogs.com/lxconan/archive/2016/01/11/5119972.html&quot;&gt;谁占了我的端口&lt;/a&gt;这篇文章，用netstat -ano和tasklist /svc /FI “PID eq 11476”查到到底是谁占用了这个4000端口。我和这位博主都是被福昕PDF的服务占用了。&lt;/p&gt;
+&lt;p&gt;如果没有ERROR，就可以进127.0.0.1:4000里本地调试了。 本地调试会生成_site文件夹存放我们的站点，不需要管它。&lt;/p&gt;
 
-&lt;p&gt;###4.更改配置&lt;br /&gt;
-修改配置和之后的很多操作需要换格式，我下载的是Notepad++。&lt;br /&gt;
-&lt;a href=&quot;/images/myblog3/4.png&quot;&gt;&lt;/a&gt;  &lt;br /&gt;
-打开config.yml，修改里面的参数（把能改的都改了）。其中要注意的是我使用的评论系统是多说的，之前的作者是用谷歌的，所以我把_includes/comments.html完全修改了，如何修改多说网站上说的很清楚，照着网站说明更改就好。&lt;br /&gt;
-照着里面的说明更换assets/images下的cover.jpg（index背景）和icon.png(头像)。建议不要改名字或是路径，因为不仅仅在config里指定了名字和路径，改起来太麻烦。然后还有一个是网站分析，config里已经写好，只要在google_analytics:后面把谷歌分析给你的代码放上去即可。&lt;/p&gt;
+&lt;p&gt;注：我碰到了端口占用的问题，参考&lt;a href=&quot;http://www.cnblogs.com/lxconan/archive/2016/01/11/5119972.html&quot;&gt;谁占了我的端口 for Windows&lt;/a&gt;这篇文章，用netstat -ano和tasklist /svc /FI “PID eq 11476”查到到底是谁占用了这个4000端口。我和这位博主都是被福昕PDF的服务占用了。&lt;/p&gt;
 
-&lt;p&gt;###5.开始写文章&lt;br /&gt;
-呼~终于到了这一步。在_posts下面存放我们的文章，要按照YYYY-MM-DD-TITLE.MD的格式来，比如文件名2016-04-02-firstblod.md。&lt;br /&gt;
-&lt;a href=&quot;/images/myblog3/11.png&quot;&gt;&lt;/a&gt;&lt;br /&gt;
-layout代表格式，不需要改，其中要注意的是image这个文章标题背景图片，我尝试使用外链来做，试了很久，并不成功。而且使用本地路径的时候需要记得在url:之后加上一个空格，然后才是/…/否则也不显示。还有一个很重要的点是文件格式&lt;strong&gt;必须是UTF-8无BOM格式编码&lt;/strong&gt;，如果用记事本修改的话，即便你保存的时候选择UTF-8格式，那也是不一样的。&lt;br /&gt;
-对了，为了方便我们写的时候预览MD效果，我下载了MarkdownPad2，但是在win10下可能会出现预览失效问题，这时候需要下载安装Awesomium SDK。&lt;br /&gt;
-&lt;a href=&quot;/images/myblog3/10.png&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;section-6&quot;&gt;4.更改配置&lt;/h3&gt;
+&lt;p&gt;修改配置和之后的很多操作需要换格式，我下载的是Notepad++。&lt;br /&gt;
+&lt;img src=&quot;/image/myblog3/4.png&quot; alt=&quot;&quot; /&gt;  &lt;br /&gt;
+打开config.yml，修改里面的参数（把能改的都改了）。其中要注意的是我使用的评论系统是多说的，之前的作者是用谷歌的，所以我把_includes/comments.html完全修改了，如何修改多说网站上说的很清楚，照着网站说明更改就好。&lt;/p&gt;
 
-&lt;p&gt;###6.上传项目，发布网站&lt;br /&gt;
-使用SourceTree上传，打开username（你的名字）.github.io，应该就OK了！&lt;/p&gt;
+&lt;p&gt;照着里面的说明更换assets/images下的cover.jpg（index背景）和icon.png(头像)。建议不要改名字或是路径，因为不仅仅在config里指定了名字和路径，改起来太麻烦。然后还有一个是网站分析，config里已经写好，只要在google_analytics:后面把谷歌分析给你的代码放上去即可。&lt;/p&gt;
 
-&lt;p&gt;##三.注意事项
-由于国内的特别，有很多服务需要更换掉，否则会影响访问速度。(似乎我都已经做了？)&lt;br /&gt;
-其中一个是谷歌字体，我们需要在_includes/head.html里把&lt;/p&gt;
+&lt;h3 id=&quot;section-7&quot;&gt;5.开始写文章&lt;/h3&gt;
+&lt;p&gt;呼~终于到了这一步。在_posts下面存放我们的文章，要按照YYYY-MM-DD-TITLE.MD的格式来，比如文件名2016-04-02-firstblod.md。&lt;br /&gt;
+&lt;img src=&quot;/image/myblog3/11.png&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
+layout代表格式，不需要改，其中要注意的是image这个文章标题背景图片，我尝试使用外链来做，试了很久，并不成功。而且使用本地路径的时候需要记得在url:之后加上一个空格，然后才是/…/否则也不显示。以及写md的文章时，如果用2个#号来作为标题的话，需要在后面加上一个空格才能用。还有一个很重要的点是文件格式&lt;strong&gt;必须是UTF-8无BOM格式编码&lt;/strong&gt;，如果用记事本修改的话，即便你保存的时候选择UTF-8格式，那也是不一样的。&lt;/p&gt;
+
+&lt;p&gt;对了，为了方便我们写的时候预览MD效果，我下载了MarkdownPad2，但是在win10下可能会出现预览失效问题，这时候需要下载安装Awesomium SDK。&lt;br /&gt;
+&lt;img src=&quot;/image/myblog3/10.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;section-8&quot;&gt;6.上传项目，发布网站&lt;/h3&gt;
+&lt;p&gt;使用SourceTree上传，打开username（你的名字）.github.io，应该就OK了！&lt;/p&gt;
+
+&lt;h2 id=&quot;section-9&quot;&gt;三.注意事项&lt;/h2&gt;
+&lt;p&gt;由于国内的特别，有很多服务需要更换掉，否则会影响访问速度。(似乎我都已经做了？)&lt;/p&gt;
+
+&lt;p&gt;其中一个是谷歌字体，我们需要在_includes/head.html里把&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;   
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;//fonts.googleapis.com/css?family=Fenix:400,400italic&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
@@ -139,9 +151,11 @@ layout代表格式，不需要改，其中要注意的是image这个文章标题
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;//fonts.useso.com/css?family=Fenix:400,400italic&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;就是googleapis换成useso。&lt;br /&gt;
-还有一个图标的问题，原本这个作者使用了genericons来提供图标，而我下载了font-awesome来替换，font-awesome网站库更全，有微博微信什么的，更棒。&lt;br /&gt;
-在head.html里&lt;/p&gt;
+&lt;p&gt;就是googleapis换成useso。&lt;/p&gt;
+
+&lt;p&gt;还有一个图标的问题，原本这个作者使用了genericons来提供图标，而我下载了font-awesome来替换，font-awesome网站库更全，有微博微信什么的，更棒。&lt;/p&gt;
+
+&lt;p&gt;在head.html里把&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;   
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/assets/css/genericons&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
@@ -159,15 +173,17 @@ layout代表格式，不需要改，其中要注意的是image这个文章标题
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;span&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;fa fa-align-left&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/span&amp;gt;&lt;/span&gt;
  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;就是表示4个横条，我用它来表示菜单图标，top.html里的多处地方本来是指向genericons，我都替换为fa fa-XXXX了。至于字体以及背景颜色，在/assets/css/default.css里，代码高亮的颜色设置在syntax.css里，都是属性，可以随意更改，建议上&lt;a href=&quot;http://www.w3school.com.cn/css/css_font.asp&quot;&gt;W3school&lt;/a&gt;上学习这些属性并更改。 &lt;br /&gt;
-由于我还不会JS，暂时没有对网站做大幅度外观和效果的更改。&lt;/p&gt;
+&lt;p&gt;就是表示4个横条，我用它来表示菜单图标，top.html里的多处地方本来是指向genericons，我都替换为fa fa-XXXX了。至于字体以及背景颜色，在/assets/css/default.css里，代码高亮的颜色设置在syntax.css里，都是属性，可以随意更改，建议上&lt;a href=&quot;http://www.w3school.com.cn/css/css_font.asp&quot;&gt;W3school&lt;/a&gt;上学习这些属性并更改。&lt;/p&gt;
 
-&lt;p&gt;##四.感想与参考&lt;br /&gt;
-这几天学习了很多很多的前端知识，虽然建立一个个人博客用WordPress可能非常非常省事简单加无脑，但是用github-Page的好处就在于我还能学习到很多知识，如CSS、HTML、MD，并不是亏的，毕竟我还是新手。如果有什么问题，请留言或是发邮件咨询。&lt;br /&gt;
-感谢以下文章：&lt;br /&gt;
+&lt;p&gt;由于我还不会JS，暂时没有对网站做大幅度外观和效果的更改。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-10&quot;&gt;四.感想与参考&lt;/h2&gt;
+&lt;p&gt;这几天学习了很多很多的前端知识，虽然建立一个个人博客用WordPress可能非常非常省事简单加无脑，但是用github-Page的好处就在于我还能学习到很多知识，如CSS、HTML、MD，并不是亏的，毕竟我还是新手。如果有什么问题，请留言或是发邮件咨询。&lt;/p&gt;
+
+&lt;p&gt;感谢以下文章：&lt;br /&gt;
 &lt;a href=&quot;http://www.ruanyifeng.com/blog/2012/08/blogging_with_jekyll.html&quot;&gt;阮一峰-搭建一个免费的，无限流量的Blog—-github Pages和Jekyll入门&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;http://www.ezlippi.com//blog/2015/03/github-pages-blog.html&quot;&gt;浮生志&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&quot;http://www.cnblogs.com/lxconan/archive/2016/01/11/5119972.html&quot;&gt;是谁占了我的端口&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;http://www.ezlippi.com//blog/2015/03/github-pages-blog.html&quot;&gt;利用github-pages建立个人博客 | Lippi-浮生志&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;http://www.cnblogs.com/lxconan/archive/2016/01/11/5119972.html&quot;&gt;谁占了我的端口 for Windows&lt;/a&gt;&lt;br /&gt;
 &lt;a href=&quot;http://www.jianshu.com/p/609e1197754c&quot;&gt;采用Jekyll + github + pygments构建个人博客的最终说明&lt;/a&gt; &lt;br /&gt;
 &lt;a href=&quot;http://blog.csdn.net/huyoo/article/details/22078565&quot;&gt;7个月之后,我在github上用pages搭建的博客终于看到东西了&lt;/a&gt;&lt;br /&gt;
 &lt;a href=&quot;http://wowubuntu.com/markdown/&quot;&gt;Markdown 语法说明 (简体中文版)&lt;/a&gt;&lt;br /&gt;
