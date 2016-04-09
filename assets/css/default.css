@@ -312,8 +312,8 @@ pre {
 	font-size: .8rem;
 	line-height: 1.2;
 	white-space: pre;
-	word-break: break-all;
-	word-wrap: break-word;
+	word-break: keep-all;
+	word-wrap: normal;
 	border-left: 10px solid #F6DF6A;
 }
 
