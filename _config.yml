@@ -1,5 +1,7 @@
 # Dependencies
 markdown:	kramdown
+toc_levels: 1..2
+
 # Permalinks
 permalink:	/blog/:title
 
@@ -36,7 +38,7 @@ social:
     desc:         Contenct my wechat ytysj_YCH
 
   - icon:         feed
-    url:          
+    url:          category.html
     desc:         
 
 menu:

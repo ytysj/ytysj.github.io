@@ -3,7 +3,7 @@ layout: default
 article: true
 ---
 
-<header class="{% if page.dark %}dark{% else %}clean{% endif %}" style="background-image: url({% if page.image.url %}{{ page.image.url }}{% else %}{{ site.cover }}{% endif %}); height: 70%; {% if site.parallax != true %}background-attachment: scroll;{% endif %}" data-stellar-background-ratio="0.5" data-stellar-horizontal-offset="50">
+<header class="{% if page.dark %}dark{% else %}clean{% endif %}" style="background-image: url({% if page.image.url %}{{ page.image.url }}{% else %}{{ site.cover }}{% endif %}); height: 100%; {% if site.parallax != true %}background-attachment: scroll;{% endif %}" data-stellar-background-ratio="0.5" data-stellar-horizontal-offset="50">
 	{% if page.video %}
 		<video id="bg-video" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0" data-stellar-ratio="0.5">
 		{% for format in page.video %}
@@ -17,7 +17,7 @@ article: true
 		{% if page.quote %}
 			<h2>{{ page.quote }}</h2>
 		{% endif %}
-		<a class="site-title" href="{{ site.url }}{{ site.baseurl }}"><div class="site-icon-small" style="background-image: url({{ site.icon }});"></div>{{ site.title }}</a>, in {{ page.date | date_to_long_string }}
+		<a class="site-title" href="{{ site.url }}{{ site.baseurl }}"><div class="site-icon-small" style="background-image: url({{ site.icon }});"></div>{{ site.title }}</a> · {{ page.date |date: "%Y 年 %m 月 %d 日"}}
 	</div>
 	{% if page.image.source %}
 	<div id="img-info" data-stellar-ratio="0.5">
@@ -27,6 +27,11 @@ article: true
 	<div id="nav-icon" style="bottom: 30px;" data-stellar-ratio="4">
 		<a class="scroll" data-speed="500" href="#article"><span class="fa fa-chevron-down"></span></a>
 	</div>
+	
+	<div id="go-top" style="bottom: 30px;" data-stellar-ratio="4">
+		<a class="scroll" data-speed="500" href="#post-info"><span class="fa fa-chevron-up"></span></a>
+	</div>
+
 </header>
 <div id="middle">
 	<div id="article">

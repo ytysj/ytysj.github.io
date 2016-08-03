@@ -16,16 +16,17 @@ header {
 	position: relative;
 }
 
-header, footer {
+header, footer {         /*标题*/
 	position: relative;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size:cover;
+	font-weight:bold;
 	font-family: 'Helvetica Neue', Helvetica, Arial,
              "Microsoft YaHei Light", "微软雅黑 Light", 
              STXihei, "华文细黑", 
              serif;
-	text-shadow: 0px 0px 30px #000000;
+	text-shadow: 0px 0px 10px #000000;
 }
 
 header a, footer a {
@@ -79,8 +80,7 @@ h3 {
 
 #post-info h2 {
 	opacity: 1;
-	font-style: italic;
-	font-size: 24px;
+	font-size: 22px;
 	line-height: 40px;
 	font-weight: lighter;
 	margin: 15px 0px;
@@ -144,7 +144,7 @@ h3 {
 	margin-right: 10px;
 }
 
-#nav-icon {
+#nav-icon {         /*向下的导航栏*/
 	width: auto;
 	height: auto;
 	left: 50%;
@@ -153,12 +153,29 @@ h3 {
 	text-align: center;
 	z-index: 2;
 }
-
 #nav-icon a, #nav-icon a span {
 	width: 50px;
 	text-decoration: none;
 	font-size: 48px;
 	display: table;
+}
+
+#go-top {         /*向上的导航栏*/
+	width: auto;
+	height: auto;
+	right:7%;
+	bottom:7%;
+	position: fixed;
+	text-align: center;
+	z-index: 5;
+}
+#go-top a, #go-top a span {
+	width: 50px;
+	text-decoration: none;
+	font-size: 48px;
+	display: table;
+	color:000;
+	opacity:0.90;
 }
 
 #img-info {
@@ -295,21 +312,22 @@ blockquote p {
 	border-left: 10px solid #F66A81;
 }
 
-code, pre {
+code, pre {           
 	font-family: Menlo, Monaco, "Courier New", monospace;
+	font-weight:bold;
 	background-color: #F0F0F0;
 }
 
-code {
+code {                      /*代码高亮*/
 	padding: .25em .5em;
 	font-size: 85%;
 	color: #bf616a;
 	border-radius: 3px;
 }
 
-pre {
+pre {                 
 	display: block;
-	font-size: .8rem;
+	font-size: 1.1rem;
 	line-height: 1.2;
 	white-space: pre;
 	word-break: normal;
@@ -346,7 +364,7 @@ pre code {
 	color: #555;
 }
 
-.social-links {
+.social-links {            /*右上社交按钮*/
 	width: auto;
 	top: 20px;
 	right: 20px;
@@ -354,7 +372,7 @@ pre code {
 	z-index: 2;
 }
 
-.social-links a {
+.social-links a {     
 	opacity: 0.8;
 	text-decoration: none;
 	display: inline-block;
@@ -368,29 +386,27 @@ pre code {
 	width: 24px;
 }
 
-.social-links a:hover {
+.social-links a:hover {   
 	opacity: 1;
 	color:#000;
 }
 
 .menu a:hover {
-	-webkit-opacity: 0.85;
-	opacity: 0.85;
-
+	opacity: 0.2;
+	color:FFF;
 }
 
-.menu {
+.menu {            /*左下菜单*/
 	display: block;
 	cursor: pointer;
-	background-color: rgba(26, 26, 26, 0.35);
 	width: 30px;
 	height: 30px;
-	top: 12px;
-	left: 12px;
+	bottom: 7%;
+	left: 1%;
 	padding-top: 5px;
 	padding-left: 5px;
-	z-index: 6;
-	
+	z-index: 5;
+	transition: width 2s;
 
 }
 
@@ -412,51 +428,71 @@ pre code {
              serif;
 	background-color: rgba(26, 26, 26, 1);
 	text-align: center;
-	z-index: 5;
+	z-index: 4;
 }
 
 .menu-content a {
 	text-transform: uppercase;
 	-moz-osx-font-smoothing: antialiased;
-	-webkit-font-smoothing: antialiased;
-	font-smoothing: antialiased;
 
 	letter-spacing: 1.2pt;
 	font-size: 20px;
-	font-weight: 600;
 	font-style: normal;
 	line-height: 35px;
 	display: block;
 	color: gray;
-
 }
 
 .menu-content a:hover {
-	color: #fff;
 	
 }
 
 .menu span {
-	color: #eee;
-	font-size: 18px;
+	color: #000;
+	font-size: 30px;
 	height: 20px;
 	width: 20px;
 	opacity: 1;
 	margin-left: 5px;
 	margin-top: 5px;
+	
 }
 .menu + input {
 	display: none;
- 
 }
 
 .menu + input + * {
-	display: none;
+	display:none;
 }
 
 .menu + input:checked + * {
 	display: block;
+	transition: width 2s;
+	width:300px;
+
 }
+/*  animation-play-state:running;
+	animation:SlideAnimation1 ;
+	animation-duration:0.5s;
+	animation-direction:alternate;
+	animation-timing-function:cubic-bezier(1, 0.7 , 0.8 , 0.5 , 0.3);;
+	animation-fill-mode: forwards;
+	animation-iteration-count:1;
+{
+0%  	 {width:130px;}
+25% 	 {width:220px;}
+50% 	 {width:260px;}
+75% 	 {width:190px;}
+100% 	 {width:220px;}
+}
+@keyframes SlideAnimation2
+{
+0%  	 {width:220px;}
+25% 	 {width:240px;}
+50% 	 {width:260px;}
+75% 	 {width:200px;}
+100% 	 {width:130px;}
+}               */
 
 .pagination {
 	position: relative;
@@ -569,3 +605,21 @@ pre code {
 	margin-top: 60px;
 	border-top: 1px solid #EEE;
 }
+
+#markdown:before {
+    content: "目录";
+    font-weight: bold;
+}
+ul#markdown-toc {
+    list-style: none;
+    position: absolute;
+    padding: 5px;
+    left: -260px;
+	color: #000;
+	font-size:16px;
+	border-radius: 0.3em;
+    box-shadow: rgba(0,0,0,0.15) 0 1px 4px;
+    box-sizing: border-box;
+    border: #fff 0.9em solid;
+    background-color: white;
+}   

@@ -7,7 +7,7 @@ header, footer {
 #post-info {
 	width: 700px;
 	left: 50%;
-	margin-left: -350px;
+	margin-left: -400px;
 	bottom: 100px;
 }
 
@@ -18,10 +18,10 @@ header, footer {
 }
 
 #article, #comments {
-	width: 700px;
+	width: 900px;
 	padding: 50px 0px;
 	left: 50%;
-	margin-left: -350px;
+	margin-left: -400px;
 }
 
 #bg-video {
@@ -38,23 +38,20 @@ header, footer {
 
 .menu {
 	position: fixed;
-	
-	transition:width 1s;
-	-moz-transition:width 1s; /* Firefox 4 */
-	-webkit-transition:width 1s; /* Safari and Chrome */
-	-o-transition:width 1s; /* Opera */
+	transition: width 2s;
 }
 
-.menu:hover, .menu:active  {
-	background-color: #1a1a1a;
-	width:160px;
-
+.menu:hover {
+	opacity: 0.2;
+	color:FFF;
 }
+
 
 .menu-content {
 	width: 125px;
-	top: 47px;
-	left: 12px;
+	height:100%;
+	top: 0px;
+	left: 0px;
 	padding-top: 5px;
 	padding-bottom: 20px;
 	padding-left: 20px;
