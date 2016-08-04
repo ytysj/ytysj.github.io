@@ -19,8 +19,8 @@ header {
 header, footer {         /*标题*/
 	position: relative;
 	background-repeat: no-repeat;
-	background-position: center;
-	background-size:cover;
+	background-position:0% 0%;
+	background-size:100%;
 	font-weight:bold;
 	font-family: 'Helvetica Neue', Helvetica, Arial,
              "Microsoft YaHei Light", "微软雅黑 Light", 
@@ -144,7 +144,7 @@ h3 {
 	margin-right: 10px;
 }
 
-#nav-icon {         /*向下的导航栏*/
+#nav-icon {         /*向下的箭头*/
 	width: auto;
 	height: auto;
 	left: 50%;
@@ -352,8 +352,9 @@ pre code {
 }
 
 .clean {
+	position:relative;
 	color: #eee;
-	background-color: #888;
+	background-color: #000;
 }
 
 .clean a {
@@ -410,7 +411,7 @@ pre code {
 
 }
 
-.menu-content > .social-links-menu {
+.menu-content > .social-links-menu {     /*社交图标的框*/
 	display: inline-block;
 	margin-left: 10px;
 }
@@ -623,3 +624,68 @@ ul#markdown-toc {
     border: #fff 0.9em solid;
     background-color: white;
 }   
+
+
+.yapiskan{
+	top:0px;
+	height: 50px;
+	background-color:rgba(0,0,0,0.8);
+	color:#fff;
+	font-size:12px;
+	width: 100%;
+	text-align:center;
+	transition:top .5s;
+	position:absolute;
+	z-index:9999;
+}
+.yya{
+	position:fixed;
+	left:0;
+	top:0;
+}
+.gizle{top:-90px;}
+.sabit{top:0;}
+.toper{height: 0px;width: 100%;background-color: #D0EAF1;}
+
+.yapiskan ul{
+width:980px;
+margin:0px auto;
+height:38px;
+padding:0;
+}
+.yapiskan ul li{
+float:left;
+list-style: none;
+}
+.yapiskan ul li a{
+width:80px;
+height:28px;
+line-height:28px;
+font-weight:bold;
+color:#FFF;
+margin:10px 10px;
+font-size:18px;
+display:block;
+text-align:center;
+text-decoration:none;
+font-family: 'Helvetica Neue', Helvetica, Arial,
+             "Microsoft YaHei Light", "微软雅黑 Light", 
+             STXihei, "华文细黑", 
+             serif;
+}
+.yapiskan ul li a:hover{
+width:80px;
+height:31px;
+line-height:28px;
+color:#aaa;
+background:#FFF;
+}
+.topbox{
+	background:#000;
+	height:50px;
+	position:absolute;
+	z-index:9990;
+}
+.topinclude{
+	background:#000;
+}

@@ -13,6 +13,8 @@
 	
 	<link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
 	
+	<link rel="stylesheet" href="/assets/css/admin5.css">
+	
 	<link href="/assets/css/syntax.css" type="text/css" rel="stylesheet" />
 	<link rel="stylesheet" href="//fonts.useso.com/css?family=Fenix:400,400italic">
 	<link rel="apple-touch-icon" href="http://ytysj.github.io/assets/images/icon.png">
@@ -34,37 +36,50 @@
 	
 	<!-- Theme Color for Chrome on Android Lollipop -->
 	<meta name="theme-color" content="#7E9576">
-</head>
+			
+	<div class="topinclude">
+		<div class="topbox"></div>
+		<div class="yapiskan">
+			<ul>
+				<li><a href="/index.html">首页</a></li>
+				<li><a href="#">标签</a></li>
+				<li><a href="#">分类</a></li>
+				<li><a href="#">归档</a></li>
+				<li><a href="/about.html/">关于</a></li>
+			</ul>
+		</div>
+	</div>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+var h1 = 0;
+var h2 = 0;
+	var ss = $(document).scrollTop();
+	$(window).scroll(function(){
+		var s = $(document).scrollTop();
+		if(s< h1){
+			$('.yapiskan').removeClass('yya');
+		}if(s > h1){
+			$('.yapiskan').addClass('yya');
+		}if(s > h2){
+			$('.yapiskan').addClass('gizle');
+			if(s > ss){
+				$('.yapiskan').removeClass('sabit');
+			}else{
+				$('.yapiskan').addClass('sabit');
+			}
+			ss = s;
+		}
+	});
+});
+</script>
+
+
+
+	</head>
 
 	<body>
-		<header class="clean" style="height: 350px; background-image: url(/assets/images/cover.jpg); background-attachment: scroll;" data-stellar-background-ratio="0.5" data-stellar-horizontal-offset="50">
-	<label class="menu" for="_1">
-	<span class="fa fa-align-left"></span>
-</label>
-<input id="_1" type="checkbox">
-<div class="menu-content">
-	<p class="menu-title">液态氧斯基<p>
-	<div class="menu" style="background-color: #1a1a1a; z-index: -1;"></div>
-	
-		<a href="/">Home</a>
-
-		<a href="/about">About</a>
-
-	<hr>
-	<a href="http://weibo.com/3493499301/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" class="social-links-menu" target="_blank" title="Follow me on weibo"><span class="fa fa-weibo"></span></a><a href="https://github.com/ytysj" class="social-links-menu" target="_blank" title="Fork me on github"><span class="fa fa-github"></span></a><a href="" class="social-links-menu" target="_blank" title="Contenct my wechat ytysj_YCH"><span class="fa fa-wechat"></span></a><a href="category.html" class="social-links-menu" target="_blank" title=""><span class="fa fa-feed"></span></a>
-</div>
-<div class="social-links" data-stellar-ratio="0.1">
-	
-		<a href="http://weibo.com/3493499301/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" target="_blank" title="Follow me on weibo"><span class="fa fa-weibo"></span></a>
-	
-		<a href="https://github.com/ytysj" target="_blank" title="Fork me on github"><span class="fa fa-github"></span></a>
-	
-		<a href="" target="_blank" title="Contenct my wechat ytysj_YCH"><span class="fa fa-wechat"></span></a>
-	
-		<a href="category.html" target="_blank" title=""><span class="fa fa-feed"></span></a>
-	
-</div>
-
+		<header class="clean" style="height: 100%; background-image: url(/assets/images/cover.jpg); background-attachment: scroll;" data-stellar-background-ratio="0.5" data-stellar-horizontal-offset="50">
 	<a href="http://ytysj.github.io">
 		<div id="home-title" class="site-icon-page" style="background-image: url(/assets/images/icon.png);" data-stellar-ratio="0.7"></div>
 	</a>
@@ -98,6 +113,7 @@
 			positionProperty: 'transform',
 			});
 		});
-		</script>
+		</script>		
+
 	</body>
 </html>

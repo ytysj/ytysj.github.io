@@ -21,6 +21,8 @@
 	
 	<link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
 	
+	<link rel="stylesheet" href="/assets/css/admin5.css">
+	
 	<link href="{{ site.baseurl }}/assets/css/syntax.css" type="text/css" rel="stylesheet" />
 	<link rel="stylesheet" href="//fonts.useso.com/css?family=Fenix:400,400italic">
 	<link rel="apple-touch-icon" href="{{ site.url }}{{ site.baseurl }}{{ site.icon }}">
@@ -44,4 +46,44 @@
 	{% endif %}
 	<!-- Theme Color for Chrome on Android Lollipop -->
 	<meta name="theme-color" content="#{% if page.theme_color %}{{ page.theme_color }}{% else %}{{ site.theme_color }}{% endif %}">
-</head>
+			
+	<div class="topinclude">
+		<div class="topbox"></div>
+		<div class="yapiskan">
+			<ul>
+				<li><a href="/index.html">首页</a></li>
+				<li><a href="#">标签</a></li>
+				<li><a href="#">分类</a></li>
+				<li><a href="#">归档</a></li>
+				<li><a href="/about.html/">关于</a></li>
+			</ul>
+		</div>
+	</div>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(function(){
+var h1 = 0;
+var h2 = 0;
+	var ss = $(document).scrollTop();
+	$(window).scroll(function(){
+		var s = $(document).scrollTop();
+		if(s< h1){
+			$('.yapiskan').removeClass('yya');
+		}if(s > h1){
+			$('.yapiskan').addClass('yya');
+		}if(s > h2){
+			$('.yapiskan').addClass('gizle');
+			if(s > ss){
+				$('.yapiskan').removeClass('sabit');
+			}else{
+				$('.yapiskan').addClass('sabit');
+			}
+			ss = s;
+		}
+	});
+});
+</script>
+
+
+
+	</head>

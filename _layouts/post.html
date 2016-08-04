@@ -11,7 +11,7 @@ article: true
 		{% endfor %}
 		</video>
 	{% endif %}
-	{% include top.html %}
+	
 	<div id="post-info" data-stellar-ratio="0.7">
 		<h1>{{ page.title }}</h1>
 		{% if page.quote %}
@@ -31,7 +31,6 @@ article: true
 	<div id="go-top" style="bottom: 30px;" data-stellar-ratio="4">
 		<a class="scroll" data-speed="500" href="#post-info"><span class="fa fa-chevron-up"></span></a>
 	</div>
-
 </header>
 <div id="middle">
 	<div id="article">
@@ -79,5 +78,4 @@ article: true
 	<p class="copyright">&copy;{{ site.time | date: "%Y" }}, <a href="{{ site.copyright.url }}" target="_blank">{{ site.copyright.author }}</a>. <a href="{{ site.copyright.type_url }}" target="_blank">{{ site.copyright.type_title }}</a>.</p>
 </footer>
 <script src="{{ site.baseurl }}/assets/js/smooth-scroll.js"></script>
-
 
