@@ -354,7 +354,7 @@ pre code {
 .clean {
 	position:relative;
 	color: #eee;
-	background-color: #000;
+	background-color: #fff;
 }
 
 .clean a {
@@ -631,10 +631,9 @@ ul#markdown-toc {
 	height: 50px;
 	background-color:rgba(0,0,0,0.8);
 	color:#fff;
-	font-size:12px;
 	width: 100%;
 	text-align:center;
-	transition:top .5s;
+	transition:top .3s;
 	position:absolute;
 	z-index:9999;
 }

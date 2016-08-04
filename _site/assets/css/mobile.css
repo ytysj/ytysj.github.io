@@ -1,6 +1,8 @@
 @import url(default.css);
 header, footer {
 	background-attachment: scroll;
+	    background-size:auto;
+		background-position:center;
 }
 
 h1 {
@@ -97,4 +99,21 @@ h2 {
 table {
 	display: block;
 	overflow: auto;
+}
+
+#middle {
+	padding-bottom: 0px;
+}
+.yapiskan{
+	height: 50px;
+}
+.yapiskan ul li a{
+width:100%;
+font-size:20px;
+}
+.yapiskan ul li a:hover{
+width:100%;
+}
+.blank-area{
+	height:110%;
 }
