@@ -16,6 +16,7 @@ article: true
 		<h1>{{ page.title }}</h1>
 		{% if page.quote %}
 			<h2>{{ page.quote }}</h2>
+			<h4>{{ page.tags[0] }}&nbsp;&nbsp;&nbsp;&nbsp;{{ page.tags[1] }}&nbsp;&nbsp;&nbsp;&nbsp;{{ page.tags[2] }}&nbsp;&nbsp;&nbsp;&nbsp;{{ page.tags[3] }}&nbsp;&nbsp;&nbsp;&nbsp;{{ page.tags[4] }}&nbsp;&nbsp;&nbsp;&nbsp;{{ page.tags[5] }}&nbsp;&nbsp;&nbsp;&nbsp;{{ page.tags[6] }}&nbsp;&nbsp;&nbsp;&nbsp;{{ page.tags[7] }}&nbsp;&nbsp;&nbsp;&nbsp;{{ page.tags[8] }}</h4>
 		{% endif %}
 		<a class="site-title" href="{{ site.url }}{{ site.baseurl }}"><div class="site-icon-small" style="background-image: url({{ site.icon }});"></div>{{ site.title }}</a> · {{ page.date |date: "%Y 年 %m 月 %d 日"}}
 	</div>
