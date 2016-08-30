@@ -20,7 +20,7 @@ article: true
 		-->
 		{% endif %}
 			{% if page.tags %}
-			<h3>{{ page.tags }}</h3>
+			<h2>{{ page.tags }}</h2>
 			{% endif %}
 		<a class="site-title" href="{{ site.url }}{{ site.baseurl }}"><div class="site-icon-small" style="background-image: url({{ site.icon }});"></div>{{ site.title }}</a> · {{ page.date |date: "%Y 年 %m 月 %d 日"}}
 	</div>
