@@ -16,8 +16,12 @@ article: true
 		<h1>{{ page.title }}</h1>
 		{% if page.quote %}
 			<h2>{{ page.quote }}</h2>
-			<h4>{{ page.tags[0] }}&nbsp;&nbsp;&nbsp;&nbsp;{{ page.tags[1] }}&nbsp;&nbsp;&nbsp;&nbsp;{{ page.tags[2] }}&nbsp;&nbsp;&nbsp;&nbsp;{{ page.tags[3] }}&nbsp;&nbsp;&nbsp;&nbsp;{{ page.tags[4] }}&nbsp;&nbsp;&nbsp;&nbsp;{{ page.tags[5] }}&nbsp;&nbsp;&nbsp;&nbsp;{{ page.tags[6] }}&nbsp;&nbsp;&nbsp;&nbsp;{{ page.tags[7] }}&nbsp;&nbsp;&nbsp;&nbsp;{{ page.tags[8] }}</h4>
+		<!--	<h4>{{ page.tags[0] }}&nbsp;&nbsp;&nbsp;&nbsp;{{ page.tags[1] }}&nbsp;&nbsp;&nbsp;&nbsp;{{ page.tags[2] }}&nbsp;&nbsp;&nbsp;&nbsp;{{ page.tags[3] }}&nbsp;&nbsp;&nbsp;&nbsp;{{ page.tags[4] }}&nbsp;&nbsp;&nbsp;&nbsp;{{ page.tags[5] }}&nbsp;&nbsp;&nbsp;&nbsp;{{ page.tags[6] }}&nbsp;&nbsp;&nbsp;&nbsp;{{ page.tags[7] }}&nbsp;&nbsp;&nbsp;&nbsp;{{ page.tags[8] }}</h4>
+		-->
 		{% endif %}
+			{% if page.tags %}
+			<h3>{{ page.tags }}</h3>
+			{% endif %}
 		<a class="site-title" href="{{ site.url }}{{ site.baseurl }}"><div class="site-icon-small" style="background-image: url({{ site.icon }});"></div>{{ site.title }}</a> · {{ page.date |date: "%Y 年 %m 月 %d 日"}}
 	</div>
 	{% if page.image.source %}
@@ -30,7 +34,7 @@ article: true
 	</div>
 	
 	<div id="go-top" style="bottom: 30px;" data-stellar-ratio="4">
-		<a class="scroll" data-speed="500" href="#post-info"><span class="fa fa-chevron-up"></span></a>
+		<a class="scroll" data-speed="500" href="#post-info"><span class="fa fa-arrow-circle-up"></span></a>
 	</div>
 </header>
 <div id="middle">
@@ -46,7 +50,7 @@ article: true
 {% if page.next %}
 	{% capture footer_style %}{% if page.next.dark %}dark{% else %}clean{% endif %}{% endcapture %}
 	{% capture footer_image %}{% if page.next.image.url %}{{ site.baseurl }}{{ page.next.image.url }}{% else %}{{ site.cover }}{% endif %}{% endcapture %}
-	{% capture footer_message %}Read next{% endcapture %}
+	{% capture footer_message %}下篇文章{% endcapture %}
 	{% capture footer_url %}{{ site.baseurl }}{{ page.next.url }}{% endcapture %}
 	{% capture footer_title %}{{ page.next.title }}{% endcapture %}
 	{% capture footer_quote %}{{ page.next.quote }}{% endcapture %}
@@ -54,7 +58,7 @@ article: true
 	{% for post in site.related_posts limit:1 %}
 		{% capture footer_style %}{% if post.dark %}dark{% else %}clean{% endif %}{% endcapture %}
 		{% capture footer_image %}{% if post.image.url %}{{ site.baseurl }}{{ post.image.url }}{% else %}{{ site.cover }}{% endif %}{% endcapture %}
-		{% capture footer_message %}Featured post{% endcapture %}
+		{% capture footer_message %}上篇文章{% endcapture %}
 		{% capture footer_url %}{{ site.baseurl }}{{ post.url }}{% endcapture %}
 		{% capture footer_title %}{{ post.title }}{% endcapture %}
 		{% capture footer_quote %}{{ post.quote }}{% endcapture %}

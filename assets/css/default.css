@@ -22,10 +22,10 @@ header, footer {         /*标题*/
 	background-position:0% 0%;
 	background-size:100%;
 	font-weight:bold;
-	font-family: 'Helvetica Neue', Helvetica, Arial,
-             "Microsoft YaHei Light", "微软雅黑 Light", 
+	font-family: 'Exo 2','Open Sans',HelveticaNeue-Light,'Helvetica Neue',
+             "Microsoft YaHei Light", "微软雅黑 Light", '-apple-system',
              STXihei, "华文细黑", 
-             serif;
+             Helvetica, Arial,serif;
 	text-shadow: 0px 0px 10px #000000;
 }
 
@@ -105,7 +105,7 @@ h3 {
 	top: 50%;
 	background-repeat: no-repeat;
 	position: absolute;
-	border-radius: 50%;
+	border-radius: 40%;
 	transition-duration: .25s;
 	z-index: 1;
 }
@@ -115,22 +115,25 @@ h3 {
 	height: 150px;
 	background-size: 150px;
 	margin: -75px 0 0 -75px;
-	opacity: .9;
 }
-
 .site-icon-home:hover {
 	width: 160px;
 	height: 160px;
 	background-size: 160px;
 	margin: -80px 0 0 -80px;
-	opacity: 1;
 }
 
 .site-icon-page {
-	width: 100px;
-	height: 100px;
-	background-size: 100px;
-	margin: -120px 0 0 -50px;
+	width: 150px;
+	height: 150px;
+	background-size: 150px;
+	margin: -169px 0 0 -75px;
+}
+.site-icon-page:hover {
+	width: 160px;
+	height: 160px;
+	background-size: 160px;
+	margin: -174px 0 0 -80px;
 }
 
 .site-icon-small {
@@ -153,11 +156,20 @@ h3 {
 	text-align: center;
 	z-index: 2;
 }
+#nav-icon a, #nav-icon a span:hover {
+	color:#000;
+	opacity:0.85;
+}
 #nav-icon a, #nav-icon a span {
 	width: 50px;
 	text-decoration: none;
 	font-size: 48px;
 	display: table;
+	color:#fff;
+	opacity:0.90;
+	transition-property:opacity,color;
+	transition-timing-function:ease;
+	transition-duration: 0.8s;
 }
 
 #go-top {         /*向上的导航栏*/
@@ -169,13 +181,20 @@ h3 {
 	text-align: center;
 	z-index: 5;
 }
+#go-top a, #go-top a span:hover {         
+	color:#000;
+	opacity:0.85;
+}
 #go-top a, #go-top a span {
 	width: 50px;
 	text-decoration: none;
 	font-size: 48px;
 	display: table;
-	color:000;
+	color:#fff;
 	opacity:0.90;
+	transition-property:opacity,color;
+	transition-timing-function:ease;
+	transition-duration: 0.8s;
 }
 
 #img-info {
@@ -208,10 +227,10 @@ h3 {
 }
 
 #article, #comments {
-	font-family: 'Helvetica Neue', Helvetica, Arial,
-             "Microsoft YaHei Light", "微软雅黑 Light", 
+	font-family: 'Exo 2','Open Sans',HelveticaNeue-Light,'Helvetica Neue',
+             "Microsoft YaHei Light", "微软雅黑 Light", '-apple-system',
              STXihei, "华文细黑", 
-             serif;
+             Helvetica, Arial,serif;
 	font-weight: 400;
 	letter-spacing: 0px;
 	font-size: 20px;
@@ -293,7 +312,7 @@ abbr[title] {
 }
 
 blockquote, pre, .message {
-	padding: 10px 18px;
+	padding: 2px 5px;
 	margin: 0px 0px 30px -20px;
 	margin-top: inherit;
 	color: #000;
@@ -313,7 +332,7 @@ blockquote p {
 }
 
 code, pre {           
-	font-family: Menlo, Monaco, "Courier New", monospace;
+	font-family: Menlo,Consolas,Monaco, "Courier New", monospace;
 	font-weight:bold;
 	background-color: #F0F0F0;
 }
@@ -423,10 +442,10 @@ pre code {
 }
 
 .menu-content {
-	font-family: 'Helvetica Neue', Helvetica, Arial,
-             "Microsoft YaHei Light", "微软雅黑 Light", 
+	font-family: 'Exo 2','Open Sans',HelveticaNeue-Light,'Helvetica Neue',
+             "Microsoft YaHei Light", "微软雅黑 Light", '-apple-system',
              STXihei, "华文细黑", 
-             serif;
+             Helvetica, Arial,serif;
 	background-color: rgba(26, 26, 26, 1);
 	text-align: center;
 	z-index: 4;
@@ -499,10 +518,10 @@ pre code {
 	position: relative;
 	margin-top: 30px;
 	text-align: center;
-	font-family: 'Helvetica Neue', Helvetica, Arial,
-             "Microsoft YaHei Light", "微软雅黑 Light", 
+	font-family: 'Exo 2','Open Sans',HelveticaNeue-Light,'Helvetica Neue',
+             "Microsoft YaHei Light", "微软雅黑 Light", '-apple-system',
              STXihei, "华文细黑", 
-             serif;
+             Helvetica, Arial,serif;
 	font-size: 14px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
@@ -555,10 +574,10 @@ pre code {
 }
 
 #post-list {
-	font-family: 'Helvetica Neue', Helvetica, Arial,
-             "Microsoft YaHei Light", "微软雅黑 Light", 
+	font-family:'Exo 2','Open Sans',HelveticaNeue-Light,'Helvetica Neue',
+             "Microsoft YaHei Light", "微软雅黑 Light", '-apple-system',
              STXihei, "华文细黑", 
-             serif;
+             Helvetica, Arial,serif;
 	top: 50px;
 	padding-bottom: 8px;
 	font-weight: 400;
@@ -568,6 +587,7 @@ pre code {
 	line-height: 1.8;
 	position: relative;
 	z-index:1;
+	
 }
 
 #post-list h1 {
@@ -592,10 +612,10 @@ pre code {
 .post-description {
 	color: #777;
 	font-size: 15pt;
-	font-family: 'Helvetica Neue', Helvetica, Arial,
-             "Microsoft YaHei Light", "微软雅黑 Light", 
+	font-family: 'Exo 2','Open Sans',HelveticaNeue-Light,'Helvetica Neue',
+             "Microsoft YaHei Light", "微软雅黑 Light", '-apple-system',
              STXihei, "华文细黑", 
-             serif;
+             Helvetica, Arial,serif;
 }
 
 .post-date {
@@ -668,10 +688,10 @@ font-size:18px;
 display:block;
 text-align:center;
 text-decoration:none;
-font-family: 'Helvetica Neue', Helvetica, Arial,
-             "Microsoft YaHei Light", "微软雅黑 Light", 
+font-family: 'Exo 2','Open Sans',HelveticaNeue-Light,'Helvetica Neue',
+             "Microsoft YaHei Light", "微软雅黑 Light", '-apple-system',
              STXihei, "华文细黑", 
-             serif;
+             Helvetica, Arial,serif;
 }
 .yapiskan ul li a:hover{
 width:80px;
@@ -720,8 +740,8 @@ background:#FFF;
 	position:relative;
 	top:50px;
 	left:20px;
-	font-family: 'Helvetica Neue', Helvetica, Arial,
-             "Microsoft YaHei Light", "微软雅黑 Light", 
+	font-family: 'Exo 2','Open Sans',HelveticaNeue-Light,'Helvetica Neue',
+             "Microsoft YaHei Light", "微软雅黑 Light", '-apple-system',
              STXihei, "华文细黑", 
-             serif;
+             Helvetica, Arial,serif;
 }

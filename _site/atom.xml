@@ -4,7 +4,7 @@
  <title>液态氧斯基</title>
  <link href="http://ytysj.github.io/atom.xml" rel="self"/>
  <link href="http://ytysj.github.io/"/>
- <updated>2016-08-04T22:19:48+08:00</updated>
+ <updated>2016-08-30T21:48:00+08:00</updated>
  <id>http://ytysj.github.io</id>
  <author>
    <name>液态氧斯基</name>
@@ -225,7 +225,8 @@ layout代表格式，不需要改，其中要注意的是image这个文章标题
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;//fonts.useso.com/css?family=Fenix:400,400italic&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
  &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;就是googleapis换成useso。&lt;/p&gt;
+&lt;p&gt;就是googleapis换成useso。 &lt;br /&gt;
+  (2016.8.30注：由于360的useso加载缓慢，我更换了中科大博客的服务，即fonts.lug.ustc.edu.cn)&lt;/p&gt;
 
 &lt;p&gt;还有一个图标的问题，原本这个作者使用了genericons来提供图标，而我下载了font-awesome来替换，font-awesome网站库更全，有微博微信什么的，更棒。&lt;/p&gt;
 

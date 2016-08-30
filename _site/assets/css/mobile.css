@@ -57,7 +57,10 @@ h2 {
 }
 
 .menu-title {
-	font-family: "Microsoft Yahei Light",Microsoft Yahei Light;
+	font-family: 'Exo 2','Open Sans',HelveticaNeue-Light,'Helvetica Neue',
+             "Microsoft YaHei Light", "微软雅黑 Light", '-apple-system',
+             STXihei, "华文细黑", 
+             Helvetica, Arial,serif;
 	font-size: 14px;
 	color: #b5b5b5;
 }
