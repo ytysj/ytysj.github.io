@@ -21,6 +21,7 @@
 	<link rel="stylesheet" href="//fonts.lug.ustc.edu.cn/css?family=Exo+2|Open+Sans" rel="stylesheet">
 	
 	
+	
 	<link rel="apple-touch-icon" href="http://ytysj.github.io/assets/images/icon.png">
 	<link rel="shortcut icon" href="http://ytysj.github.io/assets/images/favicon.ico">
 	<link rel="alternate" type="application/rss+xml" title="RSS" href="http://ytysj.github.io/atom.xml">
@@ -40,11 +41,15 @@
 	
 	<!-- Theme Color for Chrome on Android Lollipop -->
 	<meta name="theme-color" content="#302F2D">
-			
+
+<div id="toplogo">	
 	<div class="topinclude">
-		<div class="topbox"></div>
 		<div class="yapiskan">
+			<body>
+				
+			</body>
 			<ul>
+				<li id="logotext"><img src="/assets/images/ytysj.png"  height="50"/></li>
 				<li><a href="/index.html">首页</a></li>
 				<li><a href="/tags.html">标签</a></li>
 				<li><a href="/building.html">分类</a></li>
@@ -53,6 +58,8 @@
 			</ul>
 		</div>
 	</div>
+</div>
+
 <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript">
 $(function(){
@@ -83,28 +90,31 @@ var h2 = 0;
 	</head>
 
 	<body>
-		<header class="clean" style="background-image: url(/image/bg4.jpg); height: 100%; background-attachment: scroll;" data-stellar-background-ratio="0.5" data-stellar-horizontal-offset="50">
+		<header class="clean" style="background-image: url(http://7xskc4.com1.z0.glb.clouddn.com/bg4.jpg); height: 100%; background-attachment: scroll;" data-stellar-background-ratio="0.5" data-stellar-horizontal-offset="50">
 	
 	
 	<div id="post-info" data-stellar-ratio="0.7">
 		<h1>如何把照片处理出悬浮效果</h1>
 		
 			<h2>使用Photoshop处理悬浮照片</h2>
-		<!--	<h4>PS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
-		-->
 		
+
+			<h2>
+			 
+			<a href="/tags.html#PS-ref" style="font-size: pt; color: #;">
+			<span class="fa fa-tags"></span>  PS</a>
 			
-			<h2>PS</h2>
-			
+			</h2>
+
 		<a class="site-title" href="http://ytysj.github.io"><div class="site-icon-small" style="background-image: url(/assets/images/icon.png);"></div>液态氧斯基</a> · 2016 年 08 月 03 日
 	</div>
 	
-	<div id="nav-icon" style="bottom: 30px;" data-stellar-ratio="4">
+	<div id="nav-icon" style="bottom: 1.88rem;" data-stellar-ratio="4">
 		<a class="scroll" data-speed="500" href="#article"><span class="fa fa-chevron-down"></span></a>
 	</div>
 	
-	<div id="go-top" style="bottom: 30px;" data-stellar-ratio="4">
-		<a class="scroll" data-speed="500" href="#post-info"><span class="fa fa-arrow-circle-up"></span></a>
+	<div id="go-top" style="bottom: 1.88rem;" data-stellar-ratio="4">
+		<a class="scroll" data-speed="500" href="#toplogo"><span class="fa fa-arrow-circle-up"></span></a>
 	</div>
 </header>
 <div id="middle">
@@ -153,7 +163,7 @@ var h2 = 0;
 <p><img src="http://7xskc4.com1.z0.glb.clouddn.com/myblog4_3.jpg" alt="" /> 
 这样，悬浮照就搞定啦，整个过程大概花了几个小时吧，是不是很简单呢？<br />
 最后要感谢ZY同学，发张gif！<br />
-<img src="http://7xskc4.com1.z0.glb.clouddn.com/ZY.gif" alt="" /></p>
+<img src="http://7xskc4.com1.z0.glb.clouddn.com/myblog4_ZY.gif" alt="" /></p>
 
 <p>参考：<br />
 东京悬浮少女摄影组图-Natsumi Hayashi</p>
@@ -186,13 +196,15 @@ var duoshuoQuery = {short_name:"ytysj"};
 	</script>
 <!-- 多说公共JS代码 end -->
 
+
+
 	</div>
 	
 </div>
 
 
-<footer class="clean" style="background-image: url(/image/bg3.jpg); height: 50%; min-height: 300px; background-attachment: scroll;" data-stellar-background-ratio="0.5" data-stellar-horizontal-offset="50" data-stellar-vertical-offset="50">
-	<div id="nav-icon" style="top: 60px;" data-stellar-ratio="0.8">
+<footer class="clean" style="background-image: url(http://7xskc4.com1.z0.glb.clouddn.com/bg3.jpg); height: 50%; min-height: 18.75rem; background-attachment: scroll;" data-stellar-background-ratio="0.5" data-stellar-horizontal-offset="50" data-stellar-vertical-offset="50">
+	<div id="nav-icon" style="top: 3.75rem;" data-stellar-ratio="0.8">
 		<a class="scroll" data-speed="500" href="#article"><span class="fa fa-collapse"></span></a>
 	</div>
 	<div id="post-info" data-stellar-ratio="0.5" data-stellar-vertical-offset="120">
@@ -213,13 +225,14 @@ var duoshuoQuery = {short_name:"ytysj"};
 		var width = $(window).width()
 		if ( width > 899 )
 		$( function(){
-			$.stellar({
-				responsive: true,
-			verticalScrolling: true,
-			horizontalOffset: 0,
-			verticalOffset: 0,
-			positionProperty: 'transform',
-			});
+		//这里有error，可能是没有这个函数
+		//	$.stellar({
+		//		responsive: true,
+		//	verticalScrolling: true,
+		//	horizontalOffset: 0,
+		//	verticalOffset: 0,
+		//	positionProperty: 'transform',
+		//	});
 		});
 		</script>		
 

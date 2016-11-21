@@ -21,6 +21,7 @@
 	<link rel="stylesheet" href="//fonts.lug.ustc.edu.cn/css?family=Exo+2|Open+Sans" rel="stylesheet">
 	
 	
+	
 	<link rel="apple-touch-icon" href="http://ytysj.github.io/assets/images/icon.png">
 	<link rel="shortcut icon" href="http://ytysj.github.io/assets/images/favicon.ico">
 	<link rel="alternate" type="application/rss+xml" title="RSS" href="http://ytysj.github.io/atom.xml">
@@ -40,11 +41,15 @@
 	
 	<!-- Theme Color for Chrome on Android Lollipop -->
 	<meta name="theme-color" content="#7E9576">
-			
+
+<div id="toplogo">	
 	<div class="topinclude">
-		<div class="topbox"></div>
 		<div class="yapiskan">
+			<body>
+				
+			</body>
 			<ul>
+				<li id="logotext"><img src="/assets/images/ytysj.png"  height="50"/></li>
 				<li><a href="/index.html">首页</a></li>
 				<li><a href="/tags.html">标签</a></li>
 				<li><a href="/building.html">分类</a></li>
@@ -53,6 +58,8 @@
 			</ul>
 		</div>
 	</div>
+</div>
+
 <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript">
 $(function(){
@@ -83,11 +90,11 @@ var h2 = 0;
 	</head>
 
 	<body>
-		<header class="clean" style="height: 100%; background-image: url(/assets/images/cover.jpg); background-attachment: scroll;" data-stellar-background-ratio="0.5" data-stellar-horizontal-offset="50">
+		<header class="clean" style="height: 100%; background-image: url(/assets/images/cover.png); background-attachment: scroll;" data-stellar-background-ratio="0.5" data-stellar-horizontal-offset="50">
 	<a href="http://ytysj.github.io">
 		<div id="home-title" class="site-icon-page" style="background-image: url(/assets/images/icon.png);" data-stellar-ratio="0.7"></div>
 	</a>
-	<div id="post-info" style="bottom: 30px; text-align: center; line-height: 45px;" data-stellar-ratio="0.7">
+	<div id="post-info" style="bottom: 1.88rem; text-align: center; line-height: 2.8rem;" data-stellar-ratio="0.7">
 		<h1>时间归档</h1>
 	</div>
 </header>
@@ -96,35 +103,14 @@ var h2 = 0;
 	 
     
     
-    
-    
 
     
-      <h2>2016年</h2>
-      <h3>08月</h3>
+      <h2><span class="fa fa-clock-o"></span>&nbsp;&nbsp;2016</h2>
+      <h3></h3>
       <ul>
     
 
-    <li><span>2016.08. 3</span> &raquo; <a href="/blog/myblog4">如何把照片处理出悬浮效果</a></li>
-
-    
-          
-        
-          </ul>
-          <h3>04月</h3>
-          <ul>
-        
-        
-    
-
-    
-    
-    
-    
-
-    
-
-    <li><span>2016.04. 9</span> &raquo; <a href="/blog/myblog3">使用jekyll建立个人网站</a></li>
+    <li><span>08-03</span> - <a href="/blog/myblog4">如何把照片处理出悬浮效果</a></li>
 
     
           
@@ -134,12 +120,10 @@ var h2 = 0;
 
     
     
-    
-    
 
     
 
-    <li><span>2016.04. 4</span> &raquo; <a href="/blog/myblog2">做了小小的修改</a></li>
+    <li><span>04-09</span> - <a href="/blog/myblog3">使用jekyll建立个人网站</a></li>
 
     
           
@@ -149,12 +133,23 @@ var h2 = 0;
 
     
     
+
+    
+
+    <li><span>04-04</span> - <a href="/blog/myblog2">做了小小的修改</a></li>
+
+    
+          
+        
+        
+    
+
     
     
 
     
 
-    <li><span>2016.04. 2</span> &raquo; <a href="/blog/firstblog">上线博客</a></li>
+    <li><span>04-02</span> - <a href="/blog/firstblog">上线博客</a></li>
 
     
       </ul>
@@ -163,7 +158,8 @@ var h2 = 0;
 
 </div>
 </div>
-<footer class="clean" style="background-image: url(/assets/images/cover.jpg); background-position: bottom; bottom: 0; z-index: 4; position: absolute; height: 60px; background-attachment: scroll;" data-stellar-background-ratio="0.5" data-stellar-horizontal-offset="50" data-stellar-vertical-offset="50">
+<footer class="clean" style="background-image: url('/assets/images/bottom.png'); background-position: bottom; bottom: 0; z-index: 4;
+ height: 16rem; background-attachment: scroll;" data-stellar-background-ratio="0.5" data-stellar-horizontal-offset="50" data-stellar-vertical-offset="50">
 	<p class="copyright">&copy;2016, <a href="http://ytysj.github.io" target="_blank">ytysj</a>. <a href="http://creativecommons.org/licenses/by-nc/2.5" target="_blank">Some rights reserved</a>.</p>
 </footer>
 
@@ -171,13 +167,14 @@ var h2 = 0;
 		var width = $(window).width()
 		if ( width > 899 )
 		$( function(){
-			$.stellar({
-				responsive: true,
-			verticalScrolling: true,
-			horizontalOffset: 0,
-			verticalOffset: 0,
-			positionProperty: 'transform',
-			});
+		//这里有error，可能是没有这个函数
+		//	$.stellar({
+		//		responsive: true,
+		//	verticalScrolling: true,
+		//	horizontalOffset: 0,
+		//	verticalOffset: 0,
+		//	positionProperty: 'transform',
+		//	});
 		});
 		</script>		
 

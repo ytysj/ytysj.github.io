@@ -29,6 +29,7 @@
 	<link rel="stylesheet" href="//fonts.lug.ustc.edu.cn/css?family=Exo+2|Open+Sans" rel="stylesheet">
 	
 	
+	
 	<link rel="apple-touch-icon" href="{{ site.url }}{{ site.baseurl }}{{ site.icon }}">
 	<link rel="shortcut icon" href="{{ site.url }}{{ site.baseurl }}/assets/images/favicon.ico">
 	<link rel="alternate" type="application/rss+xml" title="RSS" href="{{ site.url }}{{ site.baseurl }}/atom.xml">
@@ -50,11 +51,15 @@
 	{% endif %}
 	<!-- Theme Color for Chrome on Android Lollipop -->
 	<meta name="theme-color" content="#{% if page.theme_color %}{{ page.theme_color }}{% else %}{{ site.theme_color }}{% endif %}">
-			
+
+<div id="toplogo">	
 	<div class="topinclude">
-		<div class="topbox"></div>
 		<div class="yapiskan">
+			<body>
+				
+			</body>
 			<ul>
+				<li id="logotext"><img src="/assets/images/ytysj.png"  height="50"/></li>
 				<li><a href="/index.html">首页</a></li>
 				<li><a href="/tags.html">标签</a></li>
 				<li><a href="/building.html">分类</a></li>
@@ -63,6 +68,8 @@
 			</ul>
 		</div>
 	</div>
+</div>
+
 <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript">
 $(function(){

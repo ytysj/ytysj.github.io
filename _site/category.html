@@ -21,6 +21,7 @@
 	<link rel="stylesheet" href="//fonts.lug.ustc.edu.cn/css?family=Exo+2|Open+Sans" rel="stylesheet">
 	
 	
+	
 	<link rel="apple-touch-icon" href="http://ytysj.github.io/assets/images/icon.png">
 	<link rel="shortcut icon" href="http://ytysj.github.io/assets/images/favicon.ico">
 	<link rel="alternate" type="application/rss+xml" title="RSS" href="http://ytysj.github.io/atom.xml">
@@ -40,11 +41,15 @@
 	
 	<!-- Theme Color for Chrome on Android Lollipop -->
 	<meta name="theme-color" content="#7E9576">
-			
+
+<div id="toplogo">	
 	<div class="topinclude">
-		<div class="topbox"></div>
 		<div class="yapiskan">
+			<body>
+				
+			</body>
 			<ul>
+				<li id="logotext"><img src="/assets/images/ytysj.png"  height="50"/></li>
 				<li><a href="/index.html">首页</a></li>
 				<li><a href="/tags.html">标签</a></li>
 				<li><a href="/building.html">分类</a></li>
@@ -53,6 +58,8 @@
 			</ul>
 		</div>
 	</div>
+</div>
+
 <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript">
 $(function(){
@@ -83,7 +90,7 @@ var h2 = 0;
 	</head>
 
 	<body>
-		<header class="clean" style="height: 450px; background-image: url(/assets/images/cover.jpg); background-attachment: scroll;" data-stellar-background-ratio="0.5" data-stellar-horizontal-offset="50">
+		<header class="clean" style="height: 450px; background-image: url(/assets/images/cover.png); background-attachment: scroll;" data-stellar-background-ratio="0.5" data-stellar-horizontal-offset="50">
 	
 	<a href="http://ytysj.github.io">
 		<div id="home-title" class="site-icon-home" style="background-image: url(/assets/images/icon.png);" data-stellar-ratio="0.5"></div>
@@ -99,7 +106,7 @@ var h2 = 0;
 		</li>
 		{\% endfor %\}
 	</ul>
-<footer class="clean" style="background-image: url(/assets/images/cover.jpg); background-position: bottom; bottom: 0; z-index: 4; position: absolute; height: 60px; background-attachment: scroll;">
+<footer class="clean" style="background-image: url(/assets/images/cover.png); background-position: bottom; bottom: 0; z-index: 4; position: absolute; height: 60px; background-attachment: scroll;">
 	<p class="copyright">&copy;2016, <a href="http://ytysj.github.io" target="_blank">ytysj</a>. <a href="http://creativecommons.org/licenses/by-nc/2.5" target="_blank">Some rights reserved</a>.</p>
 </footer>
 
@@ -107,13 +114,14 @@ var h2 = 0;
 		var width = $(window).width()
 		if ( width > 899 )
 		$( function(){
-			$.stellar({
-				responsive: true,
-			verticalScrolling: true,
-			horizontalOffset: 0,
-			verticalOffset: 0,
-			positionProperty: 'transform',
-			});
+		//这里有error，可能是没有这个函数
+		//	$.stellar({
+		//		responsive: true,
+		//	verticalScrolling: true,
+		//	horizontalOffset: 0,
+		//	verticalOffset: 0,
+		//	positionProperty: 'transform',
+		//	});
 		});
 		</script>		
 

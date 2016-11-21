@@ -21,6 +21,7 @@
 	<link rel="stylesheet" href="//fonts.lug.ustc.edu.cn/css?family=Exo+2|Open+Sans" rel="stylesheet">
 	
 	
+	
 	<link rel="apple-touch-icon" href="http://ytysj.github.io/assets/images/icon.png">
 	<link rel="shortcut icon" href="http://ytysj.github.io/assets/images/favicon.ico">
 	<link rel="alternate" type="application/rss+xml" title="RSS" href="http://ytysj.github.io/atom.xml">
@@ -40,11 +41,15 @@
 	
 	<!-- Theme Color for Chrome on Android Lollipop -->
 	<meta name="theme-color" content="#7E9576">
-			
+
+<div id="toplogo">	
 	<div class="topinclude">
-		<div class="topbox"></div>
 		<div class="yapiskan">
+			<body>
+				
+			</body>
 			<ul>
+				<li id="logotext"><img src="/assets/images/ytysj.png"  height="50"/></li>
 				<li><a href="/index.html">首页</a></li>
 				<li><a href="/tags.html">标签</a></li>
 				<li><a href="/building.html">分类</a></li>
@@ -53,6 +58,8 @@
 			</ul>
 		</div>
 	</div>
+</div>
+
 <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript">
 $(function(){
@@ -83,59 +90,23 @@ var h2 = 0;
 	</head>
 
 	<body>
-		<header class="clean" style="height: 71%; background-image: url(/assets/images/cover.jpg); background-attachment: scroll;" data-stellar-background-ratio="0.5" data-stellar-horizontal-offset="50">
+		<header class="clean" style="height: 71%; background-image: url(/assets/images/cover.png); background-attachment: scroll;" data-stellar-background-ratio="0.5" data-stellar-horizontal-offset="50">
 	
 	<a href="http://ytysj.github.io">
 		<div id="home-title" class="site-icon-home" style="background-image: url(/assets/images/icon.png);" data-stellar-ratio="0.5"></div>
 	</a>
 </header>
 
-<div id="middle">
+<!-- <div id="middle">
+</div> -->
 
-<div class="left-blank-area">
-
-
-
-
-
-
-
-  
-  
-  
-  
-  
-  <a href="/tags.html#生活-ref" style="font-size: 18pt; color: #000;">生活</a>
-
-  
-  
-  
-  
-  
-  <a href="/tags.html#jekyll-ref" style="font-size: 9pt; color: #999;">jekyll</a>
-
-  
-  
-  
-  
-  
-  <a href="/tags.html#网站-ref" style="font-size: 9pt; color: #999;">网站</a>
-
-  
-  
-  
-  
-  
-  <a href="/tags.html#PS-ref" style="font-size: 9pt; color: #999;">PS</a>
-
-</div>
 
 <div id="post-list">
 	
 		<div >
 			<span class="post-date">2016 年 08 月 03 日</span>
 			<h1><a href="/blog/myblog4">如何把照片处理出悬浮效果</a></h1>
-			<img src=/image/bg4.jpg width="100%" />
+			<img src=http://7xskc4.com1.z0.glb.clouddn.com/bg4.jpg width="100%" />
 			<p class="post-description">使用Photoshop处理悬浮照片</p>
 		</div>
 		<br>
@@ -143,7 +114,7 @@ var h2 = 0;
 		<div >
 			<span class="post-date">2016 年 04 月 09 日</span>
 			<h1><a href="/blog/myblog3">使用jekyll建立个人网站</a></h1>
-			<img src=/image/bg3.jpg width="100%" />
+			<img src=http://7xskc4.com1.z0.glb.clouddn.com/bg3.jpg width="100%" />
 			<p class="post-description">一步步学会如何使用jekyll建立个人网站</p>
 		</div>
 		<br>
@@ -151,7 +122,7 @@ var h2 = 0;
 		<div >
 			<span class="post-date">2016 年 04 月 04 日</span>
 			<h1><a href="/blog/myblog2">做了小小的修改</a></h1>
-			<img src=/image/bg2.jpg width="100%" />
+			<img src=http://7xskc4.com1.z0.glb.clouddn.com/bg2.jpg width="100%" />
 			<p class="post-description">清明假期2，雨</p>
 		</div>
 		<br>
@@ -159,7 +130,7 @@ var h2 = 0;
 		<div >
 			<span class="post-date">2016 年 04 月 02 日</span>
 			<h1><a href="/blog/firstblog">上线博客</a></h1>
-			<img src=/image/bg1.jpg width="100%" />
+			<img src=http://7xskc4.com1.z0.glb.clouddn.com/bg1.jpg width="100%" />
 			<p class="post-description">清明假期，雨</p>
 		</div>
 		<br>
@@ -171,7 +142,10 @@ var h2 = 0;
 	
 </nav>
 
-<footer class="clean" style="background-image: url(/assets/images/cover.jpg); background-position: bottom; bottom: 0; z-index: 4; position: absolute; height: 60px; background-attachment: scroll;">
+<footer class="clean" style="background-image: url('/assets/images/bottom.png') ;
+		background-position: bottom; bottom: 0; z-index: 4; height:16rem; 
+		background-attachment: scroll;">
+		
 	<p class="copyright">&copy;2016, <a href="http://ytysj.github.io" target="_blank">ytysj</a>. <a href="http://creativecommons.org/licenses/by-nc/2.5" target="_blank">Some rights reserved</a>.</p>
 </footer>
 
@@ -179,13 +153,14 @@ var h2 = 0;
 		var width = $(window).width()
 		if ( width > 899 )
 		$( function(){
-			$.stellar({
-				responsive: true,
-			verticalScrolling: true,
-			horizontalOffset: 0,
-			verticalOffset: 0,
-			positionProperty: 'transform',
-			});
+		//这里有error，可能是没有这个函数
+		//	$.stellar({
+		//		responsive: true,
+		//	verticalScrolling: true,
+		//	horizontalOffset: 0,
+		//	verticalOffset: 0,
+		//	positionProperty: 'transform',
+		//	});
 		});
 		</script>		
 
