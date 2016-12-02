@@ -4,7 +4,7 @@
  <title>液态氧斯基</title>
  <link href="http://ytysj.github.io/atom.xml" rel="self"/>
  <link href="http://ytysj.github.io/"/>
- <updated>2016-11-21T22:01:04+08:00</updated>
+ <updated>2016-12-03T00:12:32+08:00</updated>
  <id>http://ytysj.github.io</id>
  <author>
    <name>液态氧斯基</name>
@@ -13,19 +13,81 @@
 
  
  <entry>
+   <title>极路由1S刷第三方固件及SS配置</title>
+   <link href="http://ytysj.github.io/blog/myblog5"/>
+   <updated>2016-12-02T00:00:00+08:00</updated>
+   <id>http://ytysj.github.io/blog/myblog5</id>
+   <content type="html">&lt;h1 id=&quot;section&quot;&gt;前言&lt;/h1&gt;
+&lt;p&gt;其实我一开始对刷路由器这件事是抵触的，因为感觉好麻烦好辛苦，最后也没啥特别的好处。可是随着GFW的变高，翻它越来越费劲，为了能手机平板PC全部科学上网，我发现极路由在Root之后有ss插件可以直接使用，所以我就愉快的使用上了。&lt;/p&gt;
+
+&lt;p&gt;可是好景不长，不久之后我就发现极路由的致命问题——官方固件实在是太不稳定，刚到手更新了一次，WiFi死活连不上，连上也是时断时续，联系微信客服降级后勉强可以使用，可是长时间的使用还是偶尔出现连不上网、WiFi信号弱等问题。同时我发现这个ss功能略少，解析似乎也存在一些问题。&lt;/p&gt;
+
+&lt;p&gt;多方因素促成我尝试刷第三方固件——这个美丽的蛋糕。所以写下这个简单的教程，方便像我这样零基础的菜鸟来学习。&lt;/p&gt;
+
+&lt;h1 id=&quot;root&quot;&gt;一.Root&lt;/h1&gt;
+&lt;p&gt;极路由的Root教程我这里就不放了，根据官方提供的教程来就好，基本过程是申请Root，注册账号，在微信绑定手机号，下载开发者app。此处需要注意的是，极路由Root之后就会&lt;strong&gt;失去保修&lt;/strong&gt;，请斟酌。&lt;/p&gt;
+
+&lt;h1 id=&quot;breed&quot;&gt;二.不死Breed&lt;/h1&gt;
+&lt;p&gt;Breed是什么呢？是一个路由器的Bootloader，就是一个引导系统加载的程序，像BIOS就也是一种Bootloader，首先加载Bootloader，之后才运行系统。而由于刷入的第三方固件都是都是在Breed里面完成，因此不管第三方固件是否崩溃，Breed本身是不死的。&lt;/p&gt;
+
+&lt;p&gt;首先在这里下载对应Breed，&lt;a href=&quot;http://www.right.com.cn/forum/thread-161906-1-1.html&quot;&gt;Breed下载点我&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;记住要找对路由器的CPU型号，&lt;strong&gt;否则可能造成变砖问题！&lt;/strong&gt;比如我这个是极路由1S新版HC5661A，CPU是MT7628，所以找到breed-mt7628-hiwifi-hc5661a.bin这个文件并下载。&lt;/p&gt;
+
+&lt;p&gt;然后下载winscp和putty，这两个是用于访问路由器内部文件，以及作为类似命令行来操作路由器的，可以认为一个是路由器的文件资源管理器，一个是路由器里的CMD终端。&lt;/p&gt;
+
+&lt;p&gt;打开winscp，IP：192.168.199.1，账号:root，密码:你的后台密码，端口22，模式SCP。登录进去后，软件左边是电脑的文件，右边是路由器的文件，找到/tmp目录，进去之后把上面找到的Breed拽进去。 
+&lt;img src=&quot;http://7xskc4.com1.z0.glb.clouddn.com/myblog5_1.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;然后打开putty，同理输入一样内容，登录进去后输入命令：&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-powershell&quot; data-lang=&quot;powershell&quot;&gt;   
+mtd -r &lt;span class=&quot;nb&quot;&gt;write&lt;/span&gt; /tmp/breed-mt7628-hiwifi-hc5661a.bin u-boot
+ &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;等待路由器重启即刷入不死Breed。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://7xskc4.com1.z0.glb.clouddn.com/myblog5_2.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;section-1&quot;&gt;三.刷入第三方固件&lt;/h1&gt;
+&lt;p&gt;此时由于已经刷入Breed，已经可以随便刷第三方固件了，这里可以刷爱快、RippleOS、海蜘蛛、hiwifi for openwrt、宽带宝、Pandorabox、华硕等固件。&lt;/p&gt;
+
+&lt;p&gt;我刷了Pandorabox还有改华硕[N14U N54U]，个人感觉都很不错。潘多拉有多拨、ss，界面非常的漂亮干净，动画有安卓5.0以后版本的感觉。而改华硕，一位大神hiboyhiboyhiboy根据老毛子Padavan固件开发的，主要胜利在稳定，功能强，自带了广告屏蔽、ss、迅雷快鸟、路由宝、花生壳等众多功能。&lt;/p&gt;
+
+&lt;p&gt;下载地址：
+&lt;a href=&quot;http://www.right.com.cn/forum/thread-161324-1-1.html&quot;&gt;改华硕&lt;/a&gt;，
+&lt;a href=&quot;http://downloads.openwrt.org.cn/PandoraBox/RY1/&quot;&gt;Pandorabox&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;下载完固件之后，给路由器断电，按住复位键的时候上电，此时按住复位键，等灯闪5秒后再放开。电脑网络配置里选择自动获取DNS，然后浏览器登录&lt;strong&gt;192.168.1.1&lt;/strong&gt;，记住要&lt;strong&gt;备份文件&lt;/strong&gt;，防止以后无法回到官方固件。之后上传固件并点确定，等待一段时间之后刷新即可。&lt;/p&gt;
+
+&lt;p&gt;潘多拉的IP为192.168.1.1，账号：root，密码：admin&lt;/p&gt;
+
+&lt;p&gt;改华硕的IP为192.168.123.1，账号：admin，密码：admin&lt;/p&gt;
+
+&lt;h1 id=&quot;ss&quot;&gt;四.配置路由器及ss等插件&lt;/h1&gt;
+&lt;p&gt;此时固件已经刷入，进入配置界面设置宽带账号、WiFi名称密码等。&lt;/p&gt;
+
+&lt;p&gt;改华硕的扩展功能里ss配置特别简单，也只要填写工作模式、服务器地址等几个简单的框并打开开关，保存配置即可科学上网。至于什么广告屏蔽等功能就留着自己慢慢探索吧！ 
+&lt;img src=&quot;http://7xskc4.com1.z0.glb.clouddn.com/myblog5_3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;至于潘多拉自带的ss配置比较复杂，需要设置好几个界面，可能是由于里面的ChinaDNS的原因，我照着
+&lt;a href=&quot;http://www.right.com.cn/forum/forum.php?mod=viewthread&amp;amp;tid=174131&quot;&gt;点我教程&lt;/a&gt;
+最后并没有成功，这也是我换改华硕的原因。但是潘多拉里的多拨功能倒是的确把我的网速增大了一倍要多（二拨）。&lt;/p&gt;
+
+&lt;h1 id=&quot;section-2&quot;&gt;参考：&lt;/h1&gt;
+&lt;p&gt;感谢恩山论坛，大神遍布！&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.right.com.cn/forum/thread-170630-1-1.html&quot;&gt;极1S（hc5661)、极2、极硬货刷不死uboot（breed）及N种固件&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;http://bbs.dospy.com/thread-17707665-1-1001-1.html&quot;&gt;PandoraBox多拨实现带宽叠加&amp;amp;负载均衡规则策略配置教程（通用）&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
    <title>如何把照片处理出悬浮效果</title>
    <link href="http://ytysj.github.io/blog/myblog4"/>
    <updated>2016-08-03T00:00:00+08:00</updated>
    <id>http://ytysj.github.io/blog/myblog4</id>
-   <content type="html">&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;前言&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-1&quot; id=&quot;markdown-toc-section-1&quot;&gt;一.拍摄前准备&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-2&quot; id=&quot;markdown-toc-section-2&quot;&gt;二.拍摄照片&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-3&quot; id=&quot;markdown-toc-section-3&quot;&gt;三.处理照片&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-4&quot; id=&quot;markdown-toc-section-4&quot;&gt;四.完成&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;section&quot;&gt;前言&lt;/h1&gt;
+   <content type="html">&lt;h1 id=&quot;section&quot;&gt;前言&lt;/h1&gt;
 &lt;p&gt;&lt;img src=&quot;http://7xskc4.com1.z0.glb.clouddn.com/myblog4_2.jpg&quot; alt=&quot;&quot; /&gt; 
 &lt;img src=&quot;http://7xskc4.com1.z0.glb.clouddn.com/myblog4_1.jpg&quot; alt=&quot;&quot; /&gt;&lt;br /&gt;
 由东京悬浮少女启发，我和ZY同学拍摄并处理出这两张悬浮照片&lt;br /&gt;
@@ -75,23 +137,7 @@
    <link href="http://ytysj.github.io/blog/myblog3"/>
    <updated>2016-04-09T00:00:00+08:00</updated>
    <id>http://ytysj.github.io/blog/myblog3</id>
-   <content type="html">&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;前言&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-1&quot; id=&quot;markdown-toc-section-1&quot;&gt;一.了解背景&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-2&quot; id=&quot;markdown-toc-section-2&quot;&gt;二.食用方法&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#section-3&quot; id=&quot;markdown-toc-section-3&quot;&gt;1.注册，下载&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#section-4&quot; id=&quot;markdown-toc-section-4&quot;&gt;2.创建项目，开启网页&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#section-5&quot; id=&quot;markdown-toc-section-5&quot;&gt;3.本地环境搭建&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#section-6&quot; id=&quot;markdown-toc-section-6&quot;&gt;4.更改配置&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#section-7&quot; id=&quot;markdown-toc-section-7&quot;&gt;5.开始写文章&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#section-8&quot; id=&quot;markdown-toc-section-8&quot;&gt;6.上传项目，发布网站&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-9&quot; id=&quot;markdown-toc-section-9&quot;&gt;三.注意事项&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-10&quot; id=&quot;markdown-toc-section-10&quot;&gt;四.感想与参考&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1 id=&quot;section&quot;&gt;前言&lt;/h1&gt;
+   <content type="html">&lt;h1 id=&quot;section&quot;&gt;前言&lt;/h1&gt;
 &lt;p&gt;本人在4.1日之前属于完完全全不懂github、jekyll、CSS、HTML、markdown这些东西的，但是这几天探索和学习基本算是能看懂并且建立一个完整的博客了。&lt;/p&gt;
 
 &lt;h1 id=&quot;section-1&quot;&gt;一.了解背景&lt;/h1&gt;

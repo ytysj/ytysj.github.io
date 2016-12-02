@@ -76,6 +76,7 @@ h3 {
 	font-weight: bold;
 	margin: 1rem 0;
 	text-shadow: #000 2px 0 0,#000 0 2px 0,#000 -2px 0 0,#000 0 -2px 0;
+
 }
 #post-info h2 {
 	opacity: 1;
@@ -537,12 +538,14 @@ pre code {
 .clean {
 	position:relative;
 	color: #eee;
-	background-color: #000;
+	background-color: #FAF9F5;
+	
 }
 
 .clean a {
 	color: #eee;
 }
+
 
 .dark, .dark a {
 	color: #555;
