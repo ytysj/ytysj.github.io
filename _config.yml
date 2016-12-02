@@ -21,8 +21,8 @@ author:
 paginate:         5
 
 # Custom vars
-icon:             /assets/images/icon.png
-cover:            /assets/images/cover.png
+icon:             http://7xskc4.com1.z0.glb.clouddn.com/assets/images/icon.png
+cover:            http://7xskc4.com1.z0.glb.clouddn.com/assets/images/cover.png
 
 social:
   - icon:         weibo

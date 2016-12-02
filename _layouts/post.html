@@ -4,13 +4,13 @@ article: true
 ---
 
 <header class="{% if page.dark %}dark{% else %}clean{% endif %}" style="background-image: url({% if page.image.url %}{{ page.image.url }}{% else %}{{ site.cover }}{% endif %}); height: 100%; {% if site.parallax != true %}background-attachment: scroll;{% endif %}" data-stellar-background-ratio="0.5" data-stellar-horizontal-offset="50">
-<!-- 	{% if page.video %}
+ 	{% if page.video %}
 		<video id="bg-video" preload="auto" autoplay="true" loop="loop" muted="muted" volume="0" data-stellar-ratio="0.5">
 		{% for format in page.video %}
 			<source src="{% for url in format limit:1 offset:1 %}{{ url }}{% endfor %}" type="video/{% for type in format limit:1 %}{{ type }}{% endfor %}">
 		{% endfor %}
 		</video>
-	{% endif %} -->
+	{% endif %} 
 	<div id="post-info" data-stellar-ratio="0.7">
 		<h1>{{ page.title }}</h1>
 		{% if page.quote %}
