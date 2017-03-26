@@ -11,7 +11,7 @@ tagline:          '小小站'
 description:      '一个普通的小小站'
 url:              http://ytysj.github.io
 baseurl:          
-commentsystem:    Duoshuo
+commentsystem:    Uyan
 disqus:           example
 
 author:
