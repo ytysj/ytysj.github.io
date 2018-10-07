@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>网站 on 液态氧斯基•小小站</title>
+    <link>/tags/%E7%BD%91%E7%AB%99/</link>
+    <description>Recent content in 网站 on 液态氧斯基•小小站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 09 Apr 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/%E7%BD%91%E7%AB%99/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>使用jekyll建立个人网站</title>
+      <link>/post/2016-04-09-%E4%BD%BF%E7%94%A8jekyll%E5%BB%BA%E7%AB%8B%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/</link>
+      <pubDate>Sat, 09 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2016-04-09-%E4%BD%BF%E7%94%A8jekyll%E5%BB%BA%E7%AB%8B%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/</guid>
+      <description>前言 本人在4.1日之前属于完完全全不懂github、jekyll、CSS、HTML、markdown这些东西的，但是这几天探索和学习基本算是能看懂并且建立一个完整的博客了。
+一.了解背景 首先，我们要了解github和jekyll,也就是我们建立博客的靠山，全靠他们。作为开源代码库以及版本控制系统，github深受程序员的喜爱，堪称是代码届的facebook。在Github上，我们能上传并托管自己的开源项目，也可以从别人的开源项目中fork或是clone东西过来自己修改。
+为了方便大家展示自己的开源项目，Github提供了一个免费的网页，不限流量，同时速度也非常可观。而jekyll，正是github的创始人之一，Tom Preston-Werner所开发的一个静态博客系统。同时，网上也提供了大量的主题来给大家使用。我们可以方便地从别人已经提供的成品博客项目那边fork过来，修改参数，即可食用。
+各位完全可以把我的github项目fork或者clone出来，自己修改写作。(但是请麻烦您点一下右上角的star来支持一下，谢谢~)ytysj/ytysj.github.io
+我也是在阅读某个大神的博客稚晖的个人站里偶然知道可以使用jekyll建立免费博客的。
+二.食用方法 我把步骤分为这几步：
+1.注册，下载
+2.创建项目，开启网页
+3.本地环境搭建
+4.更改配置
+5.开始写文章
+6.上传项目，发布网站
+1.注册，下载 基本法第一条，注册Github账号！由于需要一个本地端来进行git操作，据说最好使用命令行，不要用客户端。但是我觉得SourceTree，作为git的图形化客户端，毕竟还是方便一些。当然也可以选择其他客户端甚至是命令行。
+2.创建项目，开启网页 点击github网页上的加号，选择New repository,新建仓库。
+注意，这里Repository name一定要填写username（你的名字）.github.io，这是特殊的命名约定，然后打开仓库，在上面一栏里面选择settings，
+然后点击里面的Github Pages下面的Launch page generator，
+随便选择主题（没用的），下一步下一步，完成之后就可以通过username.github.io来进入你的主页了。此时的主页是自动生成的，并不是我们需要的东西，目录里多出的几个文件完全可以删掉。
+3.本地环境搭建 首先，从ruby官网我们下载Ruby和DevKit，注意要版本符合(也就是x64Ruby下x64的DevKit)。
+Ruby的安装很简单，点就是了，安装完之后打开cmd命令行，输入
+ruby -v  查看Ruby安装的版本号，出现就说明安装好了。
+然后安装DevKit，把压缩包解压到默认的地方(C:\DevKit)，进入DevKit目录，输入
+cd c:/DevKit ruby dk.rb init #初始化 ruby dk.rb reviewruby #检查 dk.rb install #安装  cd那一步也可以按住shift右击DevKit文件夹，选择在此处打开命令窗口。
+然后更改gem镜像，据说可以改善国内Ruby安装的速度（但是我在这一步选择淘宝镜像以及Ruby China镜像，都出现了ERROR和FAIL的问题&amp;hellip;没办法，最后我什么都没改，用官方的反而搞定了）
+gem sources --add https://ruby.taobao.org/ --remove https://rubygems.org/ gem sources -l *** CURRENT SOURCES *** https://ruby.taobao.org # 请确保只有 ruby.</description>
+    </item>
+    
+  </channel>
+</rss>

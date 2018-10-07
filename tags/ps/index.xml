@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ps on 液态氧斯基•小小站</title>
+    <link>/tags/ps/</link>
+    <description>Recent content in Ps on 液态氧斯基•小小站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 03 Aug 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/ps/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>如何把照片处理出悬浮效果</title>
+      <link>/post/2016-08-03-%E5%A6%82%E4%BD%95%E6%8A%8A%E7%85%A7%E7%89%87%E5%A4%84%E7%90%86%E5%87%BA%E6%82%AC%E6%B5%AE%E6%95%88%E6%9E%9C/</link>
+      <pubDate>Wed, 03 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2016-08-03-%E5%A6%82%E4%BD%95%E6%8A%8A%E7%85%A7%E7%89%87%E5%A4%84%E7%90%86%E5%87%BA%E6%82%AC%E6%B5%AE%E6%95%88%E6%9E%9C/</guid>
+      <description>前言 由东京悬浮少女启发，我和ZY同学拍摄并处理出这两张悬浮照片
+做法其实非常的简单，就是需要一点点的细心和耐心。
+一.拍摄前准备 首先,我们需要一个相机和三脚架，因为如果没有三脚架，很难拍出背景完全相同的图片。同时需要准备好支撑的物件，接触面积越小越好，形状越规则越好。
+二.拍摄照片 如图，用凳子，还有手持，拍摄出人、物体的照片，同样，接触面积需要尽可能的小。尽量拍摄速度快点，因为光影会变化，处理起来更麻烦。
+三.处理照片 打开PS，把背景放在底部，把人、物体放在上方，抠出图像。
+我用的是蒙版抠图法，别的方法也行。对了，我最后处理完之后发现很多照片里有波波出现，就顺便把它也加进来了。最后做一些润色就好了。
+四.完成 这样，悬浮照就搞定啦，整个过程大概花了几个小时吧，是不是很简单呢？
+最后要感谢ZY同学，发张gif！
+参考：
+东京悬浮少女摄影组图-Natsumi Hayashi
+知乎-悬浮摄影是怎么做到的？</description>
+    </item>
+    
+  </channel>
+</rss>

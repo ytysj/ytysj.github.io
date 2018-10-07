@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>液态氧斯基•小小站</title>
+    <link>/</link>
+    <description>Recent content on 液态氧斯基•小小站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 07 Oct 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>迁移到hugo</title>
+      <link>/post/2018-10-07-%E8%BF%81%E7%A7%BB%E5%88%B0hugo/</link>
+      <pubDate>Sun, 07 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2018-10-07-%E8%BF%81%E7%A7%BB%E5%88%B0hugo/</guid>
+      <description>这两年发生了太多太多的事情，沧海桑田，白驹过隙。
+我对原来的jekyll的速度有些不满意，而hugo使用go语言，它天生有着能利用多线程的优秀特点，所以我迁移到hugo，并且在主题（Cat主题）上也花费了一点时间修改，还有不少地方不明白，但是至少能通过冒烟测试嘛~</description>
+    </item>
+    
+    <item>
+      <title>光与影</title>
+      <link>/static/photo/</link>
+      <pubDate>Tue, 18 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/static/photo/</guid>
+      <description> Wherever there is light, one can photograph. – Alfred Stieglitz
+ </description>
+    </item>
+    
+    <item>
+      <title>无声诗</title>
+      <link>/static/painting/</link>
+      <pubDate>Tue, 18 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/static/painting/</guid>
+      <description> 李侯有句不肯吐，淡墨写出无声诗 —— 黄庭坚
+ </description>
+    </item>
+    
+    <item>
+      <title>关于我</title>
+      <link>/about/</link>
+      <pubDate>Sat, 01 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>欢迎来到——Ytysj的 小小站
+关心科技和人文，热爱独立游戏、摄影、侦探小说粉，会打乒乓球，偶尔还会做一些有趣的DIY手工，渴望学习绘画。_(:з」∠)__</description>
+    </item>
+    
+    <item>
+      <title>极路由1S刷第三方固件及SS配置</title>
+      <link>/post/2016-12-02-%E6%9E%81%E8%B7%AF%E7%94%B11s%E5%88%B7%E7%AC%AC%E4%B8%89%E6%96%B9%E5%9B%BA%E4%BB%B6%E5%8F%8Ass%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Fri, 02 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2016-12-02-%E6%9E%81%E8%B7%AF%E7%94%B11s%E5%88%B7%E7%AC%AC%E4%B8%89%E6%96%B9%E5%9B%BA%E4%BB%B6%E5%8F%8Ass%E9%85%8D%E7%BD%AE/</guid>
+      <description>前言 其实我一开始对刷路由器这件事是抵触的，因为感觉好麻烦好辛苦，最后也没啥特别的好处。可是随着GFW的变高，翻它越来越费劲，为了能手机平板PC全部科学上网，我发现极路由在Root之后有ss插件可以直接使用，所以我就愉快的使用上了。
+可是好景不长，不久之后我就发现极路由的致命问题——官方固件实在是太不稳定，刚到手更新了一次，WiFi死活连不上，连上也是时断时续，联系微信客服降级后勉强可以使用，可是长时间的使用还是偶尔出现连不上网、WiFi信号弱等问题。同时我发现这个ss功能略少，解析似乎也存在一些问题。
+多方因素促成我尝试刷第三方固件——这个美丽的蛋糕。所以写下这个简单的教程，方便像我这样零基础的菜鸟来学习。
+一.Root 极路由的Root教程我这里就不放了，根据官方提供的教程来就好，基本过程是申请Root，注册账号，在微信绑定手机号，下载开发者app。此处需要注意的是，极路由Root之后就会失去保修，请斟酌。
+二.不死Breed Breed是什么呢？是一个路由器的Bootloader，就是一个引导系统加载的程序，像BIOS就也是一种Bootloader，首先加载Bootloader，之后才运行系统。而由于刷入的第三方固件都是都是在Breed里面完成，因此不管第三方固件是否崩溃，Breed本身是不死的。
+首先在这里下载对应Breed，Breed下载点我。
+记住要找对路由器的CPU型号，否则可能造成变砖问题！比如我这个是极路由1S新版HC5661A，CPU是MT7628，所以找到breed-mt7628-hiwifi-hc5661a.bin这个文件并下载。
+然后下载winscp和putty，这两个是用于访问路由器内部文件，以及作为类似命令行来操作路由器的，可以认为一个是路由器的文件资源管理器，一个是路由器里的CMD终端。
+打开winscp，IP：192.168.199.1，账号:root，密码:你的后台密码，端口22，模式SCP。登录进去后，软件左边是电脑的文件，右边是路由器的文件，找到/tmp目录，进去之后把上面找到的Breed拽进去。 然后打开putty，同理输入一样内容，登录进去后输入命令：
+mtd -r write /tmp/breed-mt7628-hiwifi-hc5661a.bin u-boot  等待路由器重启即刷入不死Breed。
+三.刷入第三方固件 此时由于已经刷入Breed，已经可以随便刷第三方固件了，这里可以刷爱快、RippleOS、海蜘蛛、hiwifi for openwrt、宽带宝、Pandorabox、华硕等固件。
+我刷了Pandorabox还有改华硕[N14U N54U]，个人感觉都很不错。潘多拉有多拨、ss，界面非常的漂亮干净，动画有安卓5.0以后版本的感觉。而改华硕，一位大神hiboyhiboyhiboy根据老毛子Padavan固件开发的，主要胜利在稳定，功能强，自带了广告屏蔽、ss、迅雷快鸟、路由宝、花生壳等众多功能。
+下载地址： 改华硕， Pandorabox
+下载完固件之后，给路由器断电，按住复位键的时候上电，此时按住复位键，等灯闪5秒后再放开。电脑网络配置里选择自动获取DNS，然后浏览器登录192.168.1.1，记住要备份文件，防止以后无法回到官方固件。之后上传固件并点确定，等待一段时间之后刷新即可。
+潘多拉的IP为192.168.1.1，账号：root，密码：admin
+改华硕的IP为192.168.123.1，账号：admin，密码：admin
+四.配置路由器及ss等插件 此时固件已经刷入，进入配置界面设置宽带账号、WiFi名称密码等。
+改华硕的扩展功能里ss配置特别简单，也只要填写工作模式、服务器地址等几个简单的框并打开开关，保存配置即可科学上网。至于什么广告屏蔽等功能就留着自己慢慢探索吧！ 至于潘多拉自带的ss配置比较复杂，需要设置好几个界面，可能是由于里面的ChinaDNS的原因，我照着 点我教程 最后并没有成功，这也是我换改华硕的原因。但是潘多拉里的多拨功能倒是的确把我的网速增大了一倍要多（二拨）。
+参考： 感谢恩山论坛，大神遍布！
+极1S（hc5661)、极2、极硬货刷不死uboot（breed）及N种固件
+PandoraBox多拨实现带宽叠加&amp;amp;负载均衡规则策略配置教程（通用）</description>
+    </item>
+    
+    <item>
+      <title>如何把照片处理出悬浮效果</title>
+      <link>/post/2016-08-03-%E5%A6%82%E4%BD%95%E6%8A%8A%E7%85%A7%E7%89%87%E5%A4%84%E7%90%86%E5%87%BA%E6%82%AC%E6%B5%AE%E6%95%88%E6%9E%9C/</link>
+      <pubDate>Wed, 03 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2016-08-03-%E5%A6%82%E4%BD%95%E6%8A%8A%E7%85%A7%E7%89%87%E5%A4%84%E7%90%86%E5%87%BA%E6%82%AC%E6%B5%AE%E6%95%88%E6%9E%9C/</guid>
+      <description>前言 由东京悬浮少女启发，我和ZY同学拍摄并处理出这两张悬浮照片
+做法其实非常的简单，就是需要一点点的细心和耐心。
+一.拍摄前准备 首先,我们需要一个相机和三脚架，因为如果没有三脚架，很难拍出背景完全相同的图片。同时需要准备好支撑的物件，接触面积越小越好，形状越规则越好。
+二.拍摄照片 如图，用凳子，还有手持，拍摄出人、物体的照片，同样，接触面积需要尽可能的小。尽量拍摄速度快点，因为光影会变化，处理起来更麻烦。
+三.处理照片 打开PS，把背景放在底部，把人、物体放在上方，抠出图像。
+我用的是蒙版抠图法，别的方法也行。对了，我最后处理完之后发现很多照片里有波波出现，就顺便把它也加进来了。最后做一些润色就好了。
+四.完成 这样，悬浮照就搞定啦，整个过程大概花了几个小时吧，是不是很简单呢？
+最后要感谢ZY同学，发张gif！
+参考：
+东京悬浮少女摄影组图-Natsumi Hayashi
+知乎-悬浮摄影是怎么做到的？</description>
+    </item>
+    
+    <item>
+      <title>使用jekyll建立个人网站</title>
+      <link>/post/2016-04-09-%E4%BD%BF%E7%94%A8jekyll%E5%BB%BA%E7%AB%8B%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/</link>
+      <pubDate>Sat, 09 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2016-04-09-%E4%BD%BF%E7%94%A8jekyll%E5%BB%BA%E7%AB%8B%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/</guid>
+      <description>前言 本人在4.1日之前属于完完全全不懂github、jekyll、CSS、HTML、markdown这些东西的，但是这几天探索和学习基本算是能看懂并且建立一个完整的博客了。
+一.了解背景 首先，我们要了解github和jekyll,也就是我们建立博客的靠山，全靠他们。作为开源代码库以及版本控制系统，github深受程序员的喜爱，堪称是代码届的facebook。在Github上，我们能上传并托管自己的开源项目，也可以从别人的开源项目中fork或是clone东西过来自己修改。
+为了方便大家展示自己的开源项目，Github提供了一个免费的网页，不限流量，同时速度也非常可观。而jekyll，正是github的创始人之一，Tom Preston-Werner所开发的一个静态博客系统。同时，网上也提供了大量的主题来给大家使用。我们可以方便地从别人已经提供的成品博客项目那边fork过来，修改参数，即可食用。
+各位完全可以把我的github项目fork或者clone出来，自己修改写作。(但是请麻烦您点一下右上角的star来支持一下，谢谢~)ytysj/ytysj.github.io
+我也是在阅读某个大神的博客稚晖的个人站里偶然知道可以使用jekyll建立免费博客的。
+二.食用方法 我把步骤分为这几步：
+1.注册，下载
+2.创建项目，开启网页
+3.本地环境搭建
+4.更改配置
+5.开始写文章
+6.上传项目，发布网站
+1.注册，下载 基本法第一条，注册Github账号！由于需要一个本地端来进行git操作，据说最好使用命令行，不要用客户端。但是我觉得SourceTree，作为git的图形化客户端，毕竟还是方便一些。当然也可以选择其他客户端甚至是命令行。
+2.创建项目，开启网页 点击github网页上的加号，选择New repository,新建仓库。
+注意，这里Repository name一定要填写username（你的名字）.github.io，这是特殊的命名约定，然后打开仓库，在上面一栏里面选择settings，
+然后点击里面的Github Pages下面的Launch page generator，
+随便选择主题（没用的），下一步下一步，完成之后就可以通过username.github.io来进入你的主页了。此时的主页是自动生成的，并不是我们需要的东西，目录里多出的几个文件完全可以删掉。
+3.本地环境搭建 首先，从ruby官网我们下载Ruby和DevKit，注意要版本符合(也就是x64Ruby下x64的DevKit)。
+Ruby的安装很简单，点就是了，安装完之后打开cmd命令行，输入
+ruby -v  查看Ruby安装的版本号，出现就说明安装好了。
+然后安装DevKit，把压缩包解压到默认的地方(C:\DevKit)，进入DevKit目录，输入
+cd c:/DevKit ruby dk.rb init #初始化 ruby dk.rb reviewruby #检查 dk.rb install #安装  cd那一步也可以按住shift右击DevKit文件夹，选择在此处打开命令窗口。
+然后更改gem镜像，据说可以改善国内Ruby安装的速度（但是我在这一步选择淘宝镜像以及Ruby China镜像，都出现了ERROR和FAIL的问题&amp;hellip;没办法，最后我什么都没改，用官方的反而搞定了）
+gem sources --add https://ruby.taobao.org/ --remove https://rubygems.org/ gem sources -l *** CURRENT SOURCES *** https://ruby.taobao.org # 请确保只有 ruby.</description>
+    </item>
+    
+    <item>
+      <title>做了小小的修改</title>
+      <link>/post/2016-04-04-%E5%81%9A%E4%BA%86%E5%B0%8F%E5%B0%8F%E7%9A%84%E4%BF%AE%E6%94%B9/</link>
+      <pubDate>Mon, 04 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2016-04-04-%E5%81%9A%E4%BA%86%E5%B0%8F%E5%B0%8F%E7%9A%84%E4%BF%AE%E6%94%B9/</guid>
+      <description>做了一点小小的美化，学了本地调试，也学了不少的HTML语言，收益颇多。
+我打算过几天整理一个教程，方便大家也建立自己的网站。</description>
+    </item>
+    
+    <item>
+      <title>上线博客</title>
+      <link>/post/2016-04-02-%E4%B8%8A%E7%BA%BF%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Sat, 02 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2016-04-02-%E4%B8%8A%E7%BA%BF%E5%8D%9A%E5%AE%A2/</guid>
+      <description>折腾了一两天，终于上线了个人网站。</description>
+    </item>
+    
+  </channel>
+</rss>

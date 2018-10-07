@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="referrer" content="no-referrer">
+    <meta name="description" content="一个简单的小小站">
+    <title>液态氧斯基•小小站</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="canonical" href="/post/2016-12-02-%E6%9E%81%E8%B7%AF%E7%94%B11s%E5%88%B7%E7%AC%AC%E4%B8%89%E6%96%B9%E5%9B%BA%E4%BB%B6%E5%8F%8Ass%E9%85%8D%E7%BD%AE/">
+    
+  </head>
+  <body>
+
+<section id="post">
+  <div class="head">
+      <div class="avatar">
+          <a href=""><img src="/image/avatar.jpg"></a>
+      </div>
+      <div class="title"> 极路由1S刷第三方固件及SS配置 </div>
+	  <div class="subtitle">
+		<div class="date">2016年12月02日</div>
+		<div class="tags">
+		
+		  
+			<a href="tags/%E6%9E%81%E8%B7%AF%E7%94%B1">极路由</a>
+		  
+			<a href="tags/shadowsocks">Shadowsocks</a>
+		  
+		
+		</div>
+	  </div>
+  </div>
+  
+  <div class="content">
+
+<h1 id="前言">前言</h1>
+
+<p>其实我一开始对刷路由器这件事是抵触的，因为感觉好麻烦好辛苦，最后也没啥特别的好处。可是随着GFW的变高，翻它越来越费劲，为了能手机平板PC全部科学上网，我发现极路由在Root之后有ss插件可以直接使用，所以我就愉快的使用上了。</p>
+
+<p>可是好景不长，不久之后我就发现极路由的致命问题——官方固件实在是太不稳定，刚到手更新了一次，WiFi死活连不上，连上也是时断时续，联系微信客服降级后勉强可以使用，可是长时间的使用还是偶尔出现连不上网、WiFi信号弱等问题。同时我发现这个ss功能略少，解析似乎也存在一些问题。</p>
+
+<p>多方因素促成我尝试刷第三方固件——这个美丽的蛋糕。所以写下这个简单的教程，方便像我这样零基础的菜鸟来学习。</p>
+
+<h1 id="一-root">一.Root</h1>
+
+<p>极路由的Root教程我这里就不放了，根据官方提供的教程来就好，基本过程是申请Root，注册账号，在微信绑定手机号，下载开发者app。此处需要注意的是，极路由Root之后就会<strong>失去保修</strong>，请斟酌。</p>
+
+<h1 id="二-不死breed">二.不死Breed</h1>
+
+<p>Breed是什么呢？是一个路由器的Bootloader，就是一个引导系统加载的程序，像BIOS就也是一种Bootloader，首先加载Bootloader，之后才运行系统。而由于刷入的第三方固件都是都是在Breed里面完成，因此不管第三方固件是否崩溃，Breed本身是不死的。</p>
+
+<p>首先在这里下载对应Breed，<a href="http://www.right.com.cn/forum/thread-161906-1-1.html">Breed下载点我</a>。</p>
+
+<p>记住要找对路由器的CPU型号，<strong>否则可能造成变砖问题！</strong>比如我这个是极路由1S新版HC5661A，CPU是MT7628，所以找到breed-mt7628-hiwifi-hc5661a.bin这个文件并下载。</p>
+
+<p>然后下载winscp和putty，这两个是用于访问路由器内部文件，以及作为类似命令行来操作路由器的，可以认为一个是路由器的文件资源管理器，一个是路由器里的CMD终端。</p>
+
+<p>打开winscp，IP：192.168.199.1，账号:root，密码:你的后台密码，端口22，模式SCP。登录进去后，软件左边是电脑的文件，右边是路由器的文件，找到/tmp目录，进去之后把上面找到的Breed拽进去。
+<img src="/image/2016-12-02-极路由1S刷第三方固件及SS配置/1.png" alt="" /></p>
+
+<p>然后打开putty，同理输入一样内容，登录进去后输入命令：</p>
+
+<pre><code class="language-powershell">mtd -r write /tmp/breed-mt7628-hiwifi-hc5661a.bin u-boot
+</code></pre>
+
+<p>等待路由器重启即刷入不死Breed。</p>
+
+<p><img src="/image/2016-12-02-极路由1S刷第三方固件及SS配置/2.png" alt="" /></p>
+
+<h1 id="三-刷入第三方固件">三.刷入第三方固件</h1>
+
+<p>此时由于已经刷入Breed，已经可以随便刷第三方固件了，这里可以刷爱快、RippleOS、海蜘蛛、hiwifi for openwrt、宽带宝、Pandorabox、华硕等固件。</p>
+
+<p>我刷了Pandorabox还有改华硕[N14U N54U]，个人感觉都很不错。潘多拉有多拨、ss，界面非常的漂亮干净，动画有安卓5.0以后版本的感觉。而改华硕，一位大神hiboyhiboyhiboy根据老毛子Padavan固件开发的，主要胜利在稳定，功能强，自带了广告屏蔽、ss、迅雷快鸟、路由宝、花生壳等众多功能。</p>
+
+<p>下载地址：
+<a href="http://www.right.com.cn/forum/thread-161324-1-1.html">改华硕</a>，
+<a href="http://downloads.openwrt.org.cn/PandoraBox/RY1/">Pandorabox</a></p>
+
+<p>下载完固件之后，给路由器断电，按住复位键的时候上电，此时按住复位键，等灯闪5秒后再放开。电脑网络配置里选择自动获取DNS，然后浏览器登录<strong>192.168.1.1</strong>，记住要<strong>备份文件</strong>，防止以后无法回到官方固件。之后上传固件并点确定，等待一段时间之后刷新即可。</p>
+
+<p>潘多拉的IP为192.168.1.1，账号：root，密码：admin</p>
+
+<p>改华硕的IP为192.168.123.1，账号：admin，密码：admin</p>
+
+<h1 id="四-配置路由器及ss等插件">四.配置路由器及ss等插件</h1>
+
+<p>此时固件已经刷入，进入配置界面设置宽带账号、WiFi名称密码等。</p>
+
+<p>改华硕的扩展功能里ss配置特别简单，也只要填写工作模式、服务器地址等几个简单的框并打开开关，保存配置即可科学上网。至于什么广告屏蔽等功能就留着自己慢慢探索吧！
+<img src="/image/2016-12-02-极路由1S刷第三方固件及SS配置/3.png" alt="" /></p>
+
+<p>至于潘多拉自带的ss配置比较复杂，需要设置好几个界面，可能是由于里面的ChinaDNS的原因，我照着
+<a href="http://www.right.com.cn/forum/forum.php?mod=viewthread&amp;tid=174131">点我教程</a>
+最后并没有成功，这也是我换改华硕的原因。但是潘多拉里的多拨功能倒是的确把我的网速增大了一倍要多（二拨）。</p>
+
+<h1 id="参考">参考：</h1>
+
+<p>感谢恩山论坛，大神遍布！</p>
+
+<p><a href="http://www.right.com.cn/forum/thread-170630-1-1.html">极1S（hc5661)、极2、极硬货刷不死uboot（breed）及N种固件</a><br />
+<a href="http://bbs.dospy.com/thread-17707665-1-1001-1.html">PandoraBox多拨实现带宽叠加&amp;负载均衡规则策略配置教程（通用）</a></p>
+</div>
+  
+
+     
+  <span id="/post/2016-12-02-%E6%9E%81%E8%B7%AF%E7%94%B11s%E5%88%B7%E7%AC%AC%E4%B8%89%E6%96%B9%E5%9B%BA%E4%BB%B6%E5%8F%8Ass%E9%85%8D%E7%BD%AE/" class="leancloud_visitors" data-flag-title="极路由1S刷第三方固件及SS配置">
+    <span class="post-meta-item-text">文章阅读量 </span>
+    <span class="leancloud-visitors-count">1000000</span>
+    <p></p>
+  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'TUITCbuSyYcJ8ThdhGW8ovr4-9Nh9j0Va',
+        appKey: 'Pm2PmK1h7rSO8AQdehhgRPG1',
+        notify:  false , 
+        verify:  false , 
+        avatar:'retro', 
+        placeholder: '说点什么吧...',
+        visitor:  true 
+    });
+  </script>
+ 
+
+</section>
+<footer>
+  &copy;
+  
+     
+  2018 <a href="">液态氧斯基•小小站</a>, powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/hoofs/Cat">Cat</a>.
+</footer>
+</body>
+</html>
+
