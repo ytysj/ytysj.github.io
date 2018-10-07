@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>网站 on 液态氧斯基•小小站</title>
-    <link>/tags/%E7%BD%91%E7%AB%99/</link>
+    <link>https://ytysj.github.io/tags/%E7%BD%91%E7%AB%99/</link>
     <description>Recent content in 网站 on 液态氧斯基•小小站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Sat, 09 Apr 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/%E7%BD%91%E7%AB%99/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ytysj.github.io/tags/%E7%BD%91%E7%AB%99/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>使用jekyll建立个人网站</title>
-      <link>/post/2016-04-09-%E4%BD%BF%E7%94%A8jekyll%E5%BB%BA%E7%AB%8B%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/</link>
+      <link>https://ytysj.github.io/post/2016-04-09-%E4%BD%BF%E7%94%A8jekyll%E5%BB%BA%E7%AB%8B%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/</link>
       <pubDate>Sat, 09 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>/post/2016-04-09-%E4%BD%BF%E7%94%A8jekyll%E5%BB%BA%E7%AB%8B%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/</guid>
+      <guid>https://ytysj.github.io/post/2016-04-09-%E4%BD%BF%E7%94%A8jekyll%E5%BB%BA%E7%AB%8B%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/</guid>
       <description>前言 本人在4.1日之前属于完完全全不懂github、jekyll、CSS、HTML、markdown这些东西的，但是这几天探索和学习基本算是能看懂并且建立一个完整的博客了。
 一.了解背景 首先，我们要了解github和jekyll,也就是我们建立博客的靠山，全靠他们。作为开源代码库以及版本控制系统，github深受程序员的喜爱，堪称是代码届的facebook。在Github上，我们能上传并托管自己的开源项目，也可以从别人的开源项目中fork或是clone东西过来自己修改。
 为了方便大家展示自己的开源项目，Github提供了一个免费的网页，不限流量，同时速度也非常可观。而jekyll，正是github的创始人之一，Tom Preston-Werner所开发的一个静态博客系统。同时，网上也提供了大量的主题来给大家使用。我们可以方便地从别人已经提供的成品博客项目那边fork过来，修改参数，即可食用。

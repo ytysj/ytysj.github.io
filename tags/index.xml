@@ -2,66 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on 液态氧斯基•小小站</title>
-    <link>/tags/</link>
+    <link>https://ytysj.github.io/tags/</link>
     <description>Recent content in Tags on 液态氧斯基•小小站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Sat, 09 Apr 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ytysj.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Jekyll</title>
-      <link>/tags/jekyll/</link>
+      <link>https://ytysj.github.io/tags/jekyll/</link>
       <pubDate>Sat, 09 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>/tags/jekyll/</guid>
+      <guid>https://ytysj.github.io/tags/jekyll/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Ps</title>
-      <link>/tags/ps/</link>
+      <link>https://ytysj.github.io/tags/ps/</link>
       <pubDate>Wed, 03 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>/tags/ps/</guid>
+      <guid>https://ytysj.github.io/tags/ps/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Shadowsocks</title>
-      <link>/tags/shadowsocks/</link>
+      <link>https://ytysj.github.io/tags/shadowsocks/</link>
       <pubDate>Fri, 02 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>/tags/shadowsocks/</guid>
+      <guid>https://ytysj.github.io/tags/shadowsocks/</guid>
       <description></description>
     </item>
     
     <item>
       <title>极路由</title>
-      <link>/tags/%E6%9E%81%E8%B7%AF%E7%94%B1/</link>
+      <link>https://ytysj.github.io/tags/%E6%9E%81%E8%B7%AF%E7%94%B1/</link>
       <pubDate>Fri, 02 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>/tags/%E6%9E%81%E8%B7%AF%E7%94%B1/</guid>
+      <guid>https://ytysj.github.io/tags/%E6%9E%81%E8%B7%AF%E7%94%B1/</guid>
       <description></description>
     </item>
     
     <item>
       <title>生活</title>
-      <link>/tags/%E7%94%9F%E6%B4%BB/</link>
+      <link>https://ytysj.github.io/tags/%E7%94%9F%E6%B4%BB/</link>
       <pubDate>Sun, 07 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>/tags/%E7%94%9F%E6%B4%BB/</guid>
+      <guid>https://ytysj.github.io/tags/%E7%94%9F%E6%B4%BB/</guid>
       <description></description>
     </item>
     
     <item>
       <title>网站</title>
-      <link>/tags/%E7%BD%91%E7%AB%99/</link>
+      <link>https://ytysj.github.io/tags/%E7%BD%91%E7%AB%99/</link>
       <pubDate>Sat, 09 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>/tags/%E7%BD%91%E7%AB%99/</guid>
+      <guid>https://ytysj.github.io/tags/%E7%BD%91%E7%AB%99/</guid>
       <description></description>
     </item>
     

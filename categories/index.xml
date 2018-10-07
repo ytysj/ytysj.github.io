@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on 液态氧斯基•小小站</title>
-    <link>/categories/</link>
+    <link>https://ytysj.github.io/categories/</link>
     <description>Recent content in Categories on 液态氧斯基•小小站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     
-	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ytysj.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
