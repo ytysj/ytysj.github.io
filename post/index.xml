@@ -6,13 +6,36 @@
     <description>Recent content in Posts on 液态氧斯基•小小站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Wed, 31 Oct 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 10 Nov 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ytysj.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>《解忧杂货店之温情》</title>
+      <title>如何在电脑上折叠出SS纸飞机</title>
+      <link>https://ytysj.github.io/post/2018-11-10-%E5%A6%82%E4%BD%95%E5%9C%A8%E7%94%B5%E8%84%91%E4%B8%8A%E6%8A%98%E5%8F%A0%E5%87%BA%E7%BA%B8%E9%A3%9E%E6%9C%BA/</link>
+      <pubDate>Sat, 10 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://ytysj.github.io/post/2018-11-10-%E5%A6%82%E4%BD%95%E5%9C%A8%E7%94%B5%E8%84%91%E4%B8%8A%E6%8A%98%E5%8F%A0%E5%87%BA%E7%BA%B8%E9%A3%9E%E6%9C%BA/</guid>
+      <description>注：本文只涉及客户端，服务端以后再说。
+Shadowsocks可以指：一种基于Socks5代理方式的加密传输协议，也可以指实现这个协议的各种传输包。目前包使用Python、C、C++、C#、Go语言等编程语言开发，大部分主要实现（iOS平台的除外）采用Apache许可证、GPL、MIT许可证等多种自由软件许可协议开放源代码。Shadowsocks分为服务器端和客户端，在使用之前，需要先将服务器端部署到服务器上面，然后通过客户端连接并创建本地代理。这个可爱的小纸飞机应该怎么在电脑上折呢？
+折纸飞机拢共分四步。
+一.获取客户端 github目前正常连接没有什么问题，所以可以在全球最大程序员同性交友网上下载客户端，打开项目之后点击release去下载最新版纸飞机。
+解压之后直接打开exe，ss不需要安装，点开即可。
+二.配置客户端 右击右下角纸飞机，选择编辑服务器，添加一个新的服务器，输入服务端给你的地址，端口，密码，加密方式。
+此处说明一下，右击右下角图标打开“启用系统代理”之后，PAC模式和全局模式的区别：PAC模式指使用软件自带的过滤规则，部分选择代理；而全局模式是所有电脑上的流量均走代理。由于自带的PAC模式不太好使，而且不方便修改，没什么意义。所以一般建议关闭“启用系统代理”，采用浏览器插件的过滤规则。
+三.配置浏览器 对于chromium内核浏览器，安装SwitchyOmega这个插件。注：完成第二步的时候，打开全局模式就已经可以登录谷歌了，所以如果使用chrome的也可以直接去谷歌插件商店下载SwitchyOmega。
+如果情景模式里面什么都没有的话，可以选择新建情景模式（此处我已经建好了情景模式Shadowsocks，请无视），否则可以在已有的模式上修改。
+如此配置这个情景模式的代理服务器和代理端口，这样当在这个情景模式下，就会切换到客户端的代理，从而科学上网。
+增加自动切换的情景模式
+在情景模式下选择匹配规则时的情景模式“TEST”，默认选择直接连接，这样只有匹配上时才会走代理。
+导入在线规则列表，输入网址：https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt，选择立即更新。
+在浏览器插件栏，选择自动切换模式，这时候就可以自动切换了。在打开谷歌时是左边蓝色圆圈，代表开启代理；在打开百度时是右边灰色圆圈，代表直连。如果遇到不在匹配规则内的，比如觉得液态氧斯基的小小站打开太慢，那可以选择添加条件一栏，将情景模式选成ss模式，这样下次走这个网站就是走代理模式了。
+四.享受正常上网 Please enjoy!</description>
+    </item>
+    
+    <item>
+      <title>《解忧杂货店》之温情</title>
       <link>https://ytysj.github.io/post/2018-10-31-%E8%A7%A3%E5%BF%A7%E6%9D%82%E8%B4%A7%E5%BA%97%E4%B9%8B%E6%B8%A9%E6%83%85/</link>
       <pubDate>Wed, 31 Oct 2018 00:00:00 +0000</pubDate>
       
