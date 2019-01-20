@@ -12,18 +12,21 @@
 .content h2:before,.content h3:before,.content h4:before,.content h5:before,.content h6:before{color:#56626b;position:absolute;left:-.7em;top:-4px;font-size:1.2em;font-weight:700}
 .content h4:before,.content h5:before,.content h6:before{content:none}
 .content h2,.content h3{font-size:22px}
-.content h4,.content h5,.content h6{font-size:18px}
+.content h4,.content h5,.content h6{font-size:10px}
 @media screen and (max-width:700px){.wrap{width:100%}
 .content h2,.content h3,.content h4,.content h5,.content h6{max-width:300px;left:15px}
 }
 .content input[type=checkbox]{width:17px;height:17px}
 .content b,.content strong{font-weight:700;color:#222223}
 .content em,.content i{font-style:italic;color:#222223}
-.content img{max-width:100%;height:auto;margin:.2em 0}
+.content img{max-width:100%;height:auto;border:none}
 .content a img{border:none}
 .content figure{position:relative;clear:both;outline:0;margin:10px 0 30px;padding:0;min-height:100px}
-.content figure img{display:block;max-width:100%;margin:auto auto 4px;box-sizing:border-box}
-.content figure figcaption{position:relative;width:100%;text-align:center;left:0;margin-top:10px;font-weight:400;font-size:14px;color:#666665}
+.content figure img{display:block;max-width:80%;margin:auto auto 4px;box-sizing:border-box}
+.content figure figcaption{
+	text-align:center;
+	color:#777765;
+}
 .content figure figcaption a{text-decoration:none;color:#666665}
 .content hr{border:none;border-bottom:1px solid #cfcfcf;margin-bottom:.8em;height:10px}
 .content blockquote{margin:0 0 1.64em 0;border-left:3px solid #dadada;padding-left:12px}
@@ -57,9 +60,36 @@
 .archive .post-link {text-decoration:none;color: #555;transition: 0.3s ease-out}
 .archive .post-link:hover {font-weight:bold;text-decoration:underline;color: #000;padding:0.5em;}
 
+.thumbnail-image {
+	display: inline-block;
+	border:none !important;
+	max-width:30%;	
+	padding:.5em .5em 1.3em .5em;
+	margin:.8em 1em .8em 1em;
+	box-shadow: 1px 1px 3px #888888;
+}
+
+.thumbnail-image figcaption{
+	text-align:center;
+	margin-top:10px;
+	font-size:.8em;
+	font-weight: bold;
+	color:#000;
+}
+
+.thumbnail-image:hover{
+	box-shadow: 2px 2px 10px #888888;
+}
+
+
 body{font-family:'Exo 2','Microsoft YaHei Light',sans-serif;background-color:#FAF9F5}
 div.main-container,div.post-container{width:100%;position:fixed;top:0;left:0;height:auto}
-section#main{text-align:center;max-width:760px;margin:0 auto;padding:5px}
+section#main{
+	text-align:center;
+	max-width:60%;
+	padding:5px;
+	margin:0 auto;
+}
 
 section#main .head .avatar{text-align:center}
 section#main .head .avatar a{text-decoration:none}
@@ -67,8 +97,16 @@ section#main .head .avatar img{width:100px;height:100px;border:1px solid #eaeaea
 section#main .head .title{font-size:1.8em;margin:7px 0;color:#111;font-weight:400}
 section#main .head .description{color:#555;font-size:1em;margin:5px 0}
 
-section#main .menu a{text-decoration:none;color:#555;font-size:1em}
-section#main .menu a:hover{color:#111;text-decoration:underline}
+section#main .menu a{
+	text-decoration:none;
+	color:#555;
+	font-size:1em;
+	margin:.4em .4em;
+}
+section#main .menu a:hover{
+	color:#111;
+	text-decoration:underline;
+}
 
 section#main nav{list-style:none}
 section#main nav li{display:inline-block;margin:0 5px}
@@ -90,7 +128,7 @@ ol.page-navigator{list-style:none;padding:0;margin-top:35px;margin-bottom:35px;t
 ol.page-navigator li,ol.page-navigator li.current{display:none;margin:0 10px}
 ol.page-navigator li.next,ol.page-navigator li.prev{display:inline-block}
 ol.page-navigator li.next a,ol.page-navigator li.prev a{text-decoration:none;color:#fff;background:#404D56;padding:7px 20px;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;border:none;font-size:14px}
-section#post{max-width:760px;margin:0 auto;padding:5px}
+section#post{max-width:60%;margin:0 auto;padding:5px}
 section#post .head .avatar{text-align:center}
 section#post .head .avatar a{text-decoration:none}
 section#post .head .avatar img{width:100px;height:100px;border:1px solid #eaeaea;padding:4px;border-radius:50%;margin-top:20px;margin-bottom:40px}
@@ -108,11 +146,11 @@ section#post .head .date{
 }
 section#post .tags ul{
 	display:inline-block;
-	padding:.5em 0 .5em 0；
+	margin:.5em 0 .5em 0;
 }
 section#post .tags li{
 	display:inline-block;
-	padding:0 .5em 0 .5em；
+	margin:.3em .5em .3em .5em;
 }
 section#post .tags a {
 	text-decoration:none;
