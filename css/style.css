@@ -90,6 +90,7 @@ section#main{
 	padding:5px;
 	margin:0 auto;
 }
+@media screen and (max-width:700px){section#main{max-width:100%;}}
 
 section#main .head .avatar{text-align:center}
 section#main .head .avatar a{text-decoration:none}
@@ -129,6 +130,7 @@ ol.page-navigator li,ol.page-navigator li.current{display:none;margin:0 10px}
 ol.page-navigator li.next,ol.page-navigator li.prev{display:inline-block}
 ol.page-navigator li.next a,ol.page-navigator li.prev a{text-decoration:none;color:#fff;background:#404D56;padding:7px 20px;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;border:none;font-size:14px}
 section#post{max-width:60%;margin:0 auto;padding:5px}
+@media screen and (max-width:700px){section#post{max-width:100%;}}
 section#post .head .avatar{text-align:center}
 section#post .head .avatar a{text-decoration:none}
 section#post .head .avatar img{width:100px;height:100px;border:1px solid #eaeaea;padding:4px;border-radius:50%;margin-top:20px;margin-bottom:40px}
