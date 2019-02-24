@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on 液态氧斯基•小小站</title>
+    <link>https://ytysj.github.io/tags/python/</link>
+    <description>Recent content in Python on 液态氧斯基•小小站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 24 Feb 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://ytysj.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>python跨文件全局变量问题</title>
+      <link>https://ytysj.github.io/post/2019/2019-2-24-python%E8%B7%A8%E6%96%87%E4%BB%B6%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Sun, 24 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://ytysj.github.io/post/2019/2019-2-24-python%E8%B7%A8%E6%96%87%E4%BB%B6%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E9%97%AE%E9%A2%98/</guid>
+      <description>问题发现 首先是一个使用全局变量的一个文件：
+#a.py import b g = 10 def func1(): global g print(g) g += 1 if __name__ ==&#39;__main__&#39; : func1() print(g) b.func2()  不看最后b.func2，很明显结果是
+10 11  此时全局变量g已经变成11了。
+#b.py import a def func2(): bg = a.g print(bg)  然而当调用b.func2时，打印的数字是10，也就是说a的全局变量的改变并没有传递给b。
+问题分析 python内置了id函数，每个地址都有独一无二的id，所以看id就可以很明白的知道数字是多少
+#===================a.py====================== import b g = 10 def func1(): global g print(g) g += 1 if __name__ ==&#39;__main__&#39; : print(&amp;quot;id g:&amp;quot;,id(g)) print(&amp;quot;id 10:&amp;quot;,id(10)) func1() print(g) print(&amp;quot;id g:&amp;quot;,id(g)) print(&amp;quot;id g:&amp;quot;,id(11)) b.</description>
+    </item>
+    
+  </channel>
+</rss>

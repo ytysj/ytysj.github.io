@@ -6,17 +6,31 @@
     <description>Recent content in Posts on 液态氧斯基•小小站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 19 Nov 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 24 Feb 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ytysj.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>python跨文件全局变量问题</title>
+      <link>https://ytysj.github.io/post/2019/2019-2-24-python%E8%B7%A8%E6%96%87%E4%BB%B6%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Sun, 24 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://ytysj.github.io/post/2019/2019-2-24-python%E8%B7%A8%E6%96%87%E4%BB%B6%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E9%97%AE%E9%A2%98/</guid>
+      <description>问题发现 首先是一个使用全局变量的一个文件：
+#a.py import b g = 10 def func1(): global g print(g) g += 1 if __name__ ==&#39;__main__&#39; : func1() print(g) b.func2()  不看最后b.func2，很明显结果是
+10 11  此时全局变量g已经变成11了。
+#b.py import a def func2(): bg = a.g print(bg)  然而当调用b.func2时，打印的数字是10，也就是说a的全局变量的改变并没有传递给b。
+问题分析 python内置了id函数，每个地址都有独一无二的id，所以看id就可以很明白的知道数字是多少
+#===================a.py====================== import b g = 10 def func1(): global g print(g) g += 1 if __name__ ==&#39;__main__&#39; : print(&amp;quot;id g:&amp;quot;,id(g)) print(&amp;quot;id 10:&amp;quot;,id(10)) func1() print(g) print(&amp;quot;id g:&amp;quot;,id(g)) print(&amp;quot;id g:&amp;quot;,id(11)) b.</description>
+    </item>
+    
+    <item>
       <title>『遨蓝开发日志1』2D游戏地图分层问题</title>
-      <link>https://ytysj.github.io/post/2018-11-19-%E9%81%A8%E8%93%9D%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%9712d%E6%B8%B8%E6%88%8F%E5%9C%B0%E5%9B%BE%E5%88%86%E5%B1%82%E9%97%AE%E9%A2%98/</link>
+      <link>https://ytysj.github.io/post/2018/2018-11-19-%E9%81%A8%E8%93%9D%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%9712d%E6%B8%B8%E6%88%8F%E5%9C%B0%E5%9B%BE%E5%88%86%E5%B1%82%E9%97%AE%E9%A2%98/</link>
       <pubDate>Mon, 19 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://ytysj.github.io/post/2018-11-19-%E9%81%A8%E8%93%9D%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%9712d%E6%B8%B8%E6%88%8F%E5%9C%B0%E5%9B%BE%E5%88%86%E5%B1%82%E9%97%AE%E9%A2%98/</guid>
+      <guid>https://ytysj.github.io/post/2018/2018-11-19-%E9%81%A8%E8%93%9D%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%9712d%E6%B8%B8%E6%88%8F%E5%9C%B0%E5%9B%BE%E5%88%86%E5%B1%82%E9%97%AE%E9%A2%98/</guid>
       <description>这是一个新系列，用于记录我的独立游戏《遨蓝》的开发过程，之后我会在这里持续更新开发过程中遇到的问题以及解决方式。
 一.两个镜头 由于这个游戏是航海探索类游戏，所以不可避免会有人物和船只切换的过程，这个解决比较方便，采用两个GameObject以及两个Camera即可解决。
 二.地图分层 地图我采用的是Tiled Map瓦片地图，可以比较方便省力地绘制地图。但是比较麻烦的是这个地图分层问题，由于有两个控制对象，并且他们之间的处理又是互斥的，比如船不能到岸上，人不能到海上。对于这个问题，我想了几个解决方案。
@@ -33,10 +47,10 @@
     
     <item>
       <title>如何在电脑上折叠出SS纸飞机</title>
-      <link>https://ytysj.github.io/post/2018-11-10-%E5%A6%82%E4%BD%95%E5%9C%A8%E7%94%B5%E8%84%91%E4%B8%8A%E6%8A%98%E5%8F%A0%E5%87%BA%E7%BA%B8%E9%A3%9E%E6%9C%BA/</link>
+      <link>https://ytysj.github.io/post/2018/2018-11-10-%E5%A6%82%E4%BD%95%E5%9C%A8%E7%94%B5%E8%84%91%E4%B8%8A%E6%8A%98%E5%8F%A0%E5%87%BA%E7%BA%B8%E9%A3%9E%E6%9C%BA/</link>
       <pubDate>Sat, 10 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://ytysj.github.io/post/2018-11-10-%E5%A6%82%E4%BD%95%E5%9C%A8%E7%94%B5%E8%84%91%E4%B8%8A%E6%8A%98%E5%8F%A0%E5%87%BA%E7%BA%B8%E9%A3%9E%E6%9C%BA/</guid>
+      <guid>https://ytysj.github.io/post/2018/2018-11-10-%E5%A6%82%E4%BD%95%E5%9C%A8%E7%94%B5%E8%84%91%E4%B8%8A%E6%8A%98%E5%8F%A0%E5%87%BA%E7%BA%B8%E9%A3%9E%E6%9C%BA/</guid>
       <description>注：本文只涉及客户端，服务端以后再说。
 Shadowsocks可以指：一种基于Socks5代理方式的加密传输协议，也可以指实现这个协议的各种传输包。目前包使用Python、C、C++、C#、Go语言等编程语言开发，大部分主要实现（iOS平台的除外）采用Apache许可证、GPL、MIT许可证等多种自由软件许可协议开放源代码。Shadowsocks分为服务器端和客户端，在使用之前，需要先将服务器端部署到服务器上面，然后通过客户端连接并创建本地代理。这个可爱的小纸飞机应该怎么在电脑上折呢？
 折纸飞机拢共分四步。
@@ -57,10 +71,10 @@ Shadowsocks可以指：一种基于Socks5代理方式的加密传输协议，也
     
     <item>
       <title>《解忧杂货店》之温情</title>
-      <link>https://ytysj.github.io/post/2018-10-31-%E8%A7%A3%E5%BF%A7%E6%9D%82%E8%B4%A7%E5%BA%97%E4%B9%8B%E6%B8%A9%E6%83%85/</link>
+      <link>https://ytysj.github.io/post/2018/2018-10-31-%E8%A7%A3%E5%BF%A7%E6%9D%82%E8%B4%A7%E5%BA%97%E4%B9%8B%E6%B8%A9%E6%83%85/</link>
       <pubDate>Wed, 31 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://ytysj.github.io/post/2018-10-31-%E8%A7%A3%E5%BF%A7%E6%9D%82%E8%B4%A7%E5%BA%97%E4%B9%8B%E6%B8%A9%E6%83%85/</guid>
+      <guid>https://ytysj.github.io/post/2018/2018-10-31-%E8%A7%A3%E5%BF%A7%E6%9D%82%E8%B4%A7%E5%BA%97%E4%B9%8B%E6%B8%A9%E6%83%85/</guid>
       <description>一直很喜欢东野圭吾的小说，但多数为悬疑探案，所以当知道解忧杂货店是个温情的小说时，还是稍稍有些吃惊。当时看了小说，剧情也许很吸引我，可能也很感人，不太记得了，总知是并没多大的触动，就记得个好看。
 这次看了电影版，令我吃惊的是上映日期是我的生日，那天我竟然没去看，只能今天在爱奇艺上一览。第一个故事是鱼店音乐人——松冈克郎，留着和乔布斯一样的发型，前去东京做音乐人闯荡。因为奶奶过世和父亲身体不好，纠结自己是否要放弃梦想回家继承鱼店，是个很平淡很平淡的一个故事。可是葬礼上，叔叔劝他回家继承，却当场被他父亲骂的狗血淋头。这时候我已经能体会到父亲的感情了，和我爸一样，可以自己批评，但绝对不允许别人来指责，甚至是干涉自己孩子的梦想。当他去医院看他爸，老头子头一扭，“你给我回东京去”，我眼泪就止也止不住的流。以前类似的看到很多，但一点都没感觉。现在想到我爸，完完全全体会到了为什么老头子这么说。我爸希望我回家，希望我在家过平稳的日子，臭小子你去随便闯，“你混得不好还有我们养着”，但是我要出去闯，他也非常非常非常支持。说我工作很忙，就不要我妈叫我回去，想来他就和这个老头子一样，硬扛，又愿意放手支持孩子去追梦。
 对克郎来说，他要坚持的梦想，某种程度上也是为了感激，回报他老爸的这份支持。那克郎这份梦想，又借芹子之口，传播生命的意义给众人，就像歌名《重生》，就是他的意志重生，他的精神永存，他的梦想以一种更加高尚的存在实现，让被他影响的人好好珍视自己的生命。这部分是我最感动最感动的地方。
@@ -70,20 +84,20 @@ Shadowsocks可以指：一种基于Socks5代理方式的加密传输协议，也
     
     <item>
       <title>迁移到hugo</title>
-      <link>https://ytysj.github.io/post/2018-10-07-%E8%BF%81%E7%A7%BB%E5%88%B0hugo/</link>
+      <link>https://ytysj.github.io/post/2018/2018-10-07-%E8%BF%81%E7%A7%BB%E5%88%B0hugo/</link>
       <pubDate>Sun, 07 Oct 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://ytysj.github.io/post/2018-10-07-%E8%BF%81%E7%A7%BB%E5%88%B0hugo/</guid>
+      <guid>https://ytysj.github.io/post/2018/2018-10-07-%E8%BF%81%E7%A7%BB%E5%88%B0hugo/</guid>
       <description>这两年发生了太多太多的事情，沧海桑田，白驹过隙。
 我对原来的jekyll的速度有些不满意，而hugo使用go语言，它天生有着能利用多线程的优秀特点，所以我迁移到hugo，并且在主题（Cat主题）上也花费了一点时间修改，还有不少地方不明白，但是至少能通过冒烟测试嘛~</description>
     </item>
     
     <item>
       <title>极路由1S刷第三方固件及SS配置</title>
-      <link>https://ytysj.github.io/post/2016-12-02-%E6%9E%81%E8%B7%AF%E7%94%B11s%E5%88%B7%E7%AC%AC%E4%B8%89%E6%96%B9%E5%9B%BA%E4%BB%B6%E5%8F%8Ass%E9%85%8D%E7%BD%AE/</link>
+      <link>https://ytysj.github.io/post/2016/2016-12-02-%E6%9E%81%E8%B7%AF%E7%94%B11s%E5%88%B7%E7%AC%AC%E4%B8%89%E6%96%B9%E5%9B%BA%E4%BB%B6%E5%8F%8Ass%E9%85%8D%E7%BD%AE/</link>
       <pubDate>Fri, 02 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://ytysj.github.io/post/2016-12-02-%E6%9E%81%E8%B7%AF%E7%94%B11s%E5%88%B7%E7%AC%AC%E4%B8%89%E6%96%B9%E5%9B%BA%E4%BB%B6%E5%8F%8Ass%E9%85%8D%E7%BD%AE/</guid>
+      <guid>https://ytysj.github.io/post/2016/2016-12-02-%E6%9E%81%E8%B7%AF%E7%94%B11s%E5%88%B7%E7%AC%AC%E4%B8%89%E6%96%B9%E5%9B%BA%E4%BB%B6%E5%8F%8Ass%E9%85%8D%E7%BD%AE/</guid>
       <description>前言 其实我一开始对刷路由器这件事是抵触的，因为感觉好麻烦好辛苦，最后也没啥特别的好处。可是随着GFW的变高，翻它越来越费劲，为了能手机平板PC全部科学上网，我发现极路由在Root之后有ss插件可以直接使用，所以我就愉快的使用上了。
 可是好景不长，不久之后我就发现极路由的致命问题——官方固件实在是太不稳定，刚到手更新了一次，WiFi死活连不上，连上也是时断时续，联系微信客服降级后勉强可以使用，可是长时间的使用还是偶尔出现连不上网、WiFi信号弱等问题。同时我发现这个ss功能略少，解析似乎也存在一些问题。
 多方因素促成我尝试刷第三方固件——这个美丽的蛋糕。所以写下这个简单的教程，方便像我这样零基础的菜鸟来学习。
@@ -109,10 +123,10 @@ PandoraBox多拨实现带宽叠加&amp;amp;负载均衡规则策略配置教程�
     
     <item>
       <title>如何把照片处理出悬浮效果</title>
-      <link>https://ytysj.github.io/post/2016-08-03-%E5%A6%82%E4%BD%95%E6%8A%8A%E7%85%A7%E7%89%87%E5%A4%84%E7%90%86%E5%87%BA%E6%82%AC%E6%B5%AE%E6%95%88%E6%9E%9C/</link>
+      <link>https://ytysj.github.io/post/2016/2016-08-03-%E5%A6%82%E4%BD%95%E6%8A%8A%E7%85%A7%E7%89%87%E5%A4%84%E7%90%86%E5%87%BA%E6%82%AC%E6%B5%AE%E6%95%88%E6%9E%9C/</link>
       <pubDate>Wed, 03 Aug 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://ytysj.github.io/post/2016-08-03-%E5%A6%82%E4%BD%95%E6%8A%8A%E7%85%A7%E7%89%87%E5%A4%84%E7%90%86%E5%87%BA%E6%82%AC%E6%B5%AE%E6%95%88%E6%9E%9C/</guid>
+      <guid>https://ytysj.github.io/post/2016/2016-08-03-%E5%A6%82%E4%BD%95%E6%8A%8A%E7%85%A7%E7%89%87%E5%A4%84%E7%90%86%E5%87%BA%E6%82%AC%E6%B5%AE%E6%95%88%E6%9E%9C/</guid>
       <description>前言 由东京悬浮少女启发，我和ZY同学拍摄并处理出这两张悬浮照片
 做法其实非常的简单，就是需要一点点的细心和耐心。
 一.拍摄前准备 首先,我们需要一个相机和三脚架，因为如果没有三脚架，很难拍出背景完全相同的图片。同时需要准备好支撑的物件，接触面积越小越好，形状越规则越好。
@@ -128,10 +142,10 @@ PandoraBox多拨实现带宽叠加&amp;amp;负载均衡规则策略配置教程�
     
     <item>
       <title>使用jekyll建立个人网站</title>
-      <link>https://ytysj.github.io/post/2016-04-09-%E4%BD%BF%E7%94%A8jekyll%E5%BB%BA%E7%AB%8B%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/</link>
+      <link>https://ytysj.github.io/post/2016/2016-04-09-%E4%BD%BF%E7%94%A8jekyll%E5%BB%BA%E7%AB%8B%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/</link>
       <pubDate>Sat, 09 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://ytysj.github.io/post/2016-04-09-%E4%BD%BF%E7%94%A8jekyll%E5%BB%BA%E7%AB%8B%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/</guid>
+      <guid>https://ytysj.github.io/post/2016/2016-04-09-%E4%BD%BF%E7%94%A8jekyll%E5%BB%BA%E7%AB%8B%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/</guid>
       <description>前言 本人在4.1日之前属于完完全全不懂github、jekyll、CSS、HTML、markdown这些东西的，但是这几天探索和学习基本算是能看懂并且建立一个完整的博客了。
 一.了解背景 首先，我们要了解github和jekyll,也就是我们建立博客的靠山，全靠他们。作为开源代码库以及版本控制系统，github深受程序员的喜爱，堪称是代码届的facebook。在Github上，我们能上传并托管自己的开源项目，也可以从别人的开源项目中fork或是clone东西过来自己修改。
 为了方便大家展示自己的开源项目，Github提供了一个免费的网页，不限流量，同时速度也非常可观。而jekyll，正是github的创始人之一，Tom Preston-Werner所开发的一个静态博客系统。同时，网上也提供了大量的主题来给大家使用。我们可以方便地从别人已经提供的成品博客项目那边fork过来，修改参数，即可食用。
@@ -160,20 +174,20 @@ gem sources --add https://ruby.taobao.org/ --remove https://rubygems.org/ gem so
     
     <item>
       <title>做了小小的修改</title>
-      <link>https://ytysj.github.io/post/2016-04-04-%E5%81%9A%E4%BA%86%E5%B0%8F%E5%B0%8F%E7%9A%84%E4%BF%AE%E6%94%B9/</link>
+      <link>https://ytysj.github.io/post/2016/2016-04-04-%E5%81%9A%E4%BA%86%E5%B0%8F%E5%B0%8F%E7%9A%84%E4%BF%AE%E6%94%B9/</link>
       <pubDate>Mon, 04 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://ytysj.github.io/post/2016-04-04-%E5%81%9A%E4%BA%86%E5%B0%8F%E5%B0%8F%E7%9A%84%E4%BF%AE%E6%94%B9/</guid>
+      <guid>https://ytysj.github.io/post/2016/2016-04-04-%E5%81%9A%E4%BA%86%E5%B0%8F%E5%B0%8F%E7%9A%84%E4%BF%AE%E6%94%B9/</guid>
       <description>做了一点小小的美化，学了本地调试，也学了不少的HTML语言，收益颇多。
 我打算过几天整理一个教程，方便大家也建立自己的网站。</description>
     </item>
     
     <item>
       <title>上线博客</title>
-      <link>https://ytysj.github.io/post/2016-04-02-%E4%B8%8A%E7%BA%BF%E5%8D%9A%E5%AE%A2/</link>
+      <link>https://ytysj.github.io/post/2016/2016-04-02-%E4%B8%8A%E7%BA%BF%E5%8D%9A%E5%AE%A2/</link>
       <pubDate>Sat, 02 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://ytysj.github.io/post/2016-04-02-%E4%B8%8A%E7%BA%BF%E5%8D%9A%E5%AE%A2/</guid>
+      <guid>https://ytysj.github.io/post/2016/2016-04-02-%E4%B8%8A%E7%BA%BF%E5%8D%9A%E5%AE%A2/</guid>
       <description>折腾了一两天，终于上线了个人网站。</description>
     </item>
     

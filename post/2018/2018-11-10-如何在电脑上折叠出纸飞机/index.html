@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="referrer" content="no-referrer">
+    <meta name="description" content="一个简单的小小站">
+    <title>液态氧斯基•小小站</title>
+    <link rel="stylesheet" href="https://ytysj.github.io/css/style.css">
+    <link rel="canonical" href="https://ytysj.github.io/post/2018/2018-11-10-%E5%A6%82%E4%BD%95%E5%9C%A8%E7%94%B5%E8%84%91%E4%B8%8A%E6%8A%98%E5%8F%A0%E5%87%BA%E7%BA%B8%E9%A3%9E%E6%9C%BA/">
+    
+	
+	<link href="https://ytysj.github.io/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://ytysj.github.io/css/jquery.fancybox.min.css" />
+	<link rel="stylesheet" href="https://ytysj.github.io/highlight styles/vs.css">
+	
+	<script src="https://ytysj.github.io/js/jquery-3.3.1.min.js"></script>	
+	<script src="https://ytysj.github.io/js/jquery.fancybox.min.js"></script>
+	<script src="https://ytysj.github.io/js/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	
+  </head>
+  <body>
+  </body>
+
+<section id="post">
+  <div class="head">
+      <div class="avatar">
+          <a href="https://ytysj.github.io/" target="_parent"><img src="/image/avatar.jpg"></a>
+      </div>
+      <div class="title"> 如何在电脑上折叠出SS纸飞机 </div>
+	  <div class="subtitle">
+		<div class="date">2018年11月10日</div>
+		<div class="tags">
+		
+		  
+			<a href="https://ytysj.github.io/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91">科学上网</a>
+		  
+			<a href="https://ytysj.github.io/tags/shadowsocks">Shadowsocks</a>
+		  
+		
+		</div>
+	  </div>
+  </div>
+  
+  <div class="content">
+
+<p>注：本文只涉及客户端，服务端以后再说。</p>
+
+<p>Shadowsocks可以指：一种基于Socks5代理方式的加密传输协议，也可以指实现这个协议的各种传输包。目前包使用Python、C、C++、C#、Go语言等编程语言开发，大部分主要实现（iOS平台的除外）采用Apache许可证、GPL、MIT许可证等多种自由软件许可协议开放源代码。Shadowsocks分为服务器端和客户端，在使用之前，需要先将服务器端部署到服务器上面，然后通过客户端连接并创建本地代理。这个可爱的小纸飞机应该怎么在电脑上折呢？</p>
+
+<p><img src="/image/2018/2018-11-10-如何在电脑上折叠出纸飞机/1.png" alt="" />折纸飞机拢共分四步。</p>
+
+<h2 id="一-获取客户端">一.获取客户端</h2>
+
+<p>github目前正常连接没有什么问题，所以可以在<a href="https://github.com/shadowsocks/shadowsocks-windows">全球最大程序员同性交友网</a>上下载客户端，打开项目之后点击release去下载最新版纸飞机。</p>
+
+<p><img src="/image/2018/2018-11-10-如何在电脑上折叠出纸飞机/2.png" alt="" /></p>
+
+<p><img src="/image/2018/2018-11-10-如何在电脑上折叠出纸飞机/3.png" alt="" /></p>
+
+<p>解压之后直接打开exe，ss不需要安装，点开即可。</p>
+
+<h2 id="二-配置客户端">二.配置客户端</h2>
+
+<p>右击右下角纸飞机，选择编辑服务器，添加一个新的服务器，输入服务端给你的地址，端口，密码，加密方式。</p>
+
+<p><img src="/image/2018/2018-11-10-如何在电脑上折叠出纸飞机/4.png" alt="" />  <img src="/image/2018/2018-11-10-如何在电脑上折叠出纸飞机/5.png" alt="" /></p>
+
+<p>此处说明一下，右击右下角图标打开“启用系统代理”之后，PAC模式和全局模式的区别：PAC模式指使用软件自带的过滤规则，部分选择代理；而全局模式是所有电脑上的流量均走代理。由于自带的PAC模式不太好使，而且不方便修改，没什么意义。所以一般建议关闭“启用系统代理”，采用浏览器插件的过滤规则。</p>
+
+<h2 id="三-配置浏览器">三.配置浏览器</h2>
+
+<p>对于chromium内核浏览器，安装SwitchyOmega这个插件。注：完成第二步的时候，打开全局模式就已经可以登录谷歌了，所以如果使用chrome的也可以直接去谷歌插件商店下载SwitchyOmega。</p>
+
+<p>如果情景模式里面什么都没有的话，可以选择新建情景模式（此处我已经建好了情景模式Shadowsocks，请无视），否则可以在已有的模式上修改。</p>
+
+<p><img src="/image/2018/2018-11-10-如何在电脑上折叠出纸飞机/6.png" alt="" />  <img src="/image/2018/2018-11-10-如何在电脑上折叠出纸飞机/7.png" alt="" /></p>
+
+<p>如此配置这个情景模式的代理服务器和代理端口，这样当在这个情景模式下，就会切换到客户端的代理，从而科学上网。</p>
+
+<p><img src="/image/2018/2018-11-10-如何在电脑上折叠出纸飞机/8.png" alt="" /></p>
+
+<p>增加自动切换的情景模式</p>
+
+<p><img src="/image/2018/2018-11-10-如何在电脑上折叠出纸飞机/9.png" alt="" /></p>
+
+<p>在情景模式下选择匹配规则时的情景模式“TEST”，默认选择直接连接，这样只有匹配上时才会走代理。</p>
+
+<p><img src="/image/2018/2018-11-10-如何在电脑上折叠出纸飞机/10.png" alt="" /></p>
+
+<p>创建规则列表，导入在线规则列表，输入网址， 选择立即更新。</p>
+
+<blockquote>
+<p><a href="https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt">https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt</a></p>
+</blockquote>
+
+<p><img src="/image/2018/2018-11-10-如何在电脑上折叠出纸飞机/11.png" alt="" /></p>
+
+<p>在浏览器插件栏，选择自动切换模式，这时候就可以自动切换了。在打开谷歌时是左边蓝色圆圈，代表开启代理；在打开百度时是右边灰色圆圈，代表直连。<img src="/image/2018/2018-11-10-如何在电脑上折叠出纸飞机/13.png" alt="" /></p>
+
+<p><img src="/image/2018/2018-11-10-如何在电脑上折叠出纸飞机/12.png" alt="" /></p>
+
+<p>如果遇到不在匹配规则内的，比如觉得<a href="https://ytysj.github.io/">液态氧斯基的小小站</a>打开太慢，那可以选择添加条件一栏，将情景模式选成ss模式，这样下次走这个网站就是走代理模式了。</p>
+
+<p><img src="/image/2018/2018-11-10-如何在电脑上折叠出纸飞机/14.png" alt="" /></p>
+
+<h2 id="四-享受正常上网">四.享受正常上网</h2>
+
+<p>Please enjoy!</p>
+</div>
+  
+
+     
+  <span id="/post/2018/2018-11-10-%E5%A6%82%E4%BD%95%E5%9C%A8%E7%94%B5%E8%84%91%E4%B8%8A%E6%8A%98%E5%8F%A0%E5%87%BA%E7%BA%B8%E9%A3%9E%E6%9C%BA/" class="leancloud_visitors" data-flag-title="如何在电脑上折叠出SS纸飞机">
+    <span class="post-meta-item-text">文章阅读量 </span>
+    <span class="leancloud-visitors-count">--</span>
+    <p></p>
+  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'TUITCbuSyYcJ8ThdhGW8ovr4-9Nh9j0Va',
+        appKey: 'Pm2PmK1h7rSO8AQdehhgRPG1',
+        notify:  false , 
+        verify:  false , 
+        avatar:'retro', 
+        placeholder: '说点什么吧...',
+        visitor:  true 
+    });
+  </script>
+ 
+
+</section>
+<footer>
+	<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1276093036'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s23.cnzz.com/z_stat.php%3Fid%3D1276093036' type='text/javascript'%3E%3C/script%3E"));</script>
+	
+	
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-75857373-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-75857373-1');
+	</script>
+	
+	<br />
+  &copy;
+  
+     
+  2019 <a href="https://ytysj.github.io/" target="_parent">液态氧斯基•小小站</a>, powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/hoofs/Cat">Cat</a>.
+</footer>
+</body>
+</html>
+

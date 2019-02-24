@@ -13,10 +13,10 @@
     
     <item>
       <title>如何在电脑上折叠出SS纸飞机</title>
-      <link>https://ytysj.github.io/post/2018-11-10-%E5%A6%82%E4%BD%95%E5%9C%A8%E7%94%B5%E8%84%91%E4%B8%8A%E6%8A%98%E5%8F%A0%E5%87%BA%E7%BA%B8%E9%A3%9E%E6%9C%BA/</link>
+      <link>https://ytysj.github.io/post/2018/2018-11-10-%E5%A6%82%E4%BD%95%E5%9C%A8%E7%94%B5%E8%84%91%E4%B8%8A%E6%8A%98%E5%8F%A0%E5%87%BA%E7%BA%B8%E9%A3%9E%E6%9C%BA/</link>
       <pubDate>Sat, 10 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://ytysj.github.io/post/2018-11-10-%E5%A6%82%E4%BD%95%E5%9C%A8%E7%94%B5%E8%84%91%E4%B8%8A%E6%8A%98%E5%8F%A0%E5%87%BA%E7%BA%B8%E9%A3%9E%E6%9C%BA/</guid>
+      <guid>https://ytysj.github.io/post/2018/2018-11-10-%E5%A6%82%E4%BD%95%E5%9C%A8%E7%94%B5%E8%84%91%E4%B8%8A%E6%8A%98%E5%8F%A0%E5%87%BA%E7%BA%B8%E9%A3%9E%E6%9C%BA/</guid>
       <description>注：本文只涉及客户端，服务端以后再说。
 Shadowsocks可以指：一种基于Socks5代理方式的加密传输协议，也可以指实现这个协议的各种传输包。目前包使用Python、C、C++、C#、Go语言等编程语言开发，大部分主要实现（iOS平台的除外）采用Apache许可证、GPL、MIT许可证等多种自由软件许可协议开放源代码。Shadowsocks分为服务器端和客户端，在使用之前，需要先将服务器端部署到服务器上面，然后通过客户端连接并创建本地代理。这个可爱的小纸飞机应该怎么在电脑上折呢？
 折纸飞机拢共分四步。
@@ -37,10 +37,10 @@ Shadowsocks可以指：一种基于Socks5代理方式的加密传输协议，也
     
     <item>
       <title>极路由1S刷第三方固件及SS配置</title>
-      <link>https://ytysj.github.io/post/2016-12-02-%E6%9E%81%E8%B7%AF%E7%94%B11s%E5%88%B7%E7%AC%AC%E4%B8%89%E6%96%B9%E5%9B%BA%E4%BB%B6%E5%8F%8Ass%E9%85%8D%E7%BD%AE/</link>
+      <link>https://ytysj.github.io/post/2016/2016-12-02-%E6%9E%81%E8%B7%AF%E7%94%B11s%E5%88%B7%E7%AC%AC%E4%B8%89%E6%96%B9%E5%9B%BA%E4%BB%B6%E5%8F%8Ass%E9%85%8D%E7%BD%AE/</link>
       <pubDate>Fri, 02 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://ytysj.github.io/post/2016-12-02-%E6%9E%81%E8%B7%AF%E7%94%B11s%E5%88%B7%E7%AC%AC%E4%B8%89%E6%96%B9%E5%9B%BA%E4%BB%B6%E5%8F%8Ass%E9%85%8D%E7%BD%AE/</guid>
+      <guid>https://ytysj.github.io/post/2016/2016-12-02-%E6%9E%81%E8%B7%AF%E7%94%B11s%E5%88%B7%E7%AC%AC%E4%B8%89%E6%96%B9%E5%9B%BA%E4%BB%B6%E5%8F%8Ass%E9%85%8D%E7%BD%AE/</guid>
       <description>前言 其实我一开始对刷路由器这件事是抵触的，因为感觉好麻烦好辛苦，最后也没啥特别的好处。可是随着GFW的变高，翻它越来越费劲，为了能手机平板PC全部科学上网，我发现极路由在Root之后有ss插件可以直接使用，所以我就愉快的使用上了。
 可是好景不长，不久之后我就发现极路由的致命问题——官方固件实在是太不稳定，刚到手更新了一次，WiFi死活连不上，连上也是时断时续，联系微信客服降级后勉强可以使用，可是长时间的使用还是偶尔出现连不上网、WiFi信号弱等问题。同时我发现这个ss功能略少，解析似乎也存在一些问题。
 多方因素促成我尝试刷第三方固件——这个美丽的蛋糕。所以写下这个简单的教程，方便像我这样零基础的菜鸟来学习。

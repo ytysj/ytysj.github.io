@@ -13,10 +13,10 @@
     
     <item>
       <title>如何在电脑上折叠出SS纸飞机</title>
-      <link>https://ytysj.github.io/post/2018-11-10-%E5%A6%82%E4%BD%95%E5%9C%A8%E7%94%B5%E8%84%91%E4%B8%8A%E6%8A%98%E5%8F%A0%E5%87%BA%E7%BA%B8%E9%A3%9E%E6%9C%BA/</link>
+      <link>https://ytysj.github.io/post/2018/2018-11-10-%E5%A6%82%E4%BD%95%E5%9C%A8%E7%94%B5%E8%84%91%E4%B8%8A%E6%8A%98%E5%8F%A0%E5%87%BA%E7%BA%B8%E9%A3%9E%E6%9C%BA/</link>
       <pubDate>Sat, 10 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://ytysj.github.io/post/2018-11-10-%E5%A6%82%E4%BD%95%E5%9C%A8%E7%94%B5%E8%84%91%E4%B8%8A%E6%8A%98%E5%8F%A0%E5%87%BA%E7%BA%B8%E9%A3%9E%E6%9C%BA/</guid>
+      <guid>https://ytysj.github.io/post/2018/2018-11-10-%E5%A6%82%E4%BD%95%E5%9C%A8%E7%94%B5%E8%84%91%E4%B8%8A%E6%8A%98%E5%8F%A0%E5%87%BA%E7%BA%B8%E9%A3%9E%E6%9C%BA/</guid>
       <description>注：本文只涉及客户端，服务端以后再说。
 Shadowsocks可以指：一种基于Socks5代理方式的加密传输协议，也可以指实现这个协议的各种传输包。目前包使用Python、C、C++、C#、Go语言等编程语言开发，大部分主要实现（iOS平台的除外）采用Apache许可证、GPL、MIT许可证等多种自由软件许可协议开放源代码。Shadowsocks分为服务器端和客户端，在使用之前，需要先将服务器端部署到服务器上面，然后通过客户端连接并创建本地代理。这个可爱的小纸飞机应该怎么在电脑上折呢？
 折纸飞机拢共分四步。
