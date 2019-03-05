@@ -6,10 +6,26 @@
     <description>Recent content in Posts on 液态氧斯基•小小站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 24 Feb 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 06 Mar 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ytysj.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>python列表复制问题</title>
+      <link>https://ytysj.github.io/post/2019/2019-3-6-python%E5%88%97%E8%A1%A8%E5%A4%8D%E5%88%B6%E6%97%A0%E6%95%88%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://ytysj.github.io/post/2019/2019-3-6-python%E5%88%97%E8%A1%A8%E5%A4%8D%E5%88%B6%E6%97%A0%E6%95%88%E9%97%AE%E9%A2%98/</guid>
+      <description>问题发现 在字典/列表等对象里套用字典/对象，并且复制的时候会出现这个情况：
+a={ &#39;a1&#39;:{&#39;line&#39;:&#39;l1&#39;,&#39;param&#39;:[0,1,2]}, &#39;a2&#39;:{&#39;line&#39;:&#39;l2&#39;,&#39;param&#39;:2} } print(a) b=a[&#39;a1&#39;].copy() b[&#39;param&#39;][0]=10 print(&#39;===a=====&#39;) print(a) print(&#39;===b=====&#39;) print(b)  执行结果是：
+===a before===== {&#39;a1&#39;: {&#39;line&#39;: &#39;l1&#39;, &#39;param&#39;: [0, 1, 2]}, &#39;a2&#39;: {&#39;line&#39;: &#39;l2&#39;, &#39;param&#39;: 2}} ===a after===== {&#39;a1&#39;: {&#39;line&#39;: &#39;l1&#39;, &#39;param&#39;: [10, 1, 2]}, &#39;a2&#39;: {&#39;line&#39;: &#39;l2&#39;, &#39;param&#39;: 2}} ===b after===== {&#39;line&#39;: &#39;l1&#39;, &#39;param&#39;: [10, 1, 2]}  可以发现，为了复制字典a中的字典a1给b，虽然b复制过去了，但是修改b的数值时会将a的值也一并修改。
+问题分析 原因和python的复制方式有关，python一共分三种复制
+直接赋值 直接赋值就是简单的=，由于python中数字都有固定id，比如语句c = 1意思是将1的id地址放到c的内容中。
+而对于列表来说，c = [1,2,3]的意思就是创建了一个新地址ADDR，里面存储[1,2,3]，这个地址赋给了c的内容。所以当再加上一句d = c之后，对d的操作同时也就是对c操作，这时候ADDR也同时赋给了d，所以当修改ADDR里面的内容时，c、d同时变化。
+浅复制 和下面的深复制一看就知道区别。浅复制一般是使用自带的函数copy()，如：
+c = [1,2,3] d = c.</description>
+    </item>
     
     <item>
       <title>python跨文件全局变量问题</title>
