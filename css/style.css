@@ -106,10 +106,13 @@ section#main .menu a{
 	color:#555;
 	font-size:1em;
 	margin:.4em .4em;
+	transition: 0.2s ease-out;
 }
 section#main .menu a:hover{
-	color:#111;
+	font-weight:bold;
 	text-decoration:underline;
+	color:#000;
+	padding:0.3em;
 }
 
 section#main nav{list-style:none}
@@ -160,11 +163,15 @@ section#post .tags li{
 section#post .tags a {
 	text-decoration:none;
 	color:#555;
+	transition: 0.2s ease-out;
 }
 section#post .tags a:hover{
+	font-weight:bold;
 	text-decoration:underline;
-	color:#111;
+	color:#000;
+	padding:0.5em;
 }	
+
 section#post .content{
 	margin-top:50px;
 	color:#000;
