@@ -6,10 +6,43 @@
     <description>Recent content on 液态氧斯基•小小站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 10 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 20 May 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ytysj.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>零基础搭建VPS</title>
+      <link>https://ytysj.github.io/post/2019/5-20-%E9%9B%B6%E5%9F%BA%E7%A1%80%E6%90%AD%E5%BB%BAvps/</link>
+      <pubDate>Mon, 20 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://ytysj.github.io/post/2019/5-20-%E9%9B%B6%E5%9F%BA%E7%A1%80%E6%90%AD%E5%BB%BAvps/</guid>
+      <description>前言 搭建VPS的类似教程已经很多了，但是我发现其中还是有不少坑，自己重复一遍也有可能卡住，所以写个文章来记录一下，一来提醒自己，二来方便他人零基础学习。
+什么是VPS？ VPS(Virtual Private Server)虚拟专用服务器，是一种将一台物理服务器分割成多个虚拟的服务器的技术，每个划分出的虚拟服务器都能供给不同的人独立使用。对于使用者来说，相当于是用更便宜的价格实现了一个小服务器，但是拥有和实体服务器一样的独立公网IP、操作系统、硬盘空间和CPU资源。一般用于搭建网站、提供服务、跑脚本（如爬虫）等。
+和VPN有什么区别？ VPN(Virtual Private Network)虚拟专用网络，实际上是在已有通信线路上搭建了一条虚拟的专用高速通道，连接使用者和另一专用服务器。目前语境下，VPN一般是用于连接到加速器/科学上网服务器。
+购买VPS VPS好比是租房，租若干时间，然后这房子随你怎么折腾。有名点的VPS如：Vultr、Bandwagon（搬瓦工）、Linode等，国内有阿里云、腾讯云。注意一般VPS经常有打折或者是优惠码之类的，也有一些比较实惠的促销机型，建议购买之前搜索一下，可以省很多很多钱。
+按照注册-&amp;gt;选型-&amp;gt;付费-&amp;gt;收邮件的步骤来，一般最后会得到一个IP地址，以及root账号的密码。
+进入系统 这个时候应该通过SSH( Secure Shell)协议来安全地连接你的电脑和VPS服务器，一般有putty(UI较老，开源免费)、xshell(UI比较新，个人使用途径是免费的)，这里我使用xshell。
+进入软件之后会要求新建会话，这里我仅作演示，输入VPS服务商给的IP地址和端口号。
+然后在用户身份验证处输入用户名和密码，在服务商发的邮件里肯定有写（有的服务商可能需要自己去启用SSH密码）。
+然后就能连接VPS机房了，进入的是一个无图形界面的linux终端。
+SSH密钥登录保护 这一步一开始我没有做，直到我收到邮件警告，发现我的VPS服务器在对外发垃圾邮件导致被暂停服务，我才注意到这个问题。实际上有很多黑客都在无时不刻的扫描端口，乘隙破解密码，然后用于黑产，之前的root账号密码，密码不够强壮很容易被暴力破解。
+那么取代root密码的就是密钥登录验证，具体的原理以后再说，其实就是RSA非对称加密，公钥私钥的问题。配置了这个保护之后，只有在VPS登记过公钥的电脑，用自己的私钥解密VPS发来的加密信息，才能确认登录成功。所以要妥善保管自己的私钥。下面是操作步骤：
+1.生成密钥 生成密钥的方式有很多种，如果本机是linux系统，可以在终端输入ssh-keygen -t rsa来生成一对密钥，给密钥加密的密码可以输入或者不输。最后生成两个文件，如id_rsa和id_rsa.pub，前者为私钥，后者为公钥（要发到VPS服务器上）。
+xshell也可以生成密钥，在工具-新建用户密钥生成向导里，按照步骤一步一步来，也可轻松地生成密钥。
+此处的密码可输入或不输入。
+2.把公钥保存在VPS服务器上 将id_rsa.pub文件发送到VPS服务器，首先需要安装lrzsz，可以方便的传输文件。
+root用户输入（非root用户在下面命令前面加个sudo）apt-get install lrzsz ，如果是centos用户可以输入yum -y install lrzsz 。
+安装完毕之后，到该路径下：cd /root/.ssh/，如果没有这个路径则输入mkdir /root/.ssh/ 创建文件夹。
+输入rz回车，就会弹出文件选择窗口，选择id_rsa.pub即可上传文件。
+重命名文件：cat .ssh/id_rsa.pub &amp;gt;&amp;gt; .ssh/authorized_keys
+执行chmod 600 ./authorized_keys 命令，修改权限；
+修改配置文件vim /etc/ssh/sshd_config，将RSAAuthentication 和 PubkeyAuthentication 后面的值都改成yes。
+注1：如果没有安装vim则输入apt-get install vim 。
+注2：vim默认是命令模式，按下i键才进入编辑模式，然后当修改完毕，按ESC退出编辑模式到命令模式，输入:wq(要输冒号哦)以保存和退出。
+重启sshd服务，Debian/Ubuntu输入/etc/init.d/ssh restart ，centos7以前的输入/etc/init.d/sshd restart，centos7以后的输入systemctl restart sshd.service
+3.测试密钥连接 和之前设置密码相似，只不过把password选项卡改成public key，然后选择自己的用户私钥，输入自己设置的加密密码。</description>
+    </item>
     
     <item>
       <title>计算机系统里中文常见字体来源和版权</title>

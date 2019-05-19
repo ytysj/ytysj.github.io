@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="referrer" content="no-referrer">
+    <meta name="description" content="一个简单的小小站">
+    <title>液态氧斯基•小小站</title>
+    <link rel="stylesheet" href="https://ytysj.github.io/css/style.css">
+    <link rel="canonical" href="https://ytysj.github.io/post/2019/5-20-%E9%9B%B6%E5%9F%BA%E7%A1%80%E6%90%AD%E5%BB%BAvps/">
+    
+	
+	<link href="https://ytysj.github.io/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://ytysj.github.io/css/jquery.fancybox.min.css" />
+	<link rel="stylesheet" href="https://ytysj.github.io/highlight styles/vs.css">
+	
+	<script src="https://ytysj.github.io/js/jquery-3.3.1.min.js"></script>	
+	<script src="https://ytysj.github.io/js/jquery.fancybox.min.js"></script>
+	<script src="https://ytysj.github.io/js/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	
+	<script type="text/javascript" src="http://tajs.qq.com/stats?sId=66190846" charset="UTF-8"></script>
+
+	
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-75857373-1"></script>
+	
+  </head>
+  <body>
+  </body>
+
+<section id="post">
+  <div class="head">
+      <div class="avatar">
+          <a href="https://ytysj.github.io/" target="_parent"><img src="/image/avatar.jpg"></a>
+      </div>
+      <div class="title"> 零基础搭建VPS </div>
+	  <div class="subtitle">
+		<div class="date">2019年05月20日</div>
+		<div class="tags">
+		
+		  
+			<a href="https://ytysj.github.io/tags/vps">VPS</a>
+		  
+			<a href="https://ytysj.github.io/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91">科学上网</a>
+		  
+		
+		</div>
+	  </div>
+  </div>
+  
+  <div class="content">
+
+<h2 id="前言">前言</h2>
+
+<p>搭建VPS的类似教程已经很多了，但是我发现其中还是有不少坑，自己重复一遍也有可能卡住，所以写个文章来记录一下，一来提醒自己，二来方便他人零基础学习。</p>
+
+<h2 id="什么是vps">什么是VPS？</h2>
+
+<p>VPS(Virtual Private Server)虚拟专用服务器，是一种将一台物理服务器分割成多个虚拟的服务器的技术，每个划分出的虚拟服务器都能供给不同的人独立使用。对于使用者来说，相当于是用更便宜的价格实现了一个小服务器，但是拥有和实体服务器一样的独立公网IP、操作系统、硬盘空间和CPU资源。一般用于搭建网站、提供服务、跑脚本（如爬虫）等。</p>
+
+<h2 id="和vpn有什么区别">和VPN有什么区别？</h2>
+
+<p>VPN(Virtual Private Network)虚拟专用网络，实际上是在已有通信线路上搭建了一条虚拟的专用高速通道，连接使用者和另一专用服务器。目前语境下，VPN一般是用于连接到加速器/科学上网服务器。</p>
+
+<h2 id="购买vps">购买VPS</h2>
+
+<p>VPS好比是租房，租若干时间，然后这房子随你怎么折腾。有名点的VPS如：Vultr、Bandwagon（搬瓦工）、Linode等，国内有阿里云、腾讯云。注意一般VPS经常有打折或者是优惠码之类的，也有一些比较实惠的促销机型，建议购买之前搜索一下，可以省很多很多钱。</p>
+
+<p>按照注册-&gt;选型-&gt;付费-&gt;收邮件的步骤来，一般最后会得到一个IP地址，以及root账号的密码。</p>
+
+<h2 id="进入系统">进入系统</h2>
+
+<p>这个时候应该通过SSH( Secure Shell)协议来安全地连接你的电脑和VPS服务器，一般有putty(UI较老，开源免费)、xshell(UI比较新，个人使用途径是免费的)，这里我使用xshell。</p>
+
+<p>进入软件之后会要求新建会话，这里我仅作演示，输入VPS服务商给的IP地址和端口号。</p>
+
+<p><img src="/image/2019/5-20-零基础搭建VPS/1.png" alt="" /></p>
+
+<p>然后在用户身份验证处输入用户名和密码，在服务商发的邮件里肯定有写（有的服务商可能需要自己去启用SSH密码）。</p>
+
+<p><img src="/image/2019/5-20-零基础搭建VPS/2.png" alt="" /></p>
+
+<p>然后就能连接VPS机房了，进入的是一个无图形界面的linux终端。</p>
+
+<h2 id="ssh密钥登录保护">SSH密钥登录保护</h2>
+
+<p>这一步一开始我没有做，直到我收到邮件警告，发现我的VPS服务器在对外发垃圾邮件导致被暂停服务，我才注意到这个问题。实际上有很多黑客都在无时不刻的扫描端口，乘隙破解密码，然后用于黑产，之前的root账号密码，密码不够强壮很容易被暴力破解。</p>
+
+<p>那么取代root密码的就是密钥登录验证，具体的原理以后再说，其实就是RSA非对称加密，公钥私钥的问题。配置了这个保护之后，只有在VPS登记过公钥的电脑，用自己的私钥解密VPS发来的加密信息，才能确认登录成功。所以<strong>要妥善保管自己的私钥</strong>。下面是操作步骤：</p>
+
+<h3 id="1-生成密钥">1.生成密钥</h3>
+
+<p>生成密钥的方式有很多种，如果本机是linux系统，可以在终端输入<code>ssh-keygen -t rsa</code>来生成一对密钥，给密钥加密的密码可以输入或者不输。最后生成两个文件，如id_rsa和id_rsa.pub，前者为私钥，后者为公钥（要发到VPS服务器上）。</p>
+
+<p>xshell也可以生成密钥，在工具-新建用户密钥生成向导里，按照步骤一步一步来，也可轻松地生成密钥。</p>
+
+<p><img src="/image/2019/5-20-零基础搭建VPS/3.png" alt="" /></p>
+
+<p>此处的密码可输入或不输入。</p>
+
+<p><img src="/image/2019/5-20-零基础搭建VPS/4.png" alt="" /></p>
+
+<h3 id="2-把公钥保存在vps服务器上">2.把公钥保存在VPS服务器上</h3>
+
+<p>将id_rsa.pub文件发送到VPS服务器，首先需要安装lrzsz，可以方便的传输文件。</p>
+
+<p>root用户输入（非root用户在下面命令前面加个sudo）<code>apt-get install lrzsz</code> ，如果是centos用户可以输入<code>yum -y install lrzsz</code> 。</p>
+
+<p>安装完毕之后，到该路径下：<code>cd /root/.ssh/</code>，如果没有这个路径则输入<code>mkdir /root/.ssh/</code> 创建文件夹。</p>
+
+<p>输入rz回车，就会弹出文件选择窗口，选择id_rsa.pub即可上传文件。</p>
+
+<p>重命名文件：<code>cat .ssh/id_rsa.pub &gt;&gt; .ssh/authorized_keys</code></p>
+
+<p>执行<code>chmod 600 ./authorized_keys</code> 命令，修改权限；</p>
+
+<p>修改配置文件<code>vim /etc/ssh/sshd_config</code>，将RSAAuthentication 和 PubkeyAuthentication 后面的值都改成yes。</p>
+
+<p>注1：如果没有安装vim则输入<code>apt-get install vim</code> 。</p>
+
+<p>注2：vim默认是命令模式，按下<code>i</code>键才进入编辑模式，然后当修改完毕，按ESC退出编辑模式到命令模式，输入<code>:wq</code>(要输冒号哦)以保存和退出。</p>
+
+<p>重启sshd服务，Debian/Ubuntu输入<code>/etc/init.d/ssh restart</code> ，centos7以前的输入<code>/etc/init.d/sshd restart</code>，centos7以后的输入<code>systemctl restart sshd.service</code></p>
+
+<h3 id="3-测试密钥连接">3.测试密钥连接</h3>
+
+<p>和之前设置密码相似，只不过把password选项卡改成public key，然后选择自己的用户私钥，输入自己设置的加密密码。</p>
+
+<p><img src="/image/2019/5-20-零基础搭建VPS/5.png" alt="" /></p>
+
+<h3 id="4-关闭password登录选项">4.关闭password登录选项</h3>
+
+<p>现在我们的VPS已经可以用root密码，或是密钥登录了，确认密钥登录没有问题之后，还是修改配置文件<code>vim /etc/ssh/sshd_config</code>，将将PasswordAuthentication yes 修改成 PasswordAuthentication no</p>
+
+<p>重启sshd服务，Debian/Ubuntu输入<code>/etc/init.d/ssh restart</code> ，centos7以前的输入<code>/etc/init.d/sshd restart</code>，centos7以后的输入<code>systemctl restart sshd.service</code></p>
+
+<p>那么现在设置都完成了，再次提醒要记得<strong>保存好生成的私钥文件</strong>！</p>
+
+<h2 id="安装shadowsocks服务端">安装Shadowsocks服务端</h2>
+
+<p>淦！搞了这么久终于到这一步了，你行不行啊！(hhhh)</p>
+
+<p>什么是Shadowsocks在之前的<a href="/post/2018/2018-11-10-如何在电脑上折叠出纸飞机/">客户端设置文章</a>里有介绍，这里不多说。</p>
+
+<p>这里要感谢<a href="https://teddysun.com/">秋水逸冰</a>大佬的一键安装脚本，非常简单无脑。输入下面三条命令，一个一个来，等一条命令完成再输下一条。</p>
+
+<pre><code class="language-bsh">wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh
+
+chmod +x shadowsocks-all.sh
+
+./shadowsocks-all.sh 2&gt;&amp;1 | tee shadowsocks-all.log
+</code></pre>
+
+<p>按照提示选择ss版本（随便选一个），设置密码，设置端口号(注意别用一些比较常见的端口，像什么8080和443，很容易就被嗅探到封了，可以输个大一点的数字)、选择协议等，剩下的就回车回车回车，用默认值就行。</p>
+
+<p>注：得知大佬不再更新脚本，还是感触颇深，在现在的社会环境下，为众人拾柴的往往冻死。如果做不到为先驱端一碗热汤，至少不要给先驱泼冷水吧？</p>
+
+<h2 id="bbr加速">BBR加速</h2>
+
+<p>有时候SS效果不太好，谷歌有个BBR拥塞控制算法，用于TCP加速，可以通过加倍发包的办法来做到加速的效果，在提高网络带宽利用率的同时也间接加大了网络的丢包率。有些VPS服务商会提供带有bbr的系统镜像，这里讲没有携带镜像时的安装方法。</p>
+
+<p>这里分享三种脚本</p>
+
+<h3 id="1-最新bbr内核脚本">1.最新BBR内核脚本</h3>
+
+<p><a href="https://teddysun.com/489.html">秋水逸冰</a>大佬的脚本，系统支持：CentOS 6+，Debian 7+，Ubuntu 12+</p>
+
+<p>使用root用户登录，输入</p>
+
+<pre><code class="language-bsh">wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh &amp;&amp; chmod +x bbr.sh &amp;&amp; ./bbr.sh
+</code></pre>
+
+<p>安装完成后，脚本会提示需要重启 VPS，输入 y 并回车后重启。
+重启后，验证一下是否成功安装最新内核并开启 TCP BBR，输入以下命令查看内核版本，若为最新版即可。</p>
+
+<pre><code class="language-bsh">uname -r
+</code></pre>
+
+<p>返回值一般为：<code>net.ipv4.tcp_available_congestion_control = bbr cubic reno</code>
+或者为：<code>net.ipv4.tcp_available_congestion_control = reno cubic bbr</code></p>
+
+<pre><code class="language-bsh">sysctl net.ipv4.tcp_congestion_control
+</code></pre>
+
+<p>返回值一般为：<code>net.ipv4.tcp_congestion_control = bbr</code></p>
+
+<pre><code class="language-bsh">sysctl net.core.default_qdisc
+</code></pre>
+
+<p>返回值一般为：<code>net.core.default_qdisc = fq</code></p>
+
+<pre><code class="language-bsh">lsmod | grep bbr
+</code></pre>
+
+<p>返回值有 tcp_bbr 模块即说明 bbr 已启动。注：并不是所有的 VPS 都会有此返回值，若没有也属正常。</p>
+
+<h3 id="2-bbr超级魔改脚本">2.BBR超级魔改脚本</h3>
+
+<p><a href="https://blog.sometimesnaive.org/">南琴浪</a>大佬的一键脚本，只支持Debian，Debian7、8、9都可以，超级魔改的意思就是比bbr更激进地发包，效果更加明显，丢包还有消耗的流量也更大了。</p>
+
+<p>root下输入</p>
+
+<pre><code class="language-bsh">wget https://raw.githubusercontent.com/iiiiiii1/tcp_nanqinlang-test/master/tcp_nanqinlang-test.sh
+bash tcp_nanqinlang-test.sh
+</code></pre>
+
+<p>使用脚本后</p>
+
+<p><img src="/image/2019/5-20-零基础搭建VPS/6.png" alt="" /></p>
+
+<p>先选择<code>1</code>更换内核，然后<code>reboot</code>重启后，再使用<code>bash tcp_nanqinlang-test.sh</code>进行第<code>2</code>步开启超级暴力<code>BBR</code>模式。</p>
+
+<p>如果删除内核时出现下图，选择no，然后根据提示重启系统</p>
+
+<p><img src="/image/2019/5-20-零基础搭建VPS/7.png" alt="" /></p>
+
+<p>这里我出现了这个提示，这样两个内核算是一样的，出现这个说明成功了，可以重启。</p>
+
+<pre><code class="language-bsh">[Info] 这是当前已安装的所有内核的列表：
+linux-image-4.10.10-041010-lowlatency
+[Info] 这是需要安装的所有内核的列表：
+linux-image-4.10.10-lowlatency
+[Info] 请确保上下两个列表完全一致！
+[Info] 确认内核安装无误后, 重启你的VPS, 开机后再次运行该脚本的第二项！
+</code></pre>
+
+<h3 id="3-bbr-bbr魔改-锐速集成脚本">3.BBR+BBR魔改+锐速集成脚本</h3>
+
+<p><a href="https://www.94ish.me/">千影</a>大佬的一键脚本，包含了BBR+BBR魔改版+Lotsever(锐速)，支持系统：CentOS 6+、Debian 8+、Ubuntu 14+。</p>
+
+<pre><code class="language-bsh">#过程有2步，第1步安装相应的内核，第2步开启内核对应的加速
+wget -N --no-check-certificate &quot;https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh&quot; &amp;&amp; chmod +x tcp.sh &amp;&amp; ./tcp.sh
+</code></pre>
+
+<p>使用脚本后如图，选择自己想要的</p>
+
+<p><img src="/image/2019/5-20-零基础搭建VPS/8.png" alt="" /></p>
+
+<p>重启后再使用<code>./tcp.sh</code>命令接着操作</p>
+
+<p>如果删除内核时出现下图，选择no，然后根据提示重启系统</p>
+
+<p><img src="/image/2019/5-20-零基础搭建VPS/7.png" alt="" /></p>
+
+<h2 id="总结">总结</h2>
+
+<p>以上步骤因为我不熟悉，有时候做错都没法回去，只能全部从头来，所以很多步骤我都傻傻的做了好多次，可能我的总结也不是非常详细，应该还会慢慢补充。最后就以前辈的一封邮件做结尾吧。</p>
+
+<blockquote>
+<p>“ACROSS THE GREAT WALL WE CAN REACH EVERY CORNER IN THE WORLD”(越过长城，走向世界)</p>
+
+<p>——1987年9月14日，中国向世界发出的第一封电子邮件</p>
+</blockquote>
+</div>
+  
+
+     
+  <span id="/post/2019/5-20-%E9%9B%B6%E5%9F%BA%E7%A1%80%E6%90%AD%E5%BB%BAvps/" class="leancloud_visitors" data-flag-title="零基础搭建VPS">
+    <span class="post-meta-item-text">文章阅读量 </span>
+    <span class="leancloud-visitors-count">--</span>
+    <p></p>
+  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'TUITCbuSyYcJ8ThdhGW8ovr4-9Nh9j0Va',
+        appKey: 'Pm2PmK1h7rSO8AQdehhgRPG1',
+        notify:  false , 
+        verify:  false , 
+        avatar:'retro', 
+        placeholder: '说点什么吧...',
+        visitor:  true 
+    });
+  </script>
+ 
+
+</section>
+<footer>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-75857373-1');
+	</script>
+	
+	<br />
+  &copy;
+  
+     
+  2019 <a href="https://ytysj.github.io/" target="_parent">液态氧斯基•小小站</a>, powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/hoofs/Cat">Cat</a>.
+</footer>
+</body>
+</html>
+
