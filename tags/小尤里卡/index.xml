@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>生活 on 液态氧斯基•小小站</title>
-    <link>https://ytysj.github.io/tags/%E7%94%9F%E6%B4%BB/</link>
-    <description>Recent content in 生活 on 液态氧斯基•小小站</description>
+    <title>小尤里卡 on 液态氧斯基•小小站</title>
+    <link>https://ytysj.github.io/tags/%E5%B0%8F%E5%B0%A4%E9%87%8C%E5%8D%A1/</link>
+    <description>Recent content in 小尤里卡 on 液态氧斯基•小小站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
     <lastBuildDate>Mon, 20 May 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://ytysj.github.io/tags/%E7%94%9F%E6%B4%BB/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ytysj.github.io/tags/%E5%B0%8F%E5%B0%A4%E9%87%8C%E5%8D%A1/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -27,35 +27,6 @@
 同时我也发现诚品书店里情侣好多，我也在思考女朋友的问题。像老妈说的，我还是一直在考虑着玩，不像普通的正常人。的确，我就是一直想着享受生活，辛苦读书那么多年，最后工作发现还越来越辛苦，那人生还真的没一点意义了，变成纯粹延续DNA了。但是近来我是越来越无聊，一大堆兴趣里，有些竟然可怕的开始不怎么感兴趣了。
 实际上之前我是想着，有了女朋友就有人一起玩了，就没有那么无聊了。但是今天突然想到，其实并不是随便一个人就可以满足这个要求，可能有另一半之后生活更加受束缚，互相的烦恼淹没两人，为了一些可有可无的事情耗费大量精力。很多时候就是我自己给没有到达的未来加了一个很美好的滤镜，但是事实是大部分情况都没有滤镜，只有灰调。当然，最好的情况自然是双方能互相激励，inspire each other。
 总结一下吧，为了尤里卡，还是需要多外出走走，接触他人的优秀思维成果，女朋友也不是说有就有。</description>
-    </item>
-    
-    <item>
-      <title>迁移到hugo</title>
-      <link>https://ytysj.github.io/post/2018/2018-10-07-%E8%BF%81%E7%A7%BB%E5%88%B0hugo/</link>
-      <pubDate>Sun, 07 Oct 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://ytysj.github.io/post/2018/2018-10-07-%E8%BF%81%E7%A7%BB%E5%88%B0hugo/</guid>
-      <description>这两年发生了太多太多的事情，沧海桑田，白驹过隙。
-我对原来的jekyll的速度有些不满意，而hugo使用go语言，它天生有着能利用多线程的优秀特点，所以我迁移到hugo，并且在主题（Cat主题）上也花费了一点时间修改，还有不少地方不明白，但是至少能通过冒烟测试嘛~</description>
-    </item>
-    
-    <item>
-      <title>做了小小的修改</title>
-      <link>https://ytysj.github.io/post/2016/2016-04-04-%E5%81%9A%E4%BA%86%E5%B0%8F%E5%B0%8F%E7%9A%84%E4%BF%AE%E6%94%B9/</link>
-      <pubDate>Mon, 04 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://ytysj.github.io/post/2016/2016-04-04-%E5%81%9A%E4%BA%86%E5%B0%8F%E5%B0%8F%E7%9A%84%E4%BF%AE%E6%94%B9/</guid>
-      <description>做了一点小小的美化，学了本地调试，也学了不少的HTML语言，收益颇多。
-我打算过几天整理一个教程，方便大家也建立自己的网站。</description>
-    </item>
-    
-    <item>
-      <title>上线博客</title>
-      <link>https://ytysj.github.io/post/2016/2016-04-02-%E4%B8%8A%E7%BA%BF%E5%8D%9A%E5%AE%A2/</link>
-      <pubDate>Sat, 02 Apr 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://ytysj.github.io/post/2016/2016-04-02-%E4%B8%8A%E7%BA%BF%E5%8D%9A%E5%AE%A2/</guid>
-      <description>折腾了一两天，终于上线了个人网站。</description>
     </item>
     
   </channel>
