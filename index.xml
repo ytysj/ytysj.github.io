@@ -344,5 +344,14 @@ gem sources --add https://ruby.taobao.org/ --remove https://rubygems.org/ gem so
       <description>折腾了一两天，终于上线了个人网站。</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>https://ytysj.github.io/games/i-fu-you/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ytysj.github.io/games/i-fu-you/</guid>
+      <description>Unity WebGL Player | 我FU了你var gameInstance = UnityLoader.instantiate(&#34;gameContainer&#34;, &#34;Build/WEBOUTPUT.json&#34;, {onProgress: UnityProgress});我FU了你</description>
+    </item>
+    
   </channel>
 </rss>

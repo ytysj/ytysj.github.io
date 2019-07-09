@@ -1,0 +1,14 @@
+{
+"companyName": "队名百度来的",
+"productName": "我FU了你",
+"dataUrl": "WEBOUTPUT.data.unityweb",
+"wasmCodeUrl": "WEBOUTPUT.wasm.code.unityweb",
+"wasmFrameworkUrl": "WEBOUTPUT.wasm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"backgroundUrl": "WEBOUTPUT.jpg",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#FFFFFF",
+"cacheControl": {"default": "must-revalidate"}
+}
