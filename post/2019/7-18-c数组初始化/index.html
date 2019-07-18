@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="referrer" content="no-referrer">
+    <meta name="description" content="一个简单的小小站">
+    <title>液态氧斯基•小小站</title>
+    <link rel="stylesheet" href="https://ytysj.github.io/css/style.css">
+    <link rel="canonical" href="https://ytysj.github.io/post/2019/7-18-c%E6%95%B0%E7%BB%84%E5%88%9D%E5%A7%8B%E5%8C%96/">
+    
+	
+	<link href="https://ytysj.github.io/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://ytysj.github.io/css/jquery.fancybox.min.css" />
+	<link rel="stylesheet" href="https://ytysj.github.io/highlight styles/vs.css">
+	
+	<script src="https://ytysj.github.io/js/jquery-3.3.1.min.js"></script>	
+	<script src="https://ytysj.github.io/js/jquery.fancybox.min.js"></script>
+	<script src="https://ytysj.github.io/js/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+	
+	<script type="text/javascript" src="http://tajs.qq.com/stats?sId=66190846" charset="UTF-8"></script>
+
+	
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-75857373-1"></script>
+	
+  </head>
+  <body>
+  </body>
+
+<section id="post">
+  <div class="head">
+      <div class="avatar">
+          <a href="https://ytysj.github.io/" target="_parent"><img src="/image/avatar.jpg"></a>
+      </div>
+      <div class="title"> C/C&#43;&#43;数组的初始化 </div>
+	  <div class="subtitle">
+		<div class="date">2019年07月18日</div>
+		<div class="tags">
+		
+		  
+			<a href="https://ytysj.github.io/tags/%E7%BC%96%E7%A8%8B">编程</a>
+		  
+			<a href="https://ytysj.github.io/tags/c%E8%AF%AD%E8%A8%80">C语言</a>
+		  
+		
+		</div>
+	  </div>
+  </div>
+  
+  <div class="content"><p>C/C++里面数组的初始化，一般是这样写的：</p>
+
+<pre><code class="language-c">int a[4]={0,1,2,3};
+</code></pre>
+
+<p>即在初始化的时候对每个地址赋值。</p>
+
+<p>为了方便初始化，C/C++如果这样写：</p>
+
+<pre><code class="language-c">int a[4]={0};
+</code></pre>
+
+<p>不仅是a[0]初始化为0，剩下的地址也同时初始化为0。</p>
+
+<p>然后因为这个特性，这几天我就以为这样写也可以：</p>
+
+<pre><code class="language-c">int a[4]={1};
+</code></pre>
+
+<p>我以为这样写是4个地址都为1。而实际上，只有a[0]为1，其他的地址还是初始化为0。</p>
+
+<p>要想所有地址都为1，还是得循环对每个地址单独赋值。</p>
+</div>
+  
+
+     
+  <span id="/post/2019/7-18-c%E6%95%B0%E7%BB%84%E5%88%9D%E5%A7%8B%E5%8C%96/" class="leancloud_visitors" data-flag-title="C/C&#43;&#43;数组的初始化">
+    <span class="post-meta-item-text">文章阅读量 </span>
+    <span class="leancloud-visitors-count">--</span>
+    <p></p>
+  </span>
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'TUITCbuSyYcJ8ThdhGW8ovr4-9Nh9j0Va',
+        appKey: 'Pm2PmK1h7rSO8AQdehhgRPG1',
+        notify:  false , 
+        verify:  false , 
+        avatar:'retro', 
+        placeholder: '说点什么吧...',
+        visitor:  true 
+    });
+  </script>
+ 
+
+</section>
+<footer>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-75857373-1');
+	</script>
+	
+	<br />
+  &copy;
+  
+     
+  2019 <a href="https://ytysj.github.io/" target="_parent">液态氧斯基•小小站</a>, powered by <a href="https://gohugo.io">Hugo</a> and <a href="https://github.com/hoofs/Cat">Cat</a>.
+</footer>
+</body>
+</html>
+
