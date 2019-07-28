@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://ytysj.github.io/post/2019/7-28-%E9%95%BF%E5%AE%89%E5%8D%81%E4%BA%8C%E6%97%B6%E8%BE%B0%E6%98%AF%E6%80%8E%E4%B9%88%E6%89%93%E7%A0%B4%E6%AC%A1%E5%85%83%E5%A3%81%E7%9A%84/</loc>
+    <lastmod>2019-07-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ytysj.github.io/post/2019/7-19-%E5%AF%B9%E9%A6%99%E6%B8%AF%E4%BA%8B%E4%BB%B6%E7%9A%84%E6%84%9F%E8%A7%A6/</loc>
     <lastmod>2019-07-19T00:00:00+00:00</lastmod>
   </url>
@@ -135,7 +140,7 @@
   
   <url>
     <loc>https://ytysj.github.io/post/</loc>
-    <lastmod>2019-07-19T00:00:00+00:00</lastmod>
+    <lastmod>2019-07-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -188,6 +193,12 @@
   </url>
   
   <url>
+    <loc>https://ytysj.github.io/tags/%E5%BD%B1%E8%A7%86/</loc>
+    <lastmod>2019-07-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://ytysj.github.io/tags/%E6%9E%81%E8%B7%AF%E7%94%B1/</loc>
     <lastmod>2016-12-02T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -195,7 +206,7 @@
   
   <url>
     <loc>https://ytysj.github.io/</loc>
-    <lastmod>2019-07-19T00:00:00+00:00</lastmod>
+    <lastmod>2019-07-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -225,13 +236,7 @@
   
   <url>
     <loc>https://ytysj.github.io/tags/%E7%94%9F%E6%B4%BB/</loc>
-    <lastmod>2019-07-19T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ytysj.github.io/tags/%E7%94%B5%E5%BD%B1/</loc>
-    <lastmod>2018-10-31T00:00:00+00:00</lastmod>
+    <lastmod>2019-07-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
