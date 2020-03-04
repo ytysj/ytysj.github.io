@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://ytysj.github.io/post/2020/3-5-%E5%B0%8F%E5%B0%A4%E9%87%8C%E5%8D%A1%E5%85%B3%E4%BA%8E%E5%90%8C%E6%80%A7%E5%A9%9A%E5%A7%BB%E4%BB%A5%E5%8F%8A%E5%85%B6%E4%BB%96%E5%85%B3%E7%B3%BB%E7%9A%84%E6%80%9D%E8%80%83/</loc>
+    <lastmod>2020-03-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ytysj.github.io/post/2019/7-28-%E9%95%BF%E5%AE%89%E5%8D%81%E4%BA%8C%E6%97%B6%E8%BE%B0%E6%98%AF%E6%80%8E%E4%B9%88%E6%89%93%E7%A0%B4%E6%AC%A1%E5%85%83%E5%A3%81%E7%9A%84/</loc>
     <lastmod>2019-07-28T00:00:00+00:00</lastmod>
   </url>
@@ -140,7 +145,7 @@
   
   <url>
     <loc>https://ytysj.github.io/post/</loc>
-    <lastmod>2019-07-28T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -188,13 +193,19 @@
   
   <url>
     <loc>https://ytysj.github.io/tags/%E5%B0%8F%E5%B0%A4%E9%87%8C%E5%8D%A1/</loc>
-    <lastmod>2019-06-08T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ytysj.github.io/tags/%E5%BD%B1%E8%A7%86/</loc>
     <lastmod>2019-07-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ytysj.github.io/tags/%E6%80%9D%E8%80%83/</loc>
+    <lastmod>2020-03-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -206,7 +217,7 @@
   
   <url>
     <loc>https://ytysj.github.io/</loc>
-    <lastmod>2019-07-28T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-05T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
