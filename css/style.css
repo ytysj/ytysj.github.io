@@ -24,6 +24,7 @@
 .content em,.content i{font-style:italic;color:#222223}
 .content img{max-width:100%;height:auto;border:none}
 .content a img{border:none}
+
 .content figure{position:relative;clear:both;outline:0;margin:10px 0 30px;padding:0;min-height:100px}
 .content figure img{display:block;max-width:80%;margin:auto auto 4px;box-sizing:border-box}
 .content figure figcaption{
@@ -42,9 +43,25 @@
 .content li ul ul{list-style-type:square}
 .content li p{margin:.4em 0 .6em}
 .content .unstyled{list-style-type:none;margin:0;padding:0}
-.content code,.content tt{font-family:Consolas,Monaco,Menlo,Consolas,monospace;padding:0 3px;padding-top:.2em;padding-bottom:.2em;margin:0;background-color:rgba(0,0,0,.04);border-radius:3px;word-break:break-all}
-.content pre{font-family:Inconsolata,monospace;padding:16px;overflow:auto;line-height:1.45;background-color:#F0F0F0;border-radius:3px;box-shadow:6px 5px 8px rgba(0,0,0,.125)}
-.content pre code,.content pre tt{color:#4c4c4c;border:none;background:0 0;padding:0;font-family:Consolas,Monaco,Menlo,Consolas,monospace;}
+.content code,.content tt{
+    font-family:'Exo 2','Microsoft YaHei Light',Consolas,Monaco,Menlo,Consolas,monospace;
+    padding:0 3px;
+    padding-top:.2em;
+    padding-bottom:.2em;
+    margin:0;
+    background-color:rgba(0,0,0,.04);
+    border-radius:3px;
+    word-break:break-all;
+}
+.content pre{
+    padding:16px;
+    overflow:auto;
+    line-height:1.45;
+    background-color:#f6f6f6;
+    border-radius:3px;
+    box-shadow:6px 5px 8px rgba(0,0,0,.125);
+}
+.content pre code,.content pre tt{color:#4c4c4c;border:none;background:0 0;padding:0;}
 .content table{width:100%;max-width:100%;border-collapse:collapse;border-spacing:0;margin-bottom:1.5em;font-size:.96em;box-sizing:border-box}
 .content td,.content th{text-align:left;padding:4px 8px 4px 10px;border:1px solid #dadada}
 .content td{vertical-align:top}
@@ -69,7 +86,8 @@
 	max-width:30%;	
 	padding:.5em .5em 1.3em .5em;
 	margin:.8em 1em .8em 1em;
-	box-shadow: 1px 1px 3px #888888;
+    box-shadow: 1px 1px 3px #888888;
+	transition: 0.5s ease-out;
 }
 
 .thumbnail-image figcaption{
@@ -81,7 +99,8 @@
 }
 
 .thumbnail-image:hover{
-	box-shadow: 2px 2px 10px #888888;
+    box-shadow: 2px 2px 10px #888888;
+    transform: scale(1.06);
 }
 
 
@@ -95,9 +114,23 @@ section#main{
 }
 @media screen and (max-width:700px){section#main{max-width:100%;}}
 
-section#main .head .avatar{text-align:center}
-section#main .head .avatar a{text-decoration:none}
-section#main .head .avatar img{width:100px;height:100px;border:1px solid #eaeaea;padding:4px;border-radius:50%;margin-top:20px;margin-bottom:40px}
+section#main .head .avatar{
+    text-align:center;
+    margin-top:20px;
+    margin-bottom:40px;
+}
+section#main .head .avatar a{text-decoration:none;}
+section#main .head .avatar img{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    box-shadow: 1px 1px 3px #888888;
+    transition: 0.6s ease-out;
+}
+section#main .head .avatar img:hover{
+    transform: scale(1.2);
+}
+
 section#main .head .title{font-size:1.8em;margin:7px 0;color:#111;font-weight:400}
 section#main .head .description{color:#555;font-size:1em;margin:5px 0}
 
@@ -111,7 +144,7 @@ section#main .menu a{
 section#main .menu a:hover{
 	font-weight:bold;
 	text-decoration:underline;
-	color:#000;
+	color:#E60000;
 	padding:0.3em;
 }
 
@@ -120,12 +153,25 @@ section#main nav li{display:inline-block;margin:0 5px}
 section#main nav li a{font-size:14px;text-decoration:none;color:#777}
 section#main nav li a:hover{color:#000;border-bottom:2px solid #56626b}
 section#main .posts{text-align:left;margin:30px 0 15px 0}
-section#main .posts .post{text-decoration:none;color:#444;display:block;padding:1em 1.5em;border-radius:4px;transition:background-color .25s}
-section#main .posts .post:hover{background-color:#f5f5f5;transition:background-color .25s}
-section#main .posts .post .labels{font-size:.8em;margin:5px 0}
+section#main .posts .post{
+    font-size:1.0em;
+    text-decoration:none;
+    color:#444;
+    display:block;
+    padding:1em 1.5em;
+    border-radius:4px;
+    transition:background-color .25s
+}
+section#main .posts .post:hover{
+    font-weight:bold;
+	color:#E60000;
+    background-color:#f0f0f0;
+    transition:background-color .25s
+}
+section#main .posts .post .labels{font-size:.9em;margin:5px 0}
 section#main .posts .post .labels .label{display:inline-block}
 section#main .posts .post .labels .label:before{margin-left:5px}
-section#main .posts .post span{display:block;font-size:.8em;color:#999}
+section#main .posts .post span{display:block;font-size:0.8em;color:#999}
 
 footer{text-align:center;max-width:760px;margin:0 auto;color:#444;padding:70px 0 50px 0;font-size:14px}
 footer a{text-decoration:none;padding-bottom:1px;color:#444;border-bottom:1px solid #444}
@@ -137,9 +183,22 @@ ol.page-navigator li.next,ol.page-navigator li.prev{display:inline-block}
 ol.page-navigator li.next a,ol.page-navigator li.prev a{text-decoration:none;color:#fff;background:#404D56;padding:7px 20px;-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;border:none;font-size:14px}
 section#post{max-width:60%;margin:0 auto;padding:5px}
 @media screen and (max-width:700px){section#post{max-width:100%;}}
-section#post .head .avatar{text-align:center}
+section#post .head .avatar{
+    text-align:center;
+    margin-top:20px;
+    margin-bottom:40px;
+}
 section#post .head .avatar a{text-decoration:none}
-section#post .head .avatar img{width:100px;height:100px;border:1px solid #eaeaea;padding:4px;border-radius:50%;margin-top:20px;margin-bottom:40px}
+section#post .head .avatar img{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    box-shadow: 1px 1px 3px #888888;
+	transition: 0.6s ease-out;
+}
+section#post .head .avatar img:hover{
+    transform: scale(1.2);
+}
 section#post .head .title{text-align:center;font-size:1.75em;margin:7px 0;color:#000;font-weight:300}
 section#post .head .subtitle{
 	text-align:center;
