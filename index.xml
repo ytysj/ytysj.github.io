@@ -6,10 +6,20 @@
     <description>Recent content on 液态氧斯基•小小站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 16 May 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 01 Sep 2023 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://ytysj.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>友链</title>
+      <link>https://ytysj.github.io/friends/</link>
+      <pubDate>Fri, 01 Sep 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://ytysj.github.io/friends/</guid>
+      <description>Ytysj的友情推荐链接：
+ wxwxwwxxx 最好的朋友😀  </description>
+    </item>
     
     <item>
       <title>夜盲女孩和近视导盲犬（三、四、五）</title>
@@ -438,8 +448,9 @@ Shadowsocks可以指：一种基于Socks5代理方式的加密传输协议，也
       <guid>https://ytysj.github.io/about/</guid>
       <description>欢迎来到——Ytysj的 小小站
 关心科技和人文，兴趣和爱好爆棚。_(:з」∠)__
-喜好/技能列表：
-- 科幻、侦探小说 - 独立游戏（尝试制作中） - 电影 - 电子DIY - 绘画 - 摄影（航拍） - 游泳 - 网球 - 乒乓球 - 棒垒球 - Python - C/C++  </description>
+喜好列表：
+- 科幻、侦探小说 - 独立游戏（尝试制作中） - 电影 - 话剧 - 电子DIY - 绘画 - 摄影（航拍） - 游泳 - 乒乓球 - 露营  技能列表：
+- 电子DIY - 摄影（航拍） - 尤克里里（学习中） - 游泳 - 网球（忘差不多了） - 乒乓球 - 棒垒球（忘差不多了） - Python - C/C++ - Qt - 手动挡C1  </description>
     </item>
     
     <item>
